@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>E-commerce Navbar / Universe Admin</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  
+    <link rel="stylesheet" href="fonts/open-sans/style.min.css">
+<link rel="stylesheet" href="fonts/iconfont/iconfont.css">
+<link rel="stylesheet" href="vendor/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.min.css" id="stylesheet">
+
+  
+
+  <script src="js/ie.assign.fix.min.js"></script>
+</head>
+<body class="js-loading sidebar-hidden navbar-ecommerce-static">
+
+<div class="preloader">
+  <div class="loader">
+    <span class="loader__indicator"></span>
+    <div class="loader__label"><img src="img/logo.png" alt=""></div>
+  </div>
+</div>
+
+
+  <div class="navbar navbar-ecommerce"> <!-- is-dark -->
+  <div class="navbar-ecommerce__top-side">
+    <div>
+      <a class="navbar-brand" href="/"><img src="img/logo.png" alt=""/></a>
+      <a class="navbar-brand-sm" href="/"><img src="img/logo-sm.png" alt=""/></a>
+    </div>
+
+    <div class="navbar-collapse" id="navbar-collapse">
+      <div class="navbar-ecommerce__navbar-collapse">
+        <div class="navbar-search">
+          <div class="input-group iconfont icon-right">
+            <input class="form-control navbar-search__input" type="text" placeholder="Search"/>
+            <span class="input-icon iconfont iconfont-search"></span>
+          </div>
+        </div>
+        <div class="dropdown navbar-dropdown">
+          <a class="dropdown-toggle navbar-dropdown-toggle navbar-dropdown-toggle__user" data-toggle="dropdown" href="#">
+            <img src="img/users/user-3.png" alt="" class="navbar-dropdown-toggle__user-avatar">
+            <span class="navbar-dropdown__user-name">John Smith</span>
+          </a>
+          <div class="dropdown-menu navbar-dropdown-menu navbar-dropdown-menu__user">
+            <div class="navbar-dropdown-user-content">
+              <div class="dropdown-user__avatar"><img src="img/users/user-3.png" alt=""/></div>
+              <div class="dropdown-info">
+                <div class="dropdown-info__name">John Smith</div>
+                <div class="dropdown-info__job">Manager</div>
+                <div class="dropdown-info-buttons"><a class="dropdown-info__viewprofile" href="#">View Profile</a><a class="dropdown-info__addaccount" href="#">Add account</a></div>
+              </div>
+            </div><a class="dropdown-item navbar-dropdown__item" href="#">Upgrade to <span>PRO</span></a><a class="dropdown-item navbar-dropdown__item" href="#">Invite team member</a><a class="dropdown-item navbar-dropdown__item" href="#">Fedback</a><a class="dropdown-item navbar-dropdown__item" href="#">Help</a><a class="dropdown-item navbar-dropdown__item" href="#">Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-ecommerce__tabs">
+    <nav class="nav nav-tabs">
+      <a class="nav-item nav-link active" data-toggle="tab" href="#nav-file">File</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-accounting">Accounting</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-partnerships">Partnerships</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">Portfolio</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">Managed Account</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">Reports</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">Tools</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">Settings</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">Security</a>
+      <a class="nav-item nav-link" data-toggle="tab" href="#nav-contact">Web</a>
+    </nav>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="nav-file">
+        <ul class="nav navbar-ecommerce__menu">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="iconfont iconfont-bag-outline navbar-ecommerce__menu-icon"></span>
+              Portfolio
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="iconfont iconfont-user-outline navbar-ecommerce__menu-icon"></span>
+              General ledger
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="iconfont iconfont-bag-outline navbar-ecommerce__menu-icon"></span>
+              Partners
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="iconfont iconfont-chart-donut-outline navbar-ecommerce__menu-icon"></span>
+              Managed Accounts
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+              <span class="iconfont iconfont-bag-outline navbar-ecommerce__menu-icon"></span>
+              Global Report
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="nav-accounting">
+        <ul class="nav navbar-ecommerce__menu">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+              Managed Accounts
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="nav-partnerships">...</div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="page-wrap">
+  
+
+  <div class="page-content">
+    
+<div class="container-fluid container-fh">
+  <h2 class="content-heading">E-commerce Navbar</h2>
+  <div class="main-container container-fh__content">
+    content
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/popper/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/select2/js/select2.full.min.js"></script>
+<script src="vendor/simplebar/simplebar.js"></script>
+<script src="vendor/text-avatar/jquery.textavatar.js"></script>
+<script src="vendor/flatpickr/flatpickr.min.js"></script>
+<script src="vendor/wnumb/wNumb.js"></script>
+<script src="js/main.js"></script>
+
+
+
+<div class="sidebar-mobile-overlay"></div>
+
+
+  <div class="settings-panel">
+  <div class="settings-panel__header">
+    <span class="settings-panel__close iconfont iconfont-modal-close"></span>
+
+    <h5 class="settings-panel__heading">Theme Customizer</h5>
+    <div class="settings-panel__desc">Customize & Preview In Real Time</div>
+  </div>
+  <div class="settings-panel__body">
+    <div class="settings-panel__layout-options">
+      <h6 class="settings-panel__block-heading">Layout Options</h6>
+      <div class="settings-panel__layout-option">
+        <label class="switch-inline">
+          <span class="switch">
+            <input type="checkbox" id="collapse-sidebar">
+              <span class="switch-slider">
+                <span class="switch-slider__on"></span>
+                <span class="switch-slider__off"></span>
+              </span>
+            </span>
+          <span class="switch-inline__text">Collapsed Sidebar</span>
+        </label>
+      </div>
+      <!--<div class="settings-panel__layout-option">
+        <label class="switch-inline">
+          <span class="switch">
+            <input type="checkbox" checked>
+              <span class="switch-slider">
+                <span class="switch-slider__on"></span>
+                <span class="switch-slider__off"></span>
+              </span>
+            </span>
+          <span class="switch-inline__text">Fixed Sidebar</span>
+        </label>
+      </div>-->
+    </div>
+    <div class="settings-panel__theme-colors">
+      <h6 class="settings-panel__block-heading">Theme Colors</h6>
+
+      <ul class="list-unstyled">
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-a">
+            <span class="color-radio__color"></span>
+            <span class="color-radio__text">#1</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-b">
+            <span class="color-radio__color color-radio__color--deep-cerulean"></span>
+            <span class="color-radio__text">#2</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color is-checked">
+            <input type="radio" name="settings_color" data-style="style" checked>
+            <span class="color-radio__color color-radio__color--river-bad"></span>
+            <span class="color-radio__text">#3</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-d">
+            <span class="color-radio__color color-radio__color--sun-juan"></span>
+            <span class="color-radio__text">#4</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-e">
+            <span class="color-radio__color color-radio__color--bermuda-gray"></span>
+            <span class="color-radio__text">#5</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-f">
+            <span class="color-radio__color color-radio__color--deep-sea"></span>
+            <span class="color-radio__text">#6</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-i">
+            <span class="color-radio__color color-radio__color--wine-berry"></span>
+            <span class="color-radio__text">#7</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-g">
+            <span class="color-radio__color  color-radio__color--big-stone"></span>
+            <span class="color-radio__text">#8</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-j">
+            <span class="color-radio__color color-radio__color--killarney"></span>
+            <span class="color-radio__text">#9</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-h">
+            <span class="color-radio__color color-radio__color--kabul"></span>
+            <span class="color-radio__text">#10</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<span class="settings-panel-control">
+  <span class="iconfont iconfont-settings"></span>
+</span>
+<script src="js/preview/settings-panel.min.js"></script>
+
+
+
+</body>
+</html>

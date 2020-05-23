@@ -1,0 +1,21 @@
+#跨域包
+pip install django-cors-headers
+#性能框架
+pip install locustio==0.11.0 -i http://pypi.mirrors.ustc.edu.cn/simple/
+#运维监控
+pip install psutil
+#excel操作包
+读取包：pip install xlrd
+写入包：pip install xlwt
+#mysql关系型数据库操作包
+pip install pymysql
+#redis非关系型数据库操作包
+pip install redis
+#django前后端分离框架
+pip install djangorestframework
+#django前后端分离——单点登录jwt
+pip install pyjwt
+#pip install djangorestframework-jwt
+
+#豆瓣源
+https://pypi.douban.com/simple

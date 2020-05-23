@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>Boxed Layout / Universe Admin</title>
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  
+    <link rel="stylesheet" href="fonts/open-sans/style.min.css">
+<link rel="stylesheet" href="fonts/iconfont/iconfont.css">
+<link rel="stylesheet" href="vendor/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="vendor/select2/css/select2.min.css">
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.min.css" id="stylesheet">
+
+  
+
+  <script src="js/ie.assign.fix.min.js"></script>
+</head>
+<body class="js-loading boxed-layout sidebar-sm">
+
+<div class="preloader">
+  <div class="loader">
+    <span class="loader__indicator"></span>
+    <div class="loader__label"><img src="img/logo.png" alt=""></div>
+  </div>
+</div>
+
+
+  <div class="navbar navbar-light navbar-expand-lg">
+  <button class="sidebar-toggler" type="button">
+    <span class="iconfont iconfont-sidebar-open sidebar-toggler__open"></span>
+    <span class="iconfont iconfont-alert-close sidebar-toggler__close"></span>
+  </button>
+
+  <a class="navbar-brand" href="/"><img src="img/logo.png" alt=""/></a>
+  <a class="navbar-brand-sm" href="/"><img src="img/logo-sm.png" alt=""/></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+    <span class="iconfont iconfont-navbar-open navbar-toggler__open"></span>
+    <span class="iconfont iconfont-alert-close navbar-toggler__close"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+    <div class="navbar-search">
+      <div class="input-group iconfont icon-right">
+        <input class="form-control navbar-search__input" type="text" placeholder="Search"/><span class="input-icon iconfont iconfont-search"></span>
+      </div>
+    </div>
+    <div class="dropdown navbar-dropdown no-arrow navbar-notify-dropdown">
+      <a class="dropdown-toggle navbar-dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar-notify">
+          <span>
+            <span class="navbar-notify__icon iconfont iconfont-bell"></span>
+            <span class="navbar-notify__text">Notifications</span>
+          </span>
+          <span class="navbar-notify__amount">3</span>
+        </span>
+    </a>
+      <div class="dropdown-menu dropdown-menu-right navbar-dropdown-menu navbar-dropdown-notifications">
+        <div class="navbar-dropdown-notifications__header"><span>NOTIFICATIONS</span><span class="navbar-dropdown-notifications__mark-read">Mark all as read<a class="icon iconfont iconfont-arrow-circle-down" href="#"></a></span></div>
+        <div class="navbar-dropdown-notifications__body">
+          <div class="navbar-dropdown-notifications__body-empty"><img class="navbar-dropdown-notifications__body-empty-image" src="img/empty-notifications.png" alt=""/>
+            <div class="navbar-dropdown-notifications__body-empty-text">You`re up to date!</div>
+          </div>
+        </div>
+        <a class="navbar-dropdown-notifications__view-all" href="#"><span class="icon iconfont iconfont-view-all"></span><span>View all</span></a>
+      </div>
+    </div>
+    <div class="dropdown navbar-dropdown no-arrow navbar-notify-dropdown navbar-notify-dropdown--messages">
+      <a class="dropdown-toggle navbar-dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        <span class="navbar-notify">
+          <span>
+            <span class="navbar-notify__icon iconfont iconfont-envelope"></span>
+            <span class="navbar-notify__text">Messages</span>
+          </span>
+          <span class="navbar-notify__amount">5</span>
+        </span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right navbar-dropdown-menu navbar-dropdown-notifications navbar-dropdown-messages">
+        <div class="navbar-dropdown-notifications__header"><span>MESSAGES</span><span class="navbar-dropdown-notifications__mark-read">Mark all as read<a class="icon iconfont iconfont-arrow-circle-down" href="#"></a></span></div>
+        <div class="navbar-dropdown-notifications__body navbar-dropdown-notifications__body-messages js-scrollable">
+          <div class="navbar-dropdown-notifications__item is-unread">
+            <img class="navbar-dropdown-notifications__item-avatar rounded-circle" src="img/users/user-4.png" alt="" width="40" height="40"/>
+            <div class="navbar-dropdown-notifications__item-notify">
+              <div>
+                <span class="icon iconfont iconfont-reply-to"></span>
+                <strong>Gabriel Saunders</strong> replied to <strong>your comment</strong> to <strong>The secret weapon of lebound marketing...</strong>
+              </div>
+              <div class="navbar-dropdown-notifications__item-datetime">5 minute ago</div>
+            </div>
+            <div class="navbar-dropdown-notifications__item-actions">
+              <span class="icon iconfont iconfont-circle-check navbar-dropdown-notifications__item-mark-as-read" data-toggle="tooltip" data-placement="top" title="Mark as read"></span>
+              <span class="icon iconfont iconfont-circle-close navbar-dropdown-notifications__item-remove" data-toggle="tooltip" data-placement="top" title="Delete notification"></span>
+            </div>
+          </div>
+          <div class="navbar-dropdown-notifications__item">
+            <img class="navbar-dropdown-notifications__item-avatar rounded-circle" src="img/users/user-5.png" alt="" width="40" height="40"/>
+            <div class="navbar-dropdown-notifications__item-notify">
+              <div>
+                <span class="icon iconfont iconfont-comments"></span>
+                <strong>Gabriel Saunders</strong> replied to <strong>your comment</strong> to <strong>The secret weapon of lebound marketing...</strong>
+              </div>
+              <div class="navbar-dropdown-notifications__item-datetime">5 minute ago</div>
+            </div>
+            <div class="navbar-dropdown-notifications__item-actions">
+              <span class="icon iconfont iconfont-circle-check navbar-dropdown-notifications__item-mark-as-read" data-toggle="tooltip" data-placement="top" title="Mark as read"></span>
+              <span class="icon iconfont iconfont-circle-close navbar-dropdown-notifications__item-remove" data-toggle="tooltip" data-placement="top" title="Delete notification"></span>
+            </div>
+          </div>
+          <div class="navbar-dropdown-notifications__item is-unread">
+            <img class="navbar-dropdown-notifications__item-avatar rounded-circle" src="img/users/user-6.png" alt="" width="40" height="40"/>
+            <div class="navbar-dropdown-notifications__item-notify">
+              <div>
+                <span class="icon iconfont iconfont-star"></span>
+                <strong>Shawna Cohen</strong> replied to <strong>your comment</strong> to <strong>The secret weapon of lebound marketing...</strong>
+              </div>
+              <div class="navbar-dropdown-notifications__item-datetime">5 minute ago</div>
+            </div>
+            <div class="navbar-dropdown-notifications__item-actions">
+              <span class="icon iconfont iconfont-circle-check navbar-dropdown-notifications__item-mark-as-read" data-toggle="tooltip" data-placement="top" title="Mark as read"></span>
+              <span class="icon iconfont iconfont-circle-close navbar-dropdown-notifications__item-remove" data-toggle="tooltip" data-placement="top" title="Delete notification"></span>
+            </div>
+          </div>
+          <div class="navbar-dropdown-notifications__item is-unread">
+            <img class="navbar-dropdown-notifications__item-avatar rounded-circle" src="img/users/user-7.png" alt="" width="40" height="40"/>
+            <div class="navbar-dropdown-notifications__item-notify">
+              <div>
+                <span class="icon iconfont iconfont-download"></span>
+                <strong>Jason Kendall</strong> replied to <strong>your comment</strong> to <strong>The secret weapon of lebound marketing...</strong>
+              </div>
+              <div class="navbar-dropdown-notifications__item-datetime">5 minute ago</div>
+            </div>
+            <div class="navbar-dropdown-notifications__item-actions">
+              <span class="icon iconfont iconfont-circle-check navbar-dropdown-notifications__item-mark-as-read" data-toggle="tooltip" data-placement="top" title="Mark as read"></span>
+              <span class="icon iconfont iconfont-circle-close navbar-dropdown-notifications__item-remove" data-toggle="tooltip" data-placement="top" title="Delete notification"></span>
+            </div>
+          </div>
+        </div><a class="navbar-dropdown-notifications__view-all" href="#"><span class="icon iconfont iconfont-view-all"></span><span>View all</span></a>
+      </div>
+    </div>
+    <div class="dropdown navbar-dropdown no-arrow navbar-help-dropdown">
+      <a class="dropdown-toggle navbar-dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="navbar-notify">
+          <span>
+            <span class="navbar-notify__icon iconfont iconfont-info"></span>
+            <span class="navbar-notify__text">Info</span>
+          </span>
+        </span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-center navbar-dropdown-menu">
+        <h6 class="navbar-help-dropdown__heading">Need Help?</h6>
+        <p class="navbar-help-dropdown__desc">
+          Give us a call 888-898-8302 <br>
+          send a email: <a href="#">info@example.com</a> <br>
+          or
+        </p>
+        <div>
+          <a href="help-center-submit-ticket.html" class="btn btn-info navbar-help-dropdown__submit">Submit a Ticket</a>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown navbar-dropdown">
+      <a class="dropdown-toggle navbar-dropdown-toggle navbar-dropdown-toggle__user" data-toggle="dropdown" href="#">
+        <img src="img/users/user-3.png" alt="" class="navbar-dropdown-toggle__user-avatar">
+        <span class="navbar-dropdown__user-name">John Smith</span>
+      </a>
+      <div class="dropdown-menu navbar-dropdown-menu navbar-dropdown-menu__user">
+        <div class="navbar-dropdown-user-content">
+          <div class="dropdown-user__avatar"><img src="img/users/user-3.png" alt=""/></div>
+          <div class="dropdown-info">
+            <div class="dropdown-info__name">John Smith</div>
+            <div class="dropdown-info__job">Manager</div>
+            <div class="dropdown-info-buttons"><a class="dropdown-info__viewprofile" href="#">View Profile</a><a class="dropdown-info__addaccount" href="#">Add account</a></div>
+          </div>
+        </div><a class="dropdown-item navbar-dropdown__item" href="#">Upgrade to <span>PRO</span></a><a class="dropdown-item navbar-dropdown__item" href="#">Invite team member</a><a class="dropdown-item navbar-dropdown__item" href="#">Fedback</a><a class="dropdown-item navbar-dropdown__item" href="#">Help</a><a class="dropdown-item navbar-dropdown__item" href="#">Sign Out</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="page-wrap">
+  
+
+  <div class="page-content">
+    
+<div class="container-fluid container-fh">
+  <h2 class="content-heading">Boxed Layout</h2>
+  <div class="main-container container-fh__content">
+    Boxed Layout
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/popper/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/select2/js/select2.full.min.js"></script>
+<script src="vendor/simplebar/simplebar.js"></script>
+<script src="vendor/text-avatar/jquery.textavatar.js"></script>
+<script src="vendor/flatpickr/flatpickr.min.js"></script>
+<script src="vendor/wnumb/wNumb.js"></script>
+<script src="js/main.js"></script>
+
+
+
+<div class="sidebar-mobile-overlay"></div>
+
+
+  <div class="settings-panel">
+  <div class="settings-panel__header">
+    <span class="settings-panel__close iconfont iconfont-modal-close"></span>
+
+    <h5 class="settings-panel__heading">Theme Customizer</h5>
+    <div class="settings-panel__desc">Customize & Preview In Real Time</div>
+  </div>
+  <div class="settings-panel__body">
+    <div class="settings-panel__layout-options">
+      <h6 class="settings-panel__block-heading">Layout Options</h6>
+      <div class="settings-panel__layout-option">
+        <label class="switch-inline">
+          <span class="switch">
+            <input type="checkbox" id="collapse-sidebar">
+              <span class="switch-slider">
+                <span class="switch-slider__on"></span>
+                <span class="switch-slider__off"></span>
+              </span>
+            </span>
+          <span class="switch-inline__text">Collapsed Sidebar</span>
+        </label>
+      </div>
+      <!--<div class="settings-panel__layout-option">
+        <label class="switch-inline">
+          <span class="switch">
+            <input type="checkbox" checked>
+              <span class="switch-slider">
+                <span class="switch-slider__on"></span>
+                <span class="switch-slider__off"></span>
+              </span>
+            </span>
+          <span class="switch-inline__text">Fixed Sidebar</span>
+        </label>
+      </div>-->
+    </div>
+    <div class="settings-panel__theme-colors">
+      <h6 class="settings-panel__block-heading">Theme Colors</h6>
+
+      <ul class="list-unstyled">
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-a">
+            <span class="color-radio__color"></span>
+            <span class="color-radio__text">#1</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-b">
+            <span class="color-radio__color color-radio__color--deep-cerulean"></span>
+            <span class="color-radio__text">#2</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color is-checked">
+            <input type="radio" name="settings_color" data-style="style" checked>
+            <span class="color-radio__color color-radio__color--river-bad"></span>
+            <span class="color-radio__text">#3</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-d">
+            <span class="color-radio__color color-radio__color--sun-juan"></span>
+            <span class="color-radio__text">#4</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-e">
+            <span class="color-radio__color color-radio__color--bermuda-gray"></span>
+            <span class="color-radio__text">#5</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-f">
+            <span class="color-radio__color color-radio__color--deep-sea"></span>
+            <span class="color-radio__text">#6</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-i">
+            <span class="color-radio__color color-radio__color--wine-berry"></span>
+            <span class="color-radio__text">#7</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-g">
+            <span class="color-radio__color  color-radio__color--big-stone"></span>
+            <span class="color-radio__text">#8</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-j">
+            <span class="color-radio__color color-radio__color--killarney"></span>
+            <span class="color-radio__text">#9</span>
+          </label>
+        </li>
+        <li>
+          <label class="color-radio js-settings-color">
+            <input type="radio" name="settings_color" data-style="style-h">
+            <span class="color-radio__color color-radio__color--kabul"></span>
+            <span class="color-radio__text">#10</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<span class="settings-panel-control">
+  <span class="iconfont iconfont-settings"></span>
+</span>
+<script src="js/preview/settings-panel.min.js"></script>
+
+
+
+</body>
+</html>
