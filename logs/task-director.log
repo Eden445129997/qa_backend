@@ -1,0 +1,10 @@
+
+2020-06-11 13:37:20 INFO
+/Users/eden/workspace/djangoWebServer/apps/test_platform/director_and_builder.py
+process_id-34753
+thread_id-123145469054976
+report_id:85
+TaskStatus:完成
+test_task:deque([{'api_name': '所有接口数据', 'method': 'GET', 'path': '/platform/ProjectViews/', 'case_id': '1', 'interface_id': '1', 'reconnection_times': 3, 'wait_time': 10, 'header': '{}', 'data': '{}', 'mock_status': False, 'mock_response': '{}', 'text': None, 'fail_times': 0, 'checkpoint': '{}', 'sort': 0, 'status': True, 'create_time': '2020-06-08', 'update_time': '2020-06-08'}])
+time_taken:0:00:00.231130
+

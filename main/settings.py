@@ -15,6 +15,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import socket
 
+
 # 别人的django代码
 # git clone https://github.com/happyletme/requestnew.git
 
@@ -31,7 +32,7 @@ def host():
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# LOGS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -56,7 +57,6 @@ INSTALLED_APPS = [
     # 前端库(pip install django-bootstrap3)
     # 'bootstrap3',
     # 'operate_db',
-    # 'autotest',
 
     # 跨域请求解决方案的跨域包
     "corsheaders",
@@ -83,6 +83,7 @@ MIDDLEWARE = [
     # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    # log中间件
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -178,6 +179,89 @@ DATABASES = {
     }
 }
 
+# 日志地址
+LOG_PATH = os.path.join(BASE_DIR, 'logs/')
+# 如果不存该地址则创建
+if not os.path.join(LOG_PATH):
+    os.mkdir(LOG_PATH)
+LOGGING = {
+    # 版本
+    'version': 1,
+    # 是否禁止默认配置的记录器
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standard': {
+            'format': '\n%(asctime)s %(levelname)s\n'
+                      '%(pathname)s\n'
+                      'process_id:%(process)d\n'
+                      'thread_id:%(thread)d\n'
+                      '%(message)s\n',
+            'datefmt': '%Y-%m-%d %H:%M:%S'
+        }
+    },
+    # 过滤器
+    # 'filters': {
+    #     'request_info': {'()': 'apps.common.custom_middleware.DataReCordMiddleware'},
+    # },
+    'handlers': {
+        # 标准输出
+        'console': {
+            'level': 'ERROR',
+            'class': 'logging.StreamHandler',
+            # 'formatter': 'standard'
+        },
+        # 自定义 handlers，输出到文件
+        'restful_api': {
+            'level': 'DEBUG',
+            # 时间滚动切分
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': os.path.join(LOG_PATH, 'web-log.log'),
+            'encoding': 'utf-8',
+            'formatter': 'standard',
+            # 调用过滤器
+            # 'filters': ['request_info'],
+            # 每天凌晨切分
+            'when': 'MIDNIGHT',
+            # 保存 30 天
+            'backupCount': 30,
+        },
+        # 自定义 handlers，输出到文件
+        'task-director': {
+            'level': 'DEBUG',
+            # 时间滚动切分
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': os.path.join(LOG_PATH, 'task-director.log'),
+            'encoding': 'utf-8',
+            'formatter': 'standard',
+            # 调用过滤器
+            # 'filters': ['request_info'],
+            # 每天凌晨切分
+            # 'when': 'MIDNIGHT',
+            # 保存 30 天
+            # 'backupCount': 30,
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+            'propagate': False
+        },
+        'web_log': {
+            'handlers': ['restful_api'],
+            'level': 'INFO',
+            'propagate': False
+        },
+        'runner_log': {
+            'handlers': ['task-director', 'console'],
+            'level': 'INFO',
+            # 此记录器处理过的消息就不再让 django 记录器再次处理了
+            'propagate': False
+        },
+    }
+}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -213,7 +297,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # 设置用户模型（否则会用django自带的）
 # AUTH_USER_MODEL = "user_service.User"
@@ -224,3 +308,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
+# print(os.path.join(BASE_DIR, 'logs/runner-log.log'))

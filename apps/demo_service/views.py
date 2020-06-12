@@ -1,5 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 # 前后端不分离，render：返回html页面
 # from django.shortcuts import render
+
+import datetime
 
 # 模板对象
 from apps.demo_service import models
@@ -23,12 +28,52 @@ from rest_framework import status
 # django实现cbv（class base view）方式
 class DemoCBV(View):
     def get(self,request,*args,**kwargs):
+        # print(request.META)
+        # print(request.META.get('PATH_INFO'))
+        # print(request.META.get('REQUEST_METHOD'))
+        # print(request.META.get('QUERY_STRING'))
+        # print(request.META.get('CONTENT_TYPE'))
+        # print(request.GET.dict())
+
+        # 请求的方式，即http或者是https
+        print(request.scheme)
+        # 请求的路径,相对路径
+        print(request.path)
+        # session
+        print(request.session)
+
+        # 设置cookies
+        # response.set_cookie('name', 'root')
+        # 设置加密cookies
+        # response.set_cookie('passsword', '123456', salt='@#$!%^&')
+        # 获取cookie
+        # request.COOKIES.get("name")
+        # 获取加密的cookie
+        # request.get_signed_cookie("password", salt="@#$!%^&")
+        time = datetime.datetime.now()
+        print(time)
+        demo = models.DemoModel(text="测试时间戳",str_time = time)
+        demo.save()
         # safe参数默认为True，返回的必须是字典类型，否则报错
-        return JsonResponse("success,this is django CBV get request",safe=False)
+        # return JsonResponse("success,this is django CBV get request",safe=False)
+        return JsonResponse("demo.id，测试时间戳",safe=False)
 
     def post(self,request,*args,**kwargs):
+        # print(request.META)
+        # print(request.META.get('PATH_INFO'))
+        # print(request.META.get('REQUEST_METHOD'))
+        # print(request.META.get('QUERY_STRING'))
+        # print(request.META.get('CONTENT_TYPE'))
+        # print(request.GET.dict())
+
+        # 请求的主体，返回的是一个byte数据
+        print(request.body)
+        # 获取post方式表单中提交的数据,headers:{'Content-Type':"application/json"}的时候，request.POST是没有值的
+        print(request.POST)
         # safe参数默认为True，返回的必须是字典类型，否则报错
         return JsonResponse("success,this is django CBV post request",safe=False)
+
+
 
 # 使用rest_framework实现基于restful风格的get/post/put/delete......
 class DrfViewset(viewsets.ModelViewSet):
@@ -50,3 +95,7 @@ class DrfView(views.APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class RelationQuery(View):
+    def get(self,request,*args,**kwargs):
+        return JsonResponse('chil', safe=False)

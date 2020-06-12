@@ -11,7 +11,9 @@ urlpatterns = [
     path('logout/',d_controller.Logout.as_view(),name='退出登录demo，清除token'),
     path('test/',d_controller.Test.as_view(),name='测试回调'),
     path('getProjectByName/',d_controller.GetProjectByName.as_view(),name='根据project_name获取project'),
-    path('getTestPlanByName/', d_controller.GetTestPlanByName.as_view(), name='根据plan_name获取project')
+    path('getTestPlanByName/', d_controller.GetTestPlanByName.as_view(), name='根据plan_name获取project'),
+    path('runTestPlanById/', d_controller.RunTestPlanById.as_view(), name='根据测试计划id执行测试'),
+    path('runTestCaseById/', d_controller.RunTestCaseById.as_view(), name='根据测试用例id执行测试')
 ]
 
 # Viewset视图集

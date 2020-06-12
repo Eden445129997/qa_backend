@@ -11,6 +11,7 @@ urlpatterns = [
     # 基于restful规范实现的原生django接口
     path('django/',views.DemoCBV.as_view(),name='django CBV restful API'),
     path('drf/view/',views.DrfView.as_view(),name='rest_framework CBV restful API'),
+    path('relationQuery/', views.RelationQuery.as_view(), name='关联查询'),
 ]
 
 # Viewset视图集

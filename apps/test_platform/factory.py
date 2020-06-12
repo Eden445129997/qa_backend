@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# 模型
+from apps.test_platform import models
+# 序列化
+from apps.common.serializers import query_set_list_serializers
+import collections
+
+
+class DataFactory(object):
+    """
+    测试用例数据工厂
+    """
+
+    def __init__(self):
+        pass
+
+    def get_query_set_case_list_by_plan_id(self, plan_id):
+        """
+        需求：新创建的在最后，支持排序
+        创建默认sort为0
+        倒序排序
+        相同则用id升序
+        :param plan_id:
+        :return: query_set:[{case3},{case2},{case1},{case0},{case0}]
+        """
+        return models.TestCase.objects.filter(plan_id=plan_id).order_by('-sort').order_by('id')
+
+    def get_query_set_case_detail_list_by_case_id(self, case_id):
+        """
+        需求：新创建的在最后，支持排序
+        创建默认sort为0
+        倒序排序
+        相同则用id升序
+        :param case_id:
+        :return: query_set:[{case_detail3},{case_detail2},{case_detail1},{case_detail0},{case_detail0}]
+        """
+        return models.TestCaseDetail.objects.filter(case_id=case_id).order_by('-sort').order_by('id')
+
+    def get_interface_by_interface_id(self, interface_id):
+        """
+        根据interface_id获取interface的数据
+        :param case_detail_id:
+        :return: {interface}
+        """
+        return models.Interface.objects.values('api_name', 'method', 'path').get(id=interface_id)
+
+
+class SuitFactory(object):
+    """
+    测试套件工厂
+    """
+
+    def __init__(self):
+        # task_suit = []
+        self.test_suit = collections.deque()
+        # 数据工厂对象
+        self.data_factory = DataFactory()
+
+    def get_test_suit_by_plan_id(self, plan_id):
+        """
+        根据计划id生成测试套件
+        1、循环用例
+        2、根据每个用例检索出对应节点，节点反查url，并且放入映射对象
+        :param plan_id:
+        :return: {'api_name': '查看个人/他人基本信息', 'method': 'POST', 'path': '/app-http/v104/user/getAppUserBasicInfo', 'case_id': '1', 'path_id': '156', 'reconnection_times': 3, 'wait_time': 10, 'input_header': '{}', 'input_parameter': '{}', 'mock_status': False, 'mock_response': '{}', 'text': None, 'checkpoint': '{}', 'case_sort': 0, 'status': True, 'create_time': '2020-06-03', 'update_time': datetime.datetime(2020, 6, 3, 1, 11, 53, tzinfo=<UTC>)}
+        """
+
+        # 获取case列表（query_set对象）
+        query_set_case_list = self.data_factory.get_query_set_case_list_by_plan_id(plan_id)
+
+        # 根据计划检索测试用例
+        for case_id in query_set_case_list:
+            # 检索用例节点
+            query_set_case_detail_list = self.data_factory.get_query_set_case_detail_list_by_case_id(case_id)
+            # 序列化，为了反查接口数据
+            test_case_detail_list = query_set_list_serializers(query_set_case_detail_list)
+
+            # 节点反查获取接口数据
+            for test_case_detail in test_case_detail_list:
+                interface_id = test_case_detail.get('interface_id')
+                # 反查接口数据
+                api_info = self.data_factory.get_interface_by_interface_id(interface_id)
+
+                # 将接口数据，用例数据并在一起
+                test_task = {**api_info, **test_case_detail}
+                self.test_suit.append(test_task)
+        # print(test_suit)
+        # print(type(test_suit[0]))
+        return self.test_suit
+
+    def get_test_suit_by_case_id(self, case_id):
+        """
+        根据用例id生产测试套件
+        :param case_id:
+        :return:
+        """
+        # 获取用例下面所有的节点
+        query_set_case_detail_list = self.data_factory.get_query_set_case_detail_list_by_case_id(case_id)
+        # 序列化，为了反查接口数据
+        test_case_detail_list = query_set_list_serializers(query_set_case_detail_list)
+
+        # 节点反查获取接口数据
+        for test_case_detail in test_case_detail_list:
+            interface_id = test_case_detail.get('interface_id')
+            # 反查接口数据
+            api_info = self.data_factory.get_interface_by_interface_id(interface_id)
+
+            # 将接口数据，用例数据并在一起
+            test_task = {**api_info, **test_case_detail}
+            self.test_suit.append(test_task)
+        return self.test_suit

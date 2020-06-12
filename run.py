@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import os
 
 def start_app(app_name):
@@ -10,7 +13,7 @@ def start_app(app_name):
 
 def inspectdb(db_models):
     """将数据库的表映射创建模板文件orm"""
-    # 移动到项目文件下DyOl5spjCA;A
+    # 移动到项目文件下
     djangoProjectPath = os.path.dirname(os.path.abspath(__file__))
     os.system("cd %s"%djangoProjectPath)
     # 创建模板文件
@@ -24,7 +27,6 @@ def synchronized_db():
     # 迁移数据库和表结构
     os.system("python3 manage.py makemigrations")
     os.system("python3 manage.py migrate")
-
 
 def run():
     """启动服务"""
@@ -42,7 +44,12 @@ def run():
 if __name__ == '__main__':
     # start_app("batch_processing_service")
     # inspectdb("api_project")
-    # synchronized_db()
-    run()
+    synchronized_db()
+    # run()
+
+    # Create your tests here.
+
+
 
 # python manage.py createsuperuser
+
