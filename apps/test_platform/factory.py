@@ -5,7 +5,6 @@
 from apps.test_platform import models
 # 序列化
 from apps.common.serializers import query_set_list_serializers
-import collections
 
 
 class DataFactory(object):
@@ -46,6 +45,16 @@ class DataFactory(object):
         """
         return models.Interface.objects.values('api_name', 'method', 'path').get(id=interface_id)
 
+    def get_report_detail_response_by_report_id_and_sort(self, report_id, sort):
+        """
+        根据报告id和排序id获取response（参数化业务）
+        :param report_id:
+        :param sort:
+        :return:
+        """
+        # 模型获取出response的字典，再获取response键的值
+        return models.ApiTestReportDetail.objects.values('response').get(report_id=report_id, sort=sort).get('response')
+
 
 class SuitFactory(object):
     """
@@ -53,12 +62,12 @@ class SuitFactory(object):
     """
 
     def __init__(self):
-        # task_suit = []
-        self.test_suit = collections.deque()
+        # 测试套件
+        self.test_suit = models.Suit()
         # 数据工厂对象
         self.data_factory = DataFactory()
 
-    def get_test_suit_by_plan_id(self, plan_id):
+    def get_suit_by_plan_id(self, plan_id):
         """
         根据计划id生成测试套件
         1、循环用例
@@ -86,11 +95,11 @@ class SuitFactory(object):
                 # 将接口数据，用例数据并在一起
                 test_task = {**api_info, **test_case_detail}
                 self.test_suit.append(test_task)
-        # print(test_suit)
-        # print(type(test_suit[0]))
+        # print(self.test_suit)
+        # print(type(self.test_suit[0]))
         return self.test_suit
 
-    def get_test_suit_by_case_id(self, case_id):
+    def get_suit_by_case_id(self, case_id):
         """
         根据用例id生产测试套件
         :param case_id:

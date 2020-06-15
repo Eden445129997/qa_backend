@@ -3,9 +3,30 @@
 
 from django.db import models
 from apps.test_platform.enumeration import REQUEST_METHOD, TASK_STUTAS
-
+import collections
 
 # Create your models here.
+
+class Suit(object):
+    """
+    测试套件模型
+    """
+    def __init__(self):
+        self._suit = collections.deque()
+
+    def __len__(self):
+        return len(self._suit)
+
+    def __getitem__(self, position):
+        return self._suit[position]
+
+    def __str__(self):
+        return str(self._suit)
+
+    def append(self, case):
+        self._suit.append(case)
+
+
 
 class Project(models.Model):
     """工程表"""
@@ -113,7 +134,7 @@ class Interface(models.Model):
     # 资源路径
     path = models.CharField(verbose_name="资源路径", max_length=128)
     # 默认入参——存储数据的时候存储数组，每个key存储字典，键为key，值为数据类型
-    defaultData = models.TextField(verbose_name="默认入参", default="{}")
+    default_data = models.TextField(verbose_name="默认入参", default="{}")
     # 接口描述
     text = models.CharField(verbose_name="描述", max_length=255, blank=True, null=True)
     # 状态（0 不启用，1 启用）
@@ -214,13 +235,15 @@ class TestCaseDetail(models.Model):
     # 超时设置
     wait_time = models.IntegerField(verbose_name="最长等待时长", default=10)
     # 请求头
-    header = models.TextField(verbose_name="请求头", default="{}")
+    headers = models.TextField(verbose_name="请求头", default="{}")
     # 入参
     data = models.TextField(verbose_name="请求入参", default="{}")
     # mock状态（0 不启用mock，1启用mock）
     mock_status = models.BooleanField(verbose_name="mock状态（0 不启用mock，1启用mock）", default=False)
     # mock返回
     mock_response = models.TextField(verbose_name="mock的返回值", default="{}")
+    # 参数化状态
+    parameters_status = models.BooleanField(verbose_name="参数化状态（0 不启用jsonpath捕捉参数化，1 启用jsonpath捕捉参数化）", default=False)
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=255, blank=True, null=True)
     # 校验点

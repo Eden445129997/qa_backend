@@ -1,10 +1,40 @@
 
-2020-06-11 13:37:20 INFO
+2020-06-16 00:46:27 INFO
 /Users/eden/workspace/djangoWebServer/apps/test_platform/director_and_builder.py
-process_id-34753
-thread_id-123145469054976
-report_id:85
-TaskStatus:完成
-test_task:deque([{'api_name': '所有接口数据', 'method': 'GET', 'path': '/platform/ProjectViews/', 'case_id': '1', 'interface_id': '1', 'reconnection_times': 3, 'wait_time': 10, 'header': '{}', 'data': '{}', 'mock_status': False, 'mock_response': '{}', 'text': None, 'fail_times': 0, 'checkpoint': '{}', 'sort': 0, 'status': True, 'create_time': '2020-06-08', 'update_time': '2020-06-08'}])
-time_taken:0:00:00.231130
+process_id:15285
+thread_id:123145406832640
+report_id:137
+task_status:完成
+test_task:deque([{'api_name': 'django测试接口', 'method': 'GET', 'path': '/demo/django/', 'case_id': '1', 'interface_id': '443', 'reconnection_times': 3, 'wait_time': 10, 'headers': '{}', 'data': '{"a":"测试参数"}', 'mock_status': False, 'mock_response': '{}', 'parameters_status': False, 'text': None, 'checkpoint': '{}', 'sort': 0, 'status': True, 'create_time': '2020-06-14', 'update_time': '2020-06-14'}, {'api_name': '所有接口数据', 'method': 'GET', 'path': '/platform/ProjectViews/', 'case_id': '1', 'interface_id': '1', 'reconnection_times': 3, 'wait_time': 10, 'headers': '{}', 'data': '{"test":$..&0#}', 'mock_status': False, 'mock_response': '{}', 'parameters_status': True, 'text': None, 'checkpoint': '{}', 'sort': 1, 'status': True, 'create_time': '2020-06-14', 'update_time': '2020-06-14'}])
+time_taken:0:00:00.263399
+
+
+2020-06-16 00:47:07 INFO
+/Users/eden/workspace/djangoWebServer/apps/test_platform/director_and_builder.py
+process_id:15300
+thread_id:123145378095104
+report_id:138
+task_status:完成
+test_task:deque([{'api_name': 'django测试接口', 'method': 'GET', 'path': '/demo/django/', 'case_id': '1', 'interface_id': '443', 'reconnection_times': 3, 'wait_time': 10, 'headers': '{}', 'data': '{"a":"测试参数"}', 'mock_status': False, 'mock_response': '{}', 'parameters_status': False, 'text': None, 'checkpoint': '{}', 'sort': 0, 'status': True, 'create_time': '2020-06-14', 'update_time': '2020-06-14'}, {'api_name': '所有接口数据', 'method': 'GET', 'path': '/platform/ProjectViews/', 'case_id': '1', 'interface_id': '1', 'reconnection_times': 3, 'wait_time': 10, 'headers': '{}', 'data': '{"test":$..&0#}', 'mock_status': False, 'mock_response': '{}', 'parameters_status': True, 'text': None, 'checkpoint': '{}', 'sort': 1, 'status': True, 'create_time': '2020-06-14', 'update_time': '2020-06-14'}])
+time_taken:0:00:00.272127
+
+
+2020-06-16 01:03:15 INFO
+/Users/eden/workspace/djangoWebServer/apps/test_platform/director_and_builder.py
+process_id:15468
+thread_id:123145410334720
+report_id:139
+task_status:完成
+test_task:<apps.test_platform.models.Suit object at 0x7f81a2cf4080>
+time_taken:0:00:00.282297
+
+
+2020-06-16 01:05:19 INFO
+/Users/eden/workspace/djangoWebServer/apps/test_platform/director_and_builder.py
+process_id:15492
+thread_id:123145345662976
+report_id:140
+task_status:完成
+test_task:deque([{'api_name': 'django测试接口', 'method': 'GET', 'path': '/demo/django/', 'case_id': '1', 'interface_id': '443', 'reconnection_times': 3, 'wait_time': 10, 'headers': '{}', 'data': '{"a":"测试参数"}', 'mock_status': False, 'mock_response': '{}', 'parameters_status': False, 'text': None, 'checkpoint': '{}', 'sort': 0, 'status': True, 'create_time': '2020-06-14', 'update_time': '2020-06-14'}, {'api_name': '所有接口数据', 'method': 'GET', 'path': '/platform/ProjectViews/', 'case_id': '1', 'interface_id': '1', 'reconnection_times': 3, 'wait_time': 10, 'headers': '{}', 'data': '{"test":$..&0#}', 'mock_status': False, 'mock_response': '{}', 'parameters_status': True, 'text': None, 'checkpoint': '{}', 'sort': 1, 'status': True, 'create_time': '2020-06-14', 'update_time': '2020-06-14'}])
+time_taken:0:00:00.267660
 

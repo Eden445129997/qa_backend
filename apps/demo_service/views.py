@@ -56,7 +56,7 @@ class DemoCBV(View):
         demo.save()
         # safe参数默认为True，返回的必须是字典类型，否则报错
         # return JsonResponse("success,this is django CBV get request",safe=False)
-        return JsonResponse("demo.id，测试时间戳",safe=False)
+        return JsonResponse({"a":"测试1","b":"测试2"},safe=False)
 
     def post(self,request,*args,**kwargs):
         # print(request.META)

@@ -54,10 +54,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 前端库(pip install django-bootstrap3)
-    # 'bootstrap3',
-    # 'operate_db',
-
     # 跨域请求解决方案的跨域包
     "corsheaders",
     # drf框架（更加方便开发）
@@ -306,6 +302,5 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 # 静态文件(STATICFILES_DIRS默认在公用文件中找，找不到就会在对应的app下找)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 # print(os.path.join(BASE_DIR, 'logs/runner-log.log'))
