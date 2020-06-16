@@ -21,6 +21,7 @@ class _WritelnDecorator(object):
             self.write(arg)
         self.write('\n')  # text-mode streams translate to \r\n if needed
 
+
 class HttpContentType(Enum):
     """http请求头的数据类型"""
     # 文本格式
@@ -40,18 +41,19 @@ class HttpContentType(Enum):
 
 
 HTTP_CONTENT_TYPE = (
-    (HttpContentType.TEXT_HTML,HttpContentType.TEXT_HTML),
-    (HttpContentType.TEXT_PLAIN, HttpContentType.TEXT_PLAIN),
-    (HttpContentType.TEXT_XML, HttpContentType.TEXT_XML),
-    (HttpContentType.APPLICATION_X_WWW_FORM_URLENCODED, HttpContentType.APPLICATION_X_WWW_FORM_URLENCODED),
-    (HttpContentType.APPLICATION_JSON, HttpContentType.APPLICATION_JSON),
-    (HttpContentType.APPLICATION_XML, HttpContentType.APPLICATION_XML),
-    (HttpContentType.APPLICATION_MSWORD, HttpContentType.APPLICATION_MSWORD),
-    (HttpContentType.APPLICATION_PDF, HttpContentType.APPLICATION_PDF),
-    (HttpContentType.IMAGE_GIF, HttpContentType.IMAGE_GIF),
-    (HttpContentType.IMAGE_JPEG, HttpContentType.IMAGE_JPEG),
-    (HttpContentType.IMAGE_PNG, HttpContentType.IMAGE_PNG),
+    (HttpContentType.TEXT_HTML.value, HttpContentType.TEXT_HTML.value),
+    (HttpContentType.TEXT_PLAIN.value, HttpContentType.TEXT_PLAIN.value),
+    (HttpContentType.TEXT_XML.value, HttpContentType.TEXT_XML.value),
+    (HttpContentType.APPLICATION_X_WWW_FORM_URLENCODED.value, HttpContentType.APPLICATION_X_WWW_FORM_URLENCODED.value),
+    (HttpContentType.APPLICATION_JSON.value, HttpContentType.APPLICATION_JSON.value),
+    (HttpContentType.APPLICATION_XML.value, HttpContentType.APPLICATION_XML.value),
+    (HttpContentType.APPLICATION_MSWORD.value, HttpContentType.APPLICATION_MSWORD.value),
+    (HttpContentType.APPLICATION_PDF.value, HttpContentType.APPLICATION_PDF.value),
+    (HttpContentType.IMAGE_GIF.value, HttpContentType.IMAGE_GIF.value),
+    (HttpContentType.IMAGE_JPEG.value, HttpContentType.IMAGE_JPEG.value),
+    (HttpContentType.IMAGE_PNG.value, HttpContentType.IMAGE_PNG.value),
 )
+
 
 class RequestMethod(Enum):
     """请求方式"""
@@ -60,12 +62,14 @@ class RequestMethod(Enum):
     PUT = u'PUT'
     DELETE = u'DELETE'
 
+
 REQUEST_METHOD = (
-    (RequestMethod.Get, RequestMethod.Get),
-    (RequestMethod.POST, RequestMethod.POST),
-    (RequestMethod.PUT, RequestMethod.PUT),
-    (RequestMethod.DELETE, RequestMethod.DELETE),
+    (RequestMethod.Get.value, RequestMethod.Get.value),
+    (RequestMethod.POST.value, RequestMethod.POST.value),
+    (RequestMethod.PUT.value, RequestMethod.PUT.value),
+    (RequestMethod.DELETE.value, RequestMethod.DELETE.value),
 )
+
 
 class TaskStatus(Enum):
     """任务状态"""
@@ -74,11 +78,28 @@ class TaskStatus(Enum):
     FINISH = u'完成'
     FAILSE = u'失败'
 
+
 TASK_STUTAS = (
-    (TaskStatus.WAIT,TaskStatus.WAIT),
-    (TaskStatus.EXECUTION,TaskStatus.EXECUTION),
-    (TaskStatus.FINISH,TaskStatus.FINISH),
-    (TaskStatus.FAILSE, TaskStatus.FAILSE),
+    (TaskStatus.WAIT.value, TaskStatus.WAIT.value),
+    (TaskStatus.EXECUTION.value, TaskStatus.EXECUTION.value),
+    (TaskStatus.FINISH.value, TaskStatus.FINISH.value),
+    (TaskStatus.FAILSE.value, TaskStatus.FAILSE.value),
+)
+
+
+class CheckMethod(Enum):
+    """检查方法"""
+    ASSERT_EQUAL = 'assertEqual'
+    ASSERT_NOT_EQUAL = 'assertNotEqual'
+    ASSERT_IN = 'assertIn'
+    ASSERT_NOT_IN = 'assertNotIn'
+
+
+CHECK_METHOD = (
+    (CheckMethod.ASSERT_EQUAL.value, CheckMethod.ASSERT_EQUAL.value),
+    (CheckMethod.ASSERT_NOT_EQUAL.value, CheckMethod.ASSERT_NOT_EQUAL.value),
+    (CheckMethod.ASSERT_IN.value, CheckMethod.ASSERT_IN.value),
+    (CheckMethod.ASSERT_NOT_IN.value, CheckMethod.ASSERT_NOT_IN.value)
 )
 
 if __name__ == '__main__':
@@ -86,3 +107,4 @@ if __name__ == '__main__':
         print(1)
     print(RequestMethod.POST)
     print(type(RequestMethod.POST))
+    print(TaskStatus.WAIT.value)

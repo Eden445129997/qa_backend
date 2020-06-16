@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
-from apps.test_platform.enumeration import REQUEST_METHOD, TASK_STUTAS
+from apps.test_platform.enumeration import REQUEST_METHOD, TASK_STUTAS, CHECK_METHOD
 import collections
+
 
 # Create your models here.
 
@@ -11,6 +12,7 @@ class Suit(object):
     """
     测试套件模型
     """
+
     def __init__(self):
         self._suit = collections.deque()
 
@@ -27,9 +29,10 @@ class Suit(object):
         self._suit.append(case)
 
 
-
 class Project(models.Model):
-    """工程表"""
+    """
+    工程表
+    """
     # 工程id
     id = models.AutoField(primary_key=True)
     # 工程名
@@ -58,11 +61,13 @@ class Project(models.Model):
 
 
 class Host(models.Model):
-    """域名表"""
+    """
+    域名表
+    """
     # 域名id
     id = models.AutoField(primary_key=True)
     # 外键—关联工程表
-    project_id = models.TextField(verbose_name="所属项目id")
+    project_id = models.CharField(verbose_name='所属项目id', max_length=16)
     # 环境名
     host_name = models.CharField(verbose_name='域名昵称', max_length=32)
     # host地址
@@ -89,11 +94,13 @@ class Host(models.Model):
 
 
 class BusiModel(models.Model):
-    """业务划分模块表"""
+    """
+    业务划分模块表
+    """
     # 模块id
     id = models.AutoField(primary_key=True)
     # 外键—关联工程表
-    project_id = models.TextField(verbose_name="所属项目id")
+    project_id = models.CharField(verbose_name='所属项目id', max_length=16)
     # 业务名
     busi_name = models.CharField(verbose_name="业务名称", max_length=32)
     # 接口总数
@@ -120,13 +127,15 @@ class BusiModel(models.Model):
 
 
 class Interface(models.Model):
-    """接口表"""
+    """
+    接口表
+    """
     # 接口id
     id = models.AutoField(primary_key=True)
     # 工程id
-    project_id = models.TextField(verbose_name="所属项目id")
+    project_id = models.CharField(verbose_name='所属项目id', max_length=16)
     # 外键—关联模块表
-    busi_id = models.TextField(verbose_name="所属业务id")
+    busi_id = models.CharField(verbose_name='所属业务id', max_length=16)
     # 接口名称
     api_name = models.CharField(verbose_name="接口名称", max_length=32)
     # 请求方式—1、get2、post3、put4、delete
@@ -157,11 +166,13 @@ class Interface(models.Model):
 
 
 class TestPlan(models.Model):
-    """测试计划表"""
+    """
+    测试计划表
+    """
     # 计划id
     id = models.AutoField(primary_key=True)
     # 外键—关联工程表
-    project_id = models.TextField(verbose_name="所属项目id")
+    project_id = models.CharField(verbose_name='所属项目id', max_length=16)
     # 计划名称
     plan_name = models.CharField(verbose_name="测试计划", max_length=32)
     # 计划创建人
@@ -188,11 +199,13 @@ class TestPlan(models.Model):
 
 
 class TestCase(models.Model):
-    """测试用例表"""
+    """
+    测试用例表
+    """
     # 用例id
     id = models.AutoField(primary_key=True)
     # 外键—关联工程表
-    plan_id = models.TextField(verbose_name="所属计划id")
+    plan_id = models.CharField(verbose_name='所属计划id', max_length=16)
     # 用例名称
     case_name = models.CharField(verbose_name="用例名称", max_length=32)
     # 排序
@@ -227,9 +240,9 @@ class TestCaseDetail(models.Model):
     # 用例id
     id = models.AutoField(primary_key=True)
     # 外键—关联用例表
-    case_id = models.TextField(verbose_name="所属用例id")
+    case_id = models.CharField(verbose_name='所属用例id', max_length=16)
     # 请求的path
-    interface_id = models.TextField(verbose_name="请求资源地址")
+    interface_id = models.CharField(verbose_name='请求资源地址', max_length=16)
     # 重连次数
     reconnection_times = models.IntegerField(verbose_name="重连次数", default=3)
     # 超时设置
@@ -246,8 +259,6 @@ class TestCaseDetail(models.Model):
     parameters_status = models.BooleanField(verbose_name="参数化状态（0 不启用jsonpath捕捉参数化，1 启用jsonpath捕捉参数化）", default=False)
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=255, blank=True, null=True)
-    # 校验点
-    checkpoint = models.TextField(verbose_name="校验点", default="{}")
     # 排序顺序
     sort = models.IntegerField(verbose_name="用例排序顺序", default=0)
     # 状态（0 不启用，1启用）
@@ -274,9 +285,43 @@ class TestCaseDetail(models.Model):
         verbose_name_plural = verbose_name
 
 
-class ApiTestReport(models.Model):
-    """接口测试任务报告"""
+class CheckPoint(models.Model):
+    """
+    检查点
+    """
+    id = models.AutoField(primary_key=True)
+    # 关联的case_detail_id
+    case_detail_id = models.CharField(verbose_name='所属的case_detail', max_length=16)
+    # 检查对象（仅仅支持json校验）
+    point_object = models.CharField(verbose_name='检查对象，jsonpath表达式', max_length=64)
+    # 检查关系
+    check_method = models.CharField(verbose_name='校验方法', max_length=16, choices=CHECK_METHOD)
+    # 检查值
+    check_value = models.TextField(verbose_name="校验的比对值")
+    # 用例描述
+    text = models.CharField(verbose_name="用例描述", max_length=255, blank=True, null=True)
+    # 状态（0 不启用，1启用）
+    status = models.BooleanField(verbose_name="状态", default=True)
+    # 创建时间
+    create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
+    # 最后变动时间
+    update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
 
+    objects = models.Manager()
+
+    def __str__(self):
+        return "%s" % self.case_detail_id
+
+    class Meta:
+        db_table = "tb_check_point"
+        # django的admin界面的后台展示的数据
+        verbose_name = "检查点"
+        verbose_name_plural = verbose_name
+
+class ApiTestReport(models.Model):
+    """
+    接口测试任务报告
+    """
     id = models.AutoField(primary_key=True)
     # 执行者
     executor = models.CharField(verbose_name="计划执行者", max_length=32, null=True)
@@ -291,7 +336,7 @@ class ApiTestReport(models.Model):
     # 执行用例总数
     total = models.IntegerField(verbose_name="用例执行总数")
     # 任务状态（1、等待2、执行中3、执行完成）
-    task_status = models.CharField(verbose_name="任务状态（1、等待执行2、执行中3、成功4、失败）", choices=TASK_STUTAS, max_length=32)
+    task_status = models.CharField(verbose_name="任务状态（1、等待执行2、执行中3、成功4、失败）", choices=TASK_STUTAS, max_length=16)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -315,14 +360,16 @@ class ApiTestReport(models.Model):
 
 
 class ApiTestReportDetail(models.Model):
-    """接口测试报告细节"""
+    """
+    接口测试报告细节
+    """
     id = models.AutoField(primary_key=True)
     # 外键关联用例id
-    case_id = models.TextField(verbose_name="所属用例id")
+    case_id = models.CharField(verbose_name='所属用例id', max_length=16)
     # 外键关联报告id
-    report_id = models.TextField(verbose_name="所属报告id")
+    report_id = models.CharField(verbose_name='所属报告id', max_length=16)
     # 接口别名
-    api_name = models.CharField(verbose_name="接口名称",null=True, max_length=32)
+    api_name = models.CharField(verbose_name="接口名称", null=True, max_length=32)
     # 请求的url
     url = models.CharField(verbose_name="请求地址", null=True, max_length=128)
     # 请求头
