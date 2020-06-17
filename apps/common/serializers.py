@@ -42,8 +42,11 @@ def query_set_serializers(query_set_class):
     create_time = 'create_time'
     update_time = 'update_time'
     data = serializers.serialize("python", query_set_class)
+
     # print(first_list)
-    data = data.get("fields")
+    fields = data.get("fields")
+    fields['id'] = data.get('pk')
+
     # 时间单独格式化处理
     if create_time in data.keys():
         data[create_time] = data[create_time].strftime('%Y-%m-%d')
