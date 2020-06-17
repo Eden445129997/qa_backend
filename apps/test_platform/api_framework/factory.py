@@ -26,7 +26,7 @@ class DataFactory(object):
         """
         return models.TestCase.objects.filter(plan_id=plan_id).order_by('-sort').order_by('id')
 
-    def get_query_set_case_detail_list_by_case_id(self, case_id):
+    def get_case_detail_list_by_case_id(self, case_id):
         """
         需求：新创建的在最后，支持排序
         创建默认sort为0
@@ -35,7 +35,8 @@ class DataFactory(object):
         :param case_id:
         :return: query_set:[{case_detail3},{case_detail2},{case_detail1},{case_detail0},{case_detail0}]
         """
-        return models.TestCaseDetail.objects.filter(case_id=case_id).order_by('-sort').order_by('id')
+        query_set_case_detail_list = models.TestCaseDetail.objects.filter(case_id=case_id).order_by('-sort').order_by('id')
+        return query_set_list_serializers(query_set_case_detail_list)
 
     def get_interface_by_interface_id(self, interface_id):
         """
@@ -55,6 +56,14 @@ class DataFactory(object):
         # 模型获取出response的字典，再获取response键的值
         return models.ApiTestReportDetail.objects.values('response').get(report_id=report_id, sort=sort).get('response')
 
+    def get_check_point_by_case_detail_id(self, case_detail_id):
+        """
+        根据用例节点id查询检查点
+        :param case_detail_id:
+        :return:
+        """
+        check_point_list = [checkpoint for checkpoint in models.CheckPoint.objects.values('case_detail_id','point_object','check_method','check_value').filter(case_detail_id=case_detail_id, status=1)]
+        return check_point_list
 
 class SuitFactory(object):
     """
@@ -82,18 +91,26 @@ class SuitFactory(object):
         # 根据计划检索测试用例
         for case_id in query_set_case_list:
             # 检索用例节点
-            query_set_case_detail_list = self.data_factory.get_query_set_case_detail_list_by_case_id(case_id)
-            # 序列化，为了反查接口数据
-            test_case_detail_list = query_set_list_serializers(query_set_case_detail_list)
-
-            # 节点反查获取接口数据
+            test_case_detail_list = self.data_factory.get_case_detail_list_by_case_id(case_id)
+            # 补充接口数据和校验点数据
             for test_case_detail in test_case_detail_list:
+                # print(test_case_detail)
+
+                # 补充节点对应的接口数据
                 interface_id = test_case_detail.get('interface_id')
-                # 反查接口数据
                 api_info = self.data_factory.get_interface_by_interface_id(interface_id)
+
+                # 补充节点下的校验点
+                id = test_case_detail.get('id')
+                checkpoint_list = self.data_factory.get_check_point_by_case_detail_id(id)
+                test_case_detail['checkpoint_list'] = checkpoint_list
+
+                # print(api_info)
+                # print(checkpoint_list)
 
                 # 将接口数据，用例数据并在一起
                 test_task = {**api_info, **test_case_detail}
+                # print(test_task)
                 self.test_suit.append(test_task)
         # print(self.test_suit)
         # print(type(self.test_suit[0]))
@@ -105,16 +122,18 @@ class SuitFactory(object):
         :param case_id:
         :return:
         """
-        # 获取用例下面所有的节点
-        query_set_case_detail_list = self.data_factory.get_query_set_case_detail_list_by_case_id(case_id)
-        # 序列化，为了反查接口数据
-        test_case_detail_list = query_set_list_serializers(query_set_case_detail_list)
-
-        # 节点反查获取接口数据
+        # 检索用例节点
+        test_case_detail_list = self.data_factory.get_case_detail_list_by_case_id(case_id)
+        # 补充接口数据和校验点数据
         for test_case_detail in test_case_detail_list:
             interface_id = test_case_detail.get('interface_id')
             # 反查接口数据
             api_info = self.data_factory.get_interface_by_interface_id(interface_id)
+
+            # 补充节点下的校验点
+            id = test_case_detail.get('id')
+            checkpoint_list = self.data_factory.get_check_point_by_case_detail_id(id)
+            test_case_detail['checkpoint_list'] = checkpoint_list
 
             # 将接口数据，用例数据并在一起
             test_task = {**api_info, **test_case_detail}

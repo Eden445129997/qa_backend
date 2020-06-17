@@ -19,15 +19,17 @@ def query_set_list_serializers(query_set_class):
     create_time = 'create_time'
     update_time = 'update_time'
     first_list = serializers.serialize("python", query_set_class)
-    # print(first_list)
-    for list_data in first_list:
-        list_data = list_data.get("fields")
+
+    for list_json in first_list:
+        fields = list_json.get("fields")
+        # id缺失处理
+        fields['id'] = list_json.get('pk')
         # 时间单独格式化处理
-        if create_time in list_data.keys():
-            list_data[create_time] = list_data[create_time].strftime('%Y-%m-%d')
-        if update_time in list_data.keys():
-            list_data[update_time] = list_data[update_time].strftime('%Y-%m-%d')
-        second_list.append(list_data)
+        if create_time in fields.keys():
+            fields[create_time] = fields[create_time].strftime('%Y-%m-%d')
+        if update_time in fields.keys():
+            fields[update_time] = fields[update_time].strftime('%Y-%m-%d')
+        second_list.append(fields)
     # print(type(second_list))
     return second_list
 
