@@ -255,8 +255,8 @@ class TestCaseDetail(models.Model):
     mock_status = models.BooleanField(verbose_name="mock状态（0 不启用mock，1启用mock）", default=False)
     # mock返回
     mock_response = models.TextField(verbose_name="mock的返回值", default="{}")
-    # 参数化状态
-    parameters_status = models.BooleanField(verbose_name="参数化状态（0 不启用jsonpath捕捉参数化，1 启用jsonpath捕捉参数化）", default=False)
+    # 表达式状态
+    expression_status = models.BooleanField(verbose_name="表达式状态（0 不启用jsonpath捕捉参数化，1 启用jsonpath捕捉参数化）", default=False)
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=255, blank=True, null=True)
     # 排序顺序
@@ -275,8 +275,8 @@ class TestCaseDetail(models.Model):
     """
 
     def __str__(self):
-        # return "%s"%self.id
-        return "%s" % self.interface_id
+        return "%s"%self.id
+        # return "%s" % self.interface_id
 
     class Meta:
         db_table = "tb_test_case_detail"

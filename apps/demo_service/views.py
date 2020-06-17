@@ -36,11 +36,11 @@ class DemoCBV(View):
         # print(request.GET.dict())
 
         # 请求的方式，即http或者是https
-        print(request.scheme)
+        # print(request.scheme)
         # 请求的路径,相对路径
-        print(request.path)
+        # print(request.path)
         # session
-        print(request.session)
+        # print(request.session)
 
         # 设置cookies
         # response.set_cookie('name', 'root')
@@ -51,7 +51,7 @@ class DemoCBV(View):
         # 获取加密的cookie
         # request.get_signed_cookie("password", salt="@#$!%^&")
         time = datetime.datetime.now()
-        print(time)
+        # print(time)
         demo = models.DemoModel(text="测试时间戳",str_time = time)
         demo.save()
         # safe参数默认为True，返回的必须是字典类型，否则报错

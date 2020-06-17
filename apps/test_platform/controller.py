@@ -12,8 +12,8 @@ from rest_framework import status
 
 # 模型
 from apps.test_platform import models
-from apps.test_platform.factory import SuitFactory
-from apps.test_platform.director_and_builder import TaskDirector
+from apps.test_platform.api_framework.factory import SuitFactory
+from apps.test_platform.api_framework.director import TaskDirector
 
 # 序列化
 from apps.common.serializers import query_set_list_serializers
@@ -183,16 +183,16 @@ class GetProjectByName(View):
 
     def get(self, request, *args, **kwargs):
         keyword_key = 'keyword'
-        print(request.META)
-        print(request.META.get('PATH_INFO'))
-        print(request.META.get('REQUEST_METHOD'))
-        print(request.META.get('QUERY_STRING'))
-        print(request.META.get('CONTENT_TYPE'))
+        # print(request.META)
+        # print(request.META.get('PATH_INFO'))
+        # print(request.META.get('REQUEST_METHOD'))
+        # print(request.META.get('QUERY_STRING'))
+        # print(request.META.get('CONTENT_TYPE'))
 
         # 判空
         if keyword_key in request.GET.dict():
             keyword = str(request.GET['keyword'])
-            print(keyword)
+            # print(keyword)
             project_list = models.Project.objects.filter(project_name__icontains=keyword).order_by('-create_time')
             # print(project_list.query)
             project_list = query_set_list_serializers(project_list)
