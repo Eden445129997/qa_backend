@@ -293,7 +293,7 @@ class CheckPoint(models.Model):
     # 关联的case_detail_id
     case_detail_id = models.CharField(verbose_name='所属的case_detail', max_length=16)
     # 检查对象（仅仅支持json校验）
-    point_object = models.CharField(verbose_name='检查对象，jsonpath表达式', max_length=64)
+    check_object = models.CharField(verbose_name='检查对象，jsonpath表达式', max_length=64)
     # 检查关系
     check_method = models.CharField(verbose_name='校验方法', max_length=16, choices=CHECK_METHOD)
     # 检查值

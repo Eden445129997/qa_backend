@@ -39,8 +39,7 @@ class ParametersBuilder(object):
         :return:
         """
         self.log.error('error_info：%s' % str(error_info))
-        for error in error_info:
-            self.result.get('error_list', []).append(error)
+        self.result.get('error_list', []).extend(error_info)
 
     def build(self, data, report_id):
         """

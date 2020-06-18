@@ -62,7 +62,7 @@ class DataFactory(object):
         :param case_detail_id:
         :return:
         """
-        check_point_list = [checkpoint for checkpoint in models.CheckPoint.objects.values('case_detail_id','point_object','check_method','check_value').filter(case_detail_id=case_detail_id, status=1)]
+        check_point_list = [checkpoint for checkpoint in models.CheckPoint.objects.values('case_detail_id','check_object','check_method','check_value').filter(case_detail_id=str(case_detail_id), status=1)]
         return check_point_list
 
 class SuitFactory(object):

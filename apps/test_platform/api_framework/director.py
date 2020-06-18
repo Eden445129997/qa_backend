@@ -5,6 +5,7 @@ import json, logging, datetime, threading # ,collections, sys, time
 from apps.test_platform.api_framework.http import HttpBuilder
 from apps.test_platform.api_framework.parameters import ParametersBuilder
 from apps.test_platform.api_framework.report import ReportBuilder
+from apps.test_platform.api_framework.checkpoint import CheckpointBuilder
 
 # 序列化
 # from apps.common.serializers import query_set_list_serializers
@@ -66,6 +67,7 @@ class TaskDirector(threading.Thread):
         self.http_builder = HttpBuilder()
         self.parameters_builder = ParametersBuilder()
         self.report_builder = ReportBuilder()
+        self.checkpoint_builder = CheckpointBuilder()
         # self.data_factory = factory.DataFactory()
 
         self.suit = suit
@@ -114,20 +116,18 @@ class TaskDirector(threading.Thread):
             headers = case.get('headers', '{}')
             data = case.get('data', '{}')
 
-            # todo：校验点逻辑字段
-            # checkpoint = test_task.get('checkpoint', '{}')
-
             # 参数化逻辑字段
             expression_status = case.get('expression_status', False)
 
             # mock逻辑
             mock_status = case.get('mock_status', False)
 
+            # 校验点
+            checkpoint_list = case.get('checkpoint_list', [])
+
             # 拼接成具体请求的url
             url = '%s%s' % (self.host, path)
 
-            # 开始计时
-            case_start_time = datetime.datetime.now()
             fail_times = 0
             error_list = []
 
@@ -147,11 +147,13 @@ class TaskDirector(threading.Thread):
                 # headers = json.loads(headers.replace('\'', '"'))
                 data = json.loads(data.replace('\'', '"'))
             except Exception as e:
-                self.report_builder.stop_buil_test_report(report_id)
                 self.log.error('json序列化失败:\n请求头：{}\n请求参数{}\n错误：{}'.format(headers, data, e))
                 error_list.append(e)
                 # break
                 # raise KeyboardInterrupt
+
+            # 开始计时
+            case_start_time = datetime.datetime.now()
 
             # 如果mock=true，则跳过发送请求，否则发送
             if mock_status:
@@ -163,11 +165,13 @@ class TaskDirector(threading.Thread):
                     reconnection_times=reconnection_times, timeout=wait_time
                 )
                 http = self.http_builder.send_http()
-                # todo:校验点
                 # 覆盖默认失败次数
                 fail_times = http.get('fail_times', 0)
                 response = http.get('response', {})
                 error_list.extend(http.get('error_list', []))
+
+                # 校验点
+                error_list.extend(self.checkpoint_builder.build(checkpoint_list,response).get('error_list'))
 
             # 结束计时
             case_stop_time = datetime.datetime.now()
@@ -189,19 +193,17 @@ class TaskDirector(threading.Thread):
                 stop_time=case_stop_time,
                 time_taken=case_time_taken
             )
-            # 假如有报错信息，跳出循环，不再执行
+            # 假如有报错信息，标记失败，跳出循环，不再执行
             if error_list:
+                self.report_builder.failse_buil_test_report(report_id)
                 break
 
         # 计时
         task_stop_time = datetime.datetime.now()
         task_time_taken = task_stop_time - task_start_time
 
-        # 失败的报告
-        if self.report_builder.task_status == TaskStatus.FINISH.value:
-            self.report_builder.failse_buil_test_report(report_id=report_id)
-        # 无异常的报告
-        else:
+        # 正常的报告
+        if self.report_builder.task_status == TaskStatus.EXECUTION.value:
             self.report_builder.stop_buil_test_report(report_id=report_id)
         self.log.info('report_id:%s\ntask_status:%s\ntest_task:%s\ntime_taken:%s'
                       % (report_id, self.report_builder.task_status, self.suit, task_time_taken))

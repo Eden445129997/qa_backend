@@ -80,7 +80,7 @@ class HttpBuilder(object):
             response = choice.get(self._method)(url=self._url, data=self._data, headers=self._headers,
                                                 timeout=self._timeout)
             # 二进制字符集编码设置
-            # response = response.content.decode("unicode_escape")
+            # response = response.content.encode('utf-8')
             response = response.text
             response = json.loads(response)
             self.result['response'] = response
