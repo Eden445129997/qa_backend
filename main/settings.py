@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     # drf框架（更加方便开发）
     "rest_framework",
     # demo服务
-    "apps.demo_service",
+    # "apps.demo_service",
     # 用户服务
     # "apps.user_service",
     # 接口请求服务

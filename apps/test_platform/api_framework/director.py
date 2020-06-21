@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import json, logging, datetime, threading # ,collections, sys, time
+import json, logging, datetime, threading  # ,collections, sys, time
 from apps.test_platform.api_framework.http import HttpBuilder
 from apps.test_platform.api_framework.parameters import ParametersBuilder
 from apps.test_platform.api_framework.report import ReportBuilder
@@ -40,7 +40,6 @@ mock如何处理？
 3、执行任务（正则、断言。后期优化做同步或者异步）
 4、数据写入到测试报告中
 """
-
 
 
 class TaskDirector(threading.Thread):
@@ -167,11 +166,11 @@ class TaskDirector(threading.Thread):
                 http = self.http_builder.send_http()
                 # 覆盖默认失败次数
                 fail_times = http.get('fail_times', 0)
-                response = http.get('response', {})
+                response = http.get('response', None)
                 error_list.extend(http.get('error_list', []))
 
                 # 校验点
-                error_list.extend(self.checkpoint_builder.build(checkpoint_list,response).get('error_list'))
+                error_list.extend(self.checkpoint_builder.build(checkpoint_list, response).get('error_list'))
 
             # 结束计时
             case_stop_time = datetime.datetime.now()
@@ -203,13 +202,10 @@ class TaskDirector(threading.Thread):
         task_time_taken = task_stop_time - task_start_time
 
         # 正常的报告
-        if self.report_builder.task_status == TaskStatus.EXECUTION.value:
-            self.report_builder.stop_buil_test_report(report_id=report_id)
+        if self.report_builder.task_status != TaskStatus.FAILSE.value:
+            self.report_builder.stop_buil_test_report(report_id=report_id, time_taken=task_time_taken)
         self.log.info('report_id:%s\ntask_status:%s\ntest_task:%s\ntime_taken:%s'
                       % (report_id, self.report_builder.task_status, self.suit, task_time_taken))
 
         # 线程中断代码，主动停止，用户抛出异常
         # raise KeyboardInterrupt
-
-
-

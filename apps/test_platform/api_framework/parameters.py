@@ -86,6 +86,7 @@ class ParametersBuilder(object):
                             # "$多人运动"
                             catch_data = self._regular_catch('\$.*?&', catch_list[i])[0][:-1]
                             catch_result_list = jsonpath.jsonpath(catch_index_response, catch_data)
+
                             # 如果抓不到数据
                             if catch_result_list:
                                 # 选择list中需要替换的参数

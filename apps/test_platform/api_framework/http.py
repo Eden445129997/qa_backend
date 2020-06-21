@@ -87,15 +87,18 @@ class HttpBuilder(object):
             # 失败次数 = 重连次数 - 剩余重连次数
             self.result['fail_times'] = self._reconnection_times - self._rest_reconnection_times
 
-        except Exception as e:
+        except TimeoutError as e:
             self.log.error(e)
-            self.result.get('error_list', []).append(e)
             # 剩余重连次数
             self._rest_reconnection_times = self._rest_reconnection_times - 1
             # 剩余重连次数 > 0，则递归
             if self._rest_reconnection_times:
                 time.sleep(1)
                 self.send_http()
+
+        except Exception as e:
+            self.log.error(e)
+            self.result.get('error_list', []).append(e)
 
         return self.result
 

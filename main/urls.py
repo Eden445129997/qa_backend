@@ -23,11 +23,6 @@ from django.urls import path,include
 urlpatterns = [
     # django自带后台管理
     path('admin/', admin.site.urls),
-    path('demo/',include("apps.demo_service.urls")),
+    # path('demo/',include("apps.demo_service.urls")),
     path('platform/',include("apps.test_platform.urls")),
-    # path('auth/',include("apps.user_service.urls")),
-    # path('auth/',include("apps.test_platform.urls")),
-    # path('db/',include("operate_db.urls")),
-    # path('',include("api_test.urls")),
-    # path('demo/',demo),
 ]

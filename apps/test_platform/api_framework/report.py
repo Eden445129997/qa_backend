@@ -82,15 +82,16 @@ class ReportBuilder(object):
         except Exception as e:
             runner_log.error(e)
 
-    def stop_buil_test_report(self, report_id):
+    def stop_buil_test_report(self, report_id, time_taken):
         """
         状态
-        执行状态：结束任务（枚举）
+        执行状态：完成任务（枚举）
         :return:
         """
         try:
             api_test_report = models.ApiTestReport.objects.get(id=report_id)
             api_test_report.task_status = TaskStatus.FINISH.value
+            api_test_report.time_taken = time_taken
             api_test_report.save()
             self._set_status(TaskStatus.FINISH.value)
 
