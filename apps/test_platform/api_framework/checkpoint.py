@@ -22,10 +22,10 @@ class CheckpointBuilder(object):
         }
         # 方法字典
         self._funcs_dict = {
-            CheckMethod.ASSERT_EQUAL.value: "_assertEqual",
-            CheckMethod.ASSERT_NOT_EQUAL.value: '_assertNotEqual',
-            CheckMethod.ASSERT_IN.value: '_assertIn',
-            CheckMethod.ASSERT_NOT_IN.value: '_assertNotIn'
+            CheckMethod.ASSERT_EQUAL.value: "_assert_equal",
+            CheckMethod.ASSERT_NOT_EQUAL.value: '_assert_not_equal',
+            CheckMethod.ASSERT_IN.value: '_assert_in',
+            CheckMethod.ASSERT_NOT_IN.value: '_assert_not_in'
         }
 
     def _error_record(self, *error_info):
@@ -81,13 +81,13 @@ class CheckpointBuilder(object):
 
     def _to_check(self, func, first, second):
         # 根据设置的枚举选择并获取方法
-        assertion_func = self._getAssertFunc(func)
+        assertion_func = self._get_assert_func(func)
         # 校验的对象都转成字符串
         first, second = str(first).replace(' ', ''), str(second).replace(' ', '')
         # 返回true或者false
         return assertion_func(first, second)
 
-    def _getAssertFunc(self, func):
+    def _get_assert_func(self, func):
         """根据字典获取对应的方法"""
         asserter = self._funcs_dict.get(func)
         if asserter is not None:
@@ -95,26 +95,26 @@ class CheckpointBuilder(object):
                 asserter = getattr(self, asserter)
             return asserter
         # 不是统一数据类型返回默认验证方法
-        return self._baseAssertEqual
+        return self._base_assert_equal
 
-    def _baseAssertEqual(self, first, second):
+    def _base_assert_equal(self, first, second):
         """默认校验方法"""
         if not first == second:
-            self.result.get('error_list', []).append(self._baseAssertEqual)
+            self.result.get('error_list', []).append(self._base_assert_equal)
 
-    def _assertEqual(self, first, second):
+    def _assert_equal(self, first, second):
         """判断值相等"""
         return first == second
 
-    def _assertNotEqual(self, first, second):
+    def _assert_not_equal(self, first, second):
         """判断值不想等"""
         return first != second
 
-    def _assertIn(self, first, second):
+    def _assert_in(self, first, second):
         """判断包含"""
         return second in first
 
-    def _assertNotIn(self, first, second):
+    def _assert_not_in(self, first, second):
         """判断不包含"""
         return second not in first
 

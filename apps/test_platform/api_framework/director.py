@@ -159,11 +159,16 @@ class TaskDirector(threading.Thread):
                 response = case.get('mock_response', '{}')
             # 发送http请求
             else:
+                # 构造http请求
                 self.http_builder.build_http(
                     method=method, url=url, headers=headers, data=data,
                     reconnection_times=reconnection_times, timeout=wait_time
                 )
+                # 发送http请求
                 http = self.http_builder.send_http()
+                # 重置http
+                self.http_builder.reset_http()
+
                 # 覆盖默认失败次数
                 fail_times = http.get('fail_times', 0)
                 response = http.get('response', None)

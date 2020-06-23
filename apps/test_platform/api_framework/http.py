@@ -11,35 +11,6 @@ runner_log = logging.getLogger('runner_log')
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-def _get(url, data, headers, timeout=10):
-    return requests.request(method='GET', url=url, params=data, headers=headers, verify=False, timeout=timeout)
-
-
-def _post(url, data, headers, timeout=10):
-    return requests.request(method='POST', url=url, json=data, headers=headers, verify=False, timeout=timeout)
-
-
-def _put(url, data, headers, timeout=10):
-    id = data.get("id", -1)
-    url = "%s%s" % (url, ("%s/" % id if url[-1] == "/" else "/%s/" % id))
-    return requests.request(method="PUT", url=url, data=data, headers=headers, verify=False, timeout=timeout)
-
-
-def _delete(url, data, headers, timeout=10):
-    id = data.get("id", -1)
-    url = "%s%s" % (url, ("%s/" % id if url[-1] == "/" else "/%s/" % id))
-    return requests.request(method="DELETE", url=url, headers=headers, verify=False, timeout=timeout)
-
-
-# 选择请求方式
-choice = {
-    'GET': _get,
-    'POST': _post,
-    'PUT': _put,
-    'DELETE': _delete,
-}
-
-
 class HttpBuilder(object):
     """
     http建造者
@@ -48,10 +19,18 @@ class HttpBuilder(object):
     log = runner_log
 
     def __init__(self):
+        # return字典
         self.result = {
             'response': None,
             'fail_times': 0,
             'error_list': []
+        }
+        # 请求方法字典
+        self._request_method_dict = {
+            'GET': '_get',
+            'POST': '_post',
+            'PUT': '_put',
+            'DELETE': '_delete',
         }
 
         self._url = None
@@ -63,6 +42,7 @@ class HttpBuilder(object):
         self._fail_times = None
 
     def build_http(self, method, url, data, headers, reconnection_times=3, timeout=10):
+        """构建参数"""
         self._method = method
         self._url = url
         self._headers = headers if isinstance(headers, dict) else {}
@@ -72,13 +52,44 @@ class HttpBuilder(object):
         self._timeout = timeout
         # print(self._url)
 
+    def reset_http(self):
+        """重置参数"""
+        self._method = None
+        self._url = None
+        self._headers = None
+        self._data = None
+        self._reconnection_times = None
+        self._rest_reconnection_times = None
+        self._timeout = None
+
     def send_http(self):
         """发送http请求"""
+
+        # 通过反射获取方法
+        request_func = self._get_request_func(self._method)
+
+        # 判空
+        if request_func == None:
+            self.result.get('error_list', []).append('url:{} & 不存在的方法:{}'.format(self._url, self._method))
+            return self.result
+
+        # 判空
+        if None in (
+                self._url, self._data, self._headers, self._reconnection_times, self._rest_reconnection_times,
+                self._timeout
+        ):
+            self.result.get('error_list', []).append('url:{} & 不存在的方法:{}'.format(self._url, self._method))
+            return self.result
+
         # 发送请求，失败则递归重复发送
         try:
             # print(self._url)
-            response = choice.get(self._method)(url=self._url, data=self._data, headers=self._headers,
-                                                timeout=self._timeout)
+            response = request_func(url=self._url, data=self._data, headers=self._headers,
+                                    timeout=self._timeout)
+            # 如果响应是空，则当作超时处理
+            if response == None:
+                raise TimeoutError
+
             # 二进制字符集编码设置
             # response = response.content.encode('utf-8')
             response = response.text
@@ -101,6 +112,37 @@ class HttpBuilder(object):
             self.result.get('error_list', []).append(e)
 
         return self.result
+
+    def _get_request_func(self, func_key):
+        """获取请求方法"""
+        func = self._request_method_dict.get(func_key)
+        if func is not None:
+            if isinstance(func, str):
+                func = getattr(self, func)
+            return func
+        return None
+
+    def _base_func(self, url, data, headers, timeout=10):
+        """默认方法（暂不考虑使用）"""
+        self.result.get('error_list', []).append(
+            'url:{} & 不存在的方法:{} & 请求头:{} & 超时:{}'.format(url, data, headers, timeout)
+        )
+
+    def _get(self, url, data, headers, timeout=10):
+        return requests.request(method='GET', url=url, params=data, headers=headers, verify=False, timeout=timeout)
+
+    def _post(self, url, data, headers, timeout=10):
+        return requests.request(method='POST', url=url, json=data, headers=headers, verify=False, timeout=timeout)
+
+    def _put(self, url, data, headers, timeout=10):
+        id = data.get("id", -1)
+        url = "%s%s" % (url, ("%s/" % id if url[-1] == "/" else "/%s/" % id))
+        return requests.request(method="PUT", url=url, data=data, headers=headers, verify=False, timeout=timeout)
+
+    def _delete(self, url, data, headers, timeout=10):
+        id = data.get("id", -1)
+        url = "%s%s" % (url, ("%s/" % id if url[-1] == "/" else "/%s/" % id))
+        return requests.request(method="DELETE", url=url, headers=headers, verify=False, timeout=timeout)
 
 
 if __name__ == '__main__':
