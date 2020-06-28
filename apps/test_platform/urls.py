@@ -11,7 +11,8 @@ urlpatterns = [
     path('logout/', controller.Logout.as_view(), name='退出登录demo，清除token'),
     path('test/', controller.Test.as_view(), name='测试回调'),
     path('getProjectByName/', controller.GetProjectByName.as_view(), name='根据project_name获取project'),
-    path('getTestPlanByName/', controller.GetTestPlanByName.as_view(), name='根据plan_name获取project'),
+    path('getTestPlanByName/', controller.GetTestPlanByName.as_view(), name='根据plan_name获取plan'),
+    path('getTestCaseByName/', controller.GetTestCaseByName.as_view(), name='根据case_name获取case'),
     path('runTestPlanById/', controller.RunTestPlanById.as_view(), name='根据测试计划id执行测试'),
     path('runTestCaseById/', controller.RunTestCaseById.as_view(), name='根据测试用例id执行测试')
 ]

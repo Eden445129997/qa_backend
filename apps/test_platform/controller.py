@@ -154,6 +154,31 @@ class RunTestCaseById(View):
             return JsonResponse({}, safe=False, json_dumps_params={'ensure_ascii': False},
                                 status=status.HTTP_400_BAD_REQUEST)
 
+class GetProjectByName(View):
+    """根据项目名获取数据，返回数组"""
+
+    def get(self, request, *args, **kwargs):
+        keyword_key = 'keyword'
+        # print(request.META)
+        # print(request.META.get('PATH_INFO'))
+        # print(request.META.get('REQUEST_METHOD'))
+        # print(request.META.get('QUERY_STRING'))
+        # print(request.META.get('CONTENT_TYPE'))
+
+        # 判空
+        if keyword_key in request.GET.dict():
+            keyword = str(request.GET['keyword'])
+            # print(keyword)
+            project_list = models.Project.objects.filter(project_name__icontains=keyword).order_by('-create_time')
+            # print(project_list.query)
+            project_list = query_set_list_serializers(project_list)
+
+            # safe参数默认为True，返回的必须是字典类型，否则报错
+            return JsonResponse(project_list, safe=False, json_dumps_params={'ensure_ascii': False},
+                                status=status.HTTP_200_OK)
+        else:
+            return JsonResponse([], safe=False, json_dumps_params={'ensure_ascii': False},
+                                status=status.HTTP_400_BAD_REQUEST)
 
 class GetTestPlanByName(View):
     """根据计划名获取数据，返回数组"""
@@ -177,23 +202,18 @@ class GetTestPlanByName(View):
             return JsonResponse([], safe=False, json_dumps_params={'ensure_ascii': False},
                                 status=status.HTTP_400_BAD_REQUEST)
 
-
-class GetProjectByName(View):
-    """根据项目名获取数据，返回数组"""
+class GetTestCaseByName(View):
+    """根据测试用例名称获取数据，返回数组"""
 
     def get(self, request, *args, **kwargs):
-        keyword_key = 'keyword'
+        keywordKey = 'keyword'
         # print(request.META)
-        # print(request.META.get('PATH_INFO'))
-        # print(request.META.get('REQUEST_METHOD'))
-        # print(request.META.get('QUERY_STRING'))
-        # print(request.META.get('CONTENT_TYPE'))
+        print(request.GET.dict())
 
         # 判空
-        if keyword_key in request.GET.dict():
+        if keywordKey in request.GET.dict():
             keyword = str(request.GET['keyword'])
-            # print(keyword)
-            project_list = models.Project.objects.filter(project_name__icontains=keyword).order_by('-create_time')
+            project_list = models.TestCase.objects.filter(case_name__icontains=keyword).order_by('-create_time')
             # print(project_list.query)
             project_list = query_set_list_serializers(project_list)
 

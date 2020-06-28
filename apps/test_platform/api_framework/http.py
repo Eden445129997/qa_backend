@@ -152,7 +152,3 @@ if __name__ == '__main__':
     data = {
         'id': 1
     }
-    try:
-        print(choice.get("GET")('http://localhost:9998/platform/ProjectViews/', data, headers).text)
-    except ConnectionError:
-        pass
