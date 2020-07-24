@@ -19,15 +19,15 @@ urlpatterns = [
 
 # Viewset视图集
 router = DefaultRouter()
-router.register("ProjectViews", controller.ProjectViews, basename="ProjectViews")
-router.register("HostViews", controller.HostViews, basename="HostViews")
-router.register("BusiModelViews", controller.BusiModelViews, basename="BusiModelViews")
-router.register("InterfaceViews", controller.InterfaceViews, basename="InterfaceViews")
-router.register("TestPlanViews", controller.TestPlanViews, basename="TestPlanViews")
-router.register("TestCaseViews", controller.TestCaseViews, basename="TestCaseViews")
-router.register("TestCaseDetailViews", controller.TestCaseDetailViews, basename="TestCaseDetailViews")
-router.register("ApiTestReportViews", controller.ApiTestReportViews, basename="ApiTestReportViews")
-router.register("ApiTestReportDetailViews", controller.ApiTestReportDetailViews, basename="ApiTestReportDetailViews")
+router.register("project", controller.ProjectViews, basename="project")
+router.register("host", controller.HostViews, basename="host")
+router.register("busiModel", controller.BusiModelViews, basename="busiModel")
+router.register("interface", controller.InterfaceViews, basename="interface")
+router.register("testPlan", controller.TestPlanViews, basename="testPlan")
+router.register("testCase", controller.TestCaseViews, basename="testCase")
+router.register("testCaseDetail", controller.TestCaseDetailViews, basename="testCaseDetail")
+router.register("apiTestReport", controller.ApiTestReportViews, basename="apiTestReport")
+router.register("apiTestReportDetail", controller.ApiTestReportDetailViews, basename="apiTestReportDetail")
 
 # 视图集导入到url路由dict中
 urlpatterns += router.urls

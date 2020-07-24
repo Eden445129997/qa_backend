@@ -16,3 +16,4 @@ itsdangerous
 elasticsearch
 PyMySQL
 pillow
+sqlalchemy

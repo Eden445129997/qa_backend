@@ -67,7 +67,7 @@ class Host(models.Model):
     # 域名id
     id = models.AutoField(primary_key=True)
     # 外键—关联工程表
-    project_id = models.CharField(verbose_name='所属项目id', max_length=16)
+    project_id = models.IntegerField(verbose_name='所属项目id')
     # 环境名
     host_name = models.CharField(verbose_name='域名昵称', max_length=32)
     # host地址
@@ -100,11 +100,9 @@ class BusiModel(models.Model):
     # 模块id
     id = models.AutoField(primary_key=True)
     # 外键—关联工程表
-    project_id = models.CharField(verbose_name='所属项目id', max_length=16)
+    project_id = models.IntegerField(verbose_name='所属项目id')
     # 业务名
     busi_name = models.CharField(verbose_name="业务名称", max_length=32)
-    # 接口总数
-    total = models.IntegerField(verbose_name="接口总数", default=0)
     # 模块描述
     text = models.CharField(verbose_name="描述", max_length=255, blank=True, null=True)
     # 状态（启用/不启用）
@@ -133,9 +131,9 @@ class Interface(models.Model):
     # 接口id
     id = models.AutoField(primary_key=True)
     # 工程id
-    project_id = models.CharField(verbose_name='所属项目id', max_length=16)
-    # 外键—关联模块表
-    busi_id = models.CharField(verbose_name='所属业务id', max_length=16)
+    project_id = models.IntegerField(verbose_name='所属项目id', default=0, null=True)
+    # 外键—关联模块表（在考虑是否删除）
+    busi_id = models.IntegerField(verbose_name='所属业务id', null=True)
     # 接口名称
     api_name = models.CharField(verbose_name="接口名称", max_length=32)
     # 请求方式—1、get2、post3、put4、delete
@@ -172,7 +170,7 @@ class TestPlan(models.Model):
     # 计划id
     id = models.AutoField(primary_key=True)
     # 外键—关联工程表
-    project_id = models.CharField(verbose_name='所属项目id', max_length=16)
+    project_id = models.IntegerField(verbose_name='所属项目id')
     # 计划名称
     plan_name = models.CharField(verbose_name="测试计划", max_length=32)
     # 计划创建人
@@ -204,8 +202,8 @@ class TestCase(models.Model):
     """
     # 用例id
     id = models.AutoField(primary_key=True)
-    # 外键—关联工程表
-    plan_id = models.CharField(verbose_name='所属计划id', max_length=16)
+    # 外键—关联计划表
+    plan_id = models.IntegerField(verbose_name='所属计划id')
     # 用例名称
     case_name = models.CharField(verbose_name="用例名称", max_length=32)
     # 排序
@@ -240,9 +238,9 @@ class TestCaseDetail(models.Model):
     # 用例id
     id = models.AutoField(primary_key=True)
     # 外键—关联用例表
-    case_id = models.CharField(verbose_name='所属用例id', max_length=16)
+    case_id = models.IntegerField(verbose_name='所属用例id')
     # 请求的path
-    interface_id = models.CharField(verbose_name='请求资源地址', max_length=16)
+    interface_id = models.IntegerField(verbose_name='请求资源地址')
     # 重连次数
     reconnection_times = models.IntegerField(verbose_name="重连次数", default=3)
     # 超时设置
@@ -291,7 +289,7 @@ class CheckPoint(models.Model):
     """
     id = models.AutoField(primary_key=True)
     # 关联的case_detail_id
-    case_detail_id = models.CharField(verbose_name='所属的case_detail', max_length=16)
+    case_detail_id = models.IntegerField(verbose_name='所属的case_detail')
     # 检查对象（仅仅支持json校验）
     check_object = models.CharField(verbose_name='检查对象，jsonpath表达式', max_length=64)
     # 检查关系
@@ -365,9 +363,9 @@ class ApiTestReportDetail(models.Model):
     """
     id = models.AutoField(primary_key=True)
     # 外键关联用例id
-    case_id = models.CharField(verbose_name='所属用例id', max_length=16)
+    case_id = models.IntegerField(verbose_name='所属用例id')
     # 外键关联报告id
-    report_id = models.CharField(verbose_name='所属报告id', max_length=16)
+    report_id = models.IntegerField(verbose_name='所属报告id')
     # 接口别名
     api_name = models.CharField(verbose_name="接口名称", null=True, max_length=32)
     # 请求的url

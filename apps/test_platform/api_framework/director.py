@@ -96,6 +96,8 @@ class TaskDirector(threading.Thread):
         # print(self.test_task)
         # print(report_id)
 
+        # print(self.suit)
+
         # 执行任务
         for case in self.suit:
             # print(case)

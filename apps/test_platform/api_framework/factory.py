@@ -90,6 +90,7 @@ class SuitFactory(object):
 
         # 根据计划检索测试用例
         for case_id in query_set_case_list:
+            # print(case_id)
             # 检索用例节点
             test_case_detail_list = self.data_factory.get_case_detail_list_by_case_id(case_id)
             # 补充接口数据和校验点数据

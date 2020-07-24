@@ -110,6 +110,7 @@ class RunTestPlanById(View):
         :return:
         """
         request_body = bytes.decode(request.body)
+        # print(request_body)
         plan_dict = json.loads(request_body)
 
         plan_id = plan_dict.get('id', None)
@@ -208,7 +209,7 @@ class GetTestCaseByName(View):
     def get(self, request, *args, **kwargs):
         keywordKey = 'keyword'
         # print(request.META)
-        print(request.GET.dict())
+        # print(request.GET.dict())
 
         # 判空
         if keywordKey in request.GET.dict():

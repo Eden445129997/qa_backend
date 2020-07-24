@@ -30,6 +30,7 @@ def host():
 
     return ip
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # LOGS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -43,7 +44,7 @@ SECRET_KEY = '%gv+a$_$rd9bof0(*sc4p!^(1ydra!h3l21+l@(bug$4j7@0nu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [host(),"127.0.0.1","localhost"]
+ALLOWED_HOSTS = [host(), "127.0.0.1", "localhost"]
 
 # Application definition
 # 添加APP
@@ -138,7 +139,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'main.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 # pip install mysqlclient
@@ -164,19 +164,19 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "test_platform",
-        "USER":"root",
-        "PASSWORD":"root",
-        "HOST":"111.229.54.5",
-        "PORT":3306,
-        "TEST":{
-            "CHARSET":"utf8",
-            "COLLATION":"utf8_general_ci"
+        "USER": "root",
+        "PASSWORD": "root",
+        "HOST": "111.229.54.5",
+        "PORT": 3306,
+        "TEST": {
+            "CHARSET": "utf8",
+            "COLLATION": "utf8_general_ci"
         }
     }
 }
 
 # 日志地址
-LOG_PATH = os.path.join(BASE_DIR, 'logs/')
+LOG_PATH = os.path.join(BASE_DIR, 'logs')
 # 如果不存该地址则创建
 if not os.path.join(LOG_PATH):
     os.mkdir(LOG_PATH)
@@ -257,8 +257,6 @@ LOGGING = {
     }
 }
 
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -276,7 +274,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
