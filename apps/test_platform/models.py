@@ -42,11 +42,13 @@ class Project(models.Model):
     # 项目负责人
     project_leader = models.CharField("负责人", max_length=64)
     # 状态（启用/不启用）
-    status = models.BooleanField(verbose_name="状态（1启用，2不启用）", default=True)
+    is_status = models.BooleanField(verbose_name="状态（1启用，2不启用）", default=True)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
@@ -75,11 +77,13 @@ class Host(models.Model):
     # 环境描述
     text = models.CharField(verbose_name="描述", max_length=255, blank=True, null=True)
     # 状态：0不启用 1启用
-    status = models.BooleanField(verbose_name='状态：0不启用 1启用', default=True)
+    is_status = models.BooleanField(verbose_name='状态：0不启用 1启用', default=True)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
@@ -106,11 +110,13 @@ class BusiModel(models.Model):
     # 模块描述
     text = models.CharField(verbose_name="描述", max_length=255, blank=True, null=True)
     # 状态（启用/不启用）
-    status = models.BooleanField(verbose_name="状态（1启用,0不启用）", default=True)
+    is_status = models.BooleanField(verbose_name="状态（1启用,0不启用）", default=True)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
@@ -145,11 +151,13 @@ class Interface(models.Model):
     # 接口描述
     text = models.CharField(verbose_name="描述", max_length=255, blank=True, null=True)
     # 状态（0 不启用，1 启用）
-    status = models.BooleanField(verbose_name="状态", default=True)
+    is_status = models.BooleanField(verbose_name="状态", default=True)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
@@ -178,11 +186,13 @@ class TestPlan(models.Model):
     # 计划描述
     text = models.CharField(verbose_name="描述", max_length=255, blank=True, null=True)
     # 状态（启用/不启用）如果不启用，页面上则看不到
-    status = models.BooleanField(verbose_name="状态（1启用，2不启用）—如果不启用，页面上则看不到", default=True)
+    is_status = models.BooleanField(verbose_name="状态（1启用，2不启用）—如果不启用，页面上则看不到", default=True)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
@@ -211,11 +221,13 @@ class TestCase(models.Model):
     # 用例描述
     text = models.CharField(verbose_name="描述", max_length=255, blank=True, null=True)
     # 状态（启用/不启用）如果不启用，则执行测试计划的时候，该用例不会被执行
-    status = models.BooleanField(verbose_name="状态（启用/不启用）如果不启用，则执行测试计划的时候，该用例不会被执行", default=True)
+    is_status = models.BooleanField(verbose_name="状态（启用/不启用）如果不启用，则执行测试计划的时候，该用例不会被执行", default=True)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
@@ -247,24 +259,27 @@ class TestCaseDetail(models.Model):
     wait_time = models.IntegerField(verbose_name="最长等待时长", default=10)
     # 请求头
     headers = models.TextField(verbose_name="请求头", default="{}")
+    parames = models.TextField(verbose_name="请求头入参", default="{}")
     # 入参
-    data = models.TextField(verbose_name="请求入参", default="{}")
+    http_body = models.TextField(verbose_name="请求体入参", default="{}")
     # mock状态（0 不启用mock，1启用mock）
-    mock_status = models.BooleanField(verbose_name="mock状态（0 不启用mock，1启用mock）", default=False)
+    is_mock = models.BooleanField(verbose_name="mock状态（0 不启用mock，1启用mock）", default=False)
     # mock返回
     mock_response = models.TextField(verbose_name="mock的返回值", default="{}")
     # 表达式状态
-    expression_status = models.BooleanField(verbose_name="表达式状态（0 不启用jsonpath捕捉参数化，1 启用jsonpath捕捉参数化）", default=False)
+    is_expression = models.BooleanField(verbose_name="表达式状态（0 不启用jsonpath捕捉参数化，1 启用jsonpath捕捉参数化）", default=False)
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=255, blank=True, null=True)
     # 排序顺序
     sort = models.IntegerField(verbose_name="用例排序顺序", default=0)
     # 状态（0 不启用，1启用）
-    status = models.BooleanField(verbose_name="状态", default=True)
+    is_status = models.BooleanField(verbose_name="状态", default=True)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
@@ -299,11 +314,13 @@ class CheckPoint(models.Model):
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=255, blank=True, null=True)
     # 状态（0 不启用，1启用）
-    status = models.BooleanField(verbose_name="状态", default=True)
+    is_status = models.BooleanField(verbose_name="状态", default=True)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
@@ -339,6 +356,10 @@ class ApiTestReport(models.Model):
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 状态（0 不启用，1启用）
+    is_status = models.BooleanField(verbose_name="状态", default=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     # # 开始时间时间戳（用例执行时间，结束时计算并返回写入excute_time)
     # start_time_stamp = models.BigIntegerField(verbose_name="开始时间戳")
@@ -394,6 +415,10 @@ class ApiTestReportDetail(models.Model):
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
     update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
+    # 状态（0 不启用，1启用）
+    is_status = models.BooleanField(verbose_name="状态", default=True)
+    # 逻辑删除
+    is_delete = models.BooleanField(verbose_name="状态（1删除，0未删除）", default=False)
 
     objects = models.Manager()
 
