@@ -259,9 +259,10 @@ class TestCaseDetail(models.Model):
     wait_time = models.IntegerField(verbose_name="最长等待时长", default=10)
     # 请求头
     headers = models.TextField(verbose_name="请求头", default="{}")
+    # url后的请求参数
     parames = models.TextField(verbose_name="请求头入参", default="{}")
     # 入参
-    http_body = models.TextField(verbose_name="请求体入参", default="{}")
+    data = models.TextField(verbose_name="请求体入参", default="{}")
     # mock状态（0 不启用mock，1启用mock）
     is_mock = models.BooleanField(verbose_name="mock状态（0 不启用mock，1启用mock）", default=False)
     # mock返回
