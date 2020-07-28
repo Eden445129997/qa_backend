@@ -137,9 +137,9 @@ class Interface(models.Model):
     # 接口id
     id = models.AutoField(primary_key=True)
     # 工程id
-    project_id = models.IntegerField(verbose_name='所属项目id', default=0, null=True)
+    project_id = models.IntegerField(verbose_name='所属项目id', blank=True, null=True)
     # 外键—关联模块表（在考虑是否删除）
-    busi_id = models.IntegerField(verbose_name='所属业务id', null=True)
+    busi_id = models.IntegerField(verbose_name='所属业务id', blank=True, null=True)
     # 接口名称
     api_name = models.CharField(verbose_name="接口名称", max_length=32)
     # 请求方式—1、get2、post3、put4、delete
@@ -178,7 +178,7 @@ class TestPlan(models.Model):
     # 计划id
     id = models.AutoField(primary_key=True)
     # 外键—关联工程表
-    project_id = models.IntegerField(verbose_name='所属项目id')
+    project_id = models.IntegerField(verbose_name='所属项目id', blank=True, null=True)
     # 计划名称
     plan_name = models.CharField(verbose_name="测试计划", max_length=32)
     # 计划创建人
@@ -385,7 +385,7 @@ class ApiTestReportDetail(models.Model):
     """
     id = models.AutoField(primary_key=True)
     # 外键关联用例id
-    case_id = models.IntegerField(verbose_name='所属用例id')
+    case_id = models.IntegerField(verbose_name='所属用例id', blank=True, null=True)
     # 外键关联报告id
     report_id = models.IntegerField(verbose_name='所属报告id')
     # 接口别名
