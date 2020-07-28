@@ -182,7 +182,7 @@ class TestPlan(models.Model):
     # 计划名称
     plan_name = models.CharField(verbose_name="测试计划", max_length=32)
     # 计划创建人
-    creater = models.CharField(verbose_name="计划创建者", max_length=8)
+    # creater = models.CharField(verbose_name="计划创建者", max_length=8)
     # 计划描述
     text = models.CharField(verbose_name="描述", max_length=255, blank=True, null=True)
     # 状态（启用/不启用）如果不启用，页面上则看不到
