@@ -1,3 +1,4 @@
+-i http://pypi.doubanio.com/simple/
 django==3.0.6
 django-redis
 djangorestframework

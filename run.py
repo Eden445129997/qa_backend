@@ -17,7 +17,7 @@ def inspectdb(db_models):
     djangoProjectPath = os.path.dirname(os.path.abspath(__file__))
     os.system("cd %s"%djangoProjectPath)
     # 创建模板文件
-    os.system("python3 manage.py inspectdb > %s/models.py"%db_models)
+    os.system("python3 manage.py inspectdb > %s/domain.py"%db_models)
 
 def synchronized_db():
     """同步数据库和表结构"""
@@ -44,9 +44,13 @@ def run():
 if __name__ == '__main__':
     # start_app("batch_processing_service")
     # inspectdb("api_project")
-    synchronized_db()
-    # run()
+    # synchronized_db()
+    run()
 
+    # 编码
+    # aaa = "哈哈哈".encode("utf-8")
+    # aaa = aaa.decode()
+    # print(len(aaa))
     # Create your tests here.
 
 

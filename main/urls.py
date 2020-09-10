@@ -13,16 +13,47 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import json
 from django.contrib import admin
 from django.urls import path,include
-# from django.http import HttpResponse
+from django.views import View
+from django.http import JsonResponse  # ,HttpResponse
 
-# def demo(request):
+# def test_api(request):
 #     return HttpResponse("test_demo")
 
+def test_api_func(request, *args, **kwargs):
+    # for i in request.META:
+    #     print(i,request.META.get(i))
+    # print("GET:", request.GET.dict())
+    # print("POST:", request.POST.dict())
+    body = bytes.decode(request.body)
+    # body2 = json.loads(body)
+
+    data = {
+        'path': request.META.get('PATH_INFO'),
+        'method': request.META.get('REQUEST_METHOD'),
+        'contentType': request.META.get('CONTENT_TYPE'),
+        'queryString': request.META.get('QUERY_STRING'),
+        'queryJson': request.GET.dict(),
+        'body': body,
+    }
+    return JsonResponse(data, safe=False, json_dumps_params={'ensure_ascii': False})
+
+class test_api(View):
+    def get(self, request, *args, **kwargs):
+        return test_api_func(request, *args, **kwargs)
+    def post(self, request, *args, **kwargs):
+        return test_api_func(request, *args, **kwargs)
+    def put(self, request, *args, **kwargs):
+        return test_api_func(request, *args, **kwargs)
+    def delete(self, request, *args, **kwargs):
+        return test_api_func(request, *args, **kwargs)
+
 urlpatterns = [
+    path('testapi/', test_api.as_view()),
     # django自带后台管理
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     # path('demo/',include("apps.demo_service.urls")),
-    path('platform/',include("apps.test_platform.urls")),
+    path('platform/',include("apps.qa_platform.urls")),
 ]

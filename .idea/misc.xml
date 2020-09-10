@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/apps/demo_service/migrations/0001_initial.py" />
-    <file url="file://$PROJECT_DIR$/apps/demo_service/migrations/0002_childemomodel.py" />
-    <file url="file://$PROJECT_DIR$/apps/demo_service/migrations/0003_demomodel_str_time.py" />
-    <file url="file://$PROJECT_DIR$/apps/demo_service/migrations/0004_auto_20200607_1109.py" />
-    <file url="file://$PROJECT_DIR$/apps/demo_service/migrations/0005_auto_20200607_1121.py" />
-  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.6 (djangoWebServer)" project-jdk-type="Python SDK" />
   <component name="PyCharmProfessionalAdvertiser">
     <option name="shown" value="true" />
+  </component>
+  <component name="PythonCompatibilityInspectionAdvertiser">
+    <option name="version" value="3" />
   </component>
 </project>

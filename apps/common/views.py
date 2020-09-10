@@ -1,94 +1,49 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from rest_framework.viewsets import ModelViewSet
-# from rest_framework.response import Response
-# from rest_framework import status
-# from rest_framework.controller import
+from rest_framework import status
+from rest_framework import viewsets
+from apps.common.custom_json_response import JsonResponse
 
-# 这个类主要的作用就是重写rest_framework的viewset类的没有返回code的弊端（前端开发不好做判断处理）
 
-class ReturnMsg:
-    def __init__(self,code=1,msg="success",errors=None,data=None):
-        self.code = code
-        self.msg = msg
-        self.errors = {} if errors is None else errors
-        self.data = data if data is None else data
+class CustomModelViewSet(viewsets.ModelViewSet):
 
-    def dict(self):
-        return {
-            "code": self.code,
-            "msg": self.msg,
-            "errors": self.errors,
-            "data": self.data
-        }
-
-class CustomModelViewSet(ModelViewSet):
     def create(self, request, *args, **kwargs):
-        response = super().create(request, *args, **kwargs)
-        print("create")
-        return Response(ReturnMsg(data=response.data).dict(),status=response.status_code)
-    def retrieve(self, request, *args, **kwargs):
-        response = super().retrieve(request, *args, **kwargs)
-        print("retrieve")
-        return Response(ReturnMsg(data=response.data).dict(),status=response.status_code)
-    def update(self, request, *args, **kwargs):
-        response = super().update(request, *args, **kwargs)
-        print("update")
-        return Response(ReturnMsg(data=response.data).dict(),status=response.status_code)
-    def destroy(self, request, *args, **kwargs):
-        response = super().destroy(request, *args, **kwargs)
-        print("destroy")
-        return Response(ReturnMsg(data=response.data).dict(),status=response.status_code)
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        return JsonResponse(data=serializer.data, msg="success", code=201, status=status.HTTP_201_CREATED)
+
     def list(self, request, *args, **kwargs):
-        response = super().list(request, *args, **kwargs)
-        print("list")
-        return Response(ReturnMsg(data=response.data).dict(),status=response.status_code)
+        queryset = self.filter_queryset(self.get_queryset())
+        page = self.paginate_queryset(queryset)
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+            return self.get_paginated_response(serializer.data)
 
+        serializer = self.get_serializer(queryset, many=True)
+        return JsonResponse(data=serializer.data, code=200, msg="success", status=status.HTTP_200_OK)
 
-# 配置REST_FRAMEWORK的settings.py中的DEFAULTS字典
-# 找到EXCEPTION_HANDLER字段
-# 替换rest_framework.controller.exception_handler成为下面这个
-from django.core.exceptions import PermissionDenied
-from django.db import connection, transaction
-from django.http import Http404
-from rest_framework import exceptions
-from rest_framework.response import Response
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        return JsonResponse(data=serializer.data, code=200, msg="success", status=status.HTTP_200_OK)
 
+    def update(self, request, *args, **kwargs):
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
 
-def set_rollback():
-    atomic_requests = connection.settings_dict.get('ATOMIC_REQUESTS', False)
-    if atomic_requests and connection.in_atomic_block:
-        transaction.set_rollback(True)
+        if getattr(instance, '_prefetched_objects_cache', None):
+            # If 'prefetch_related' has been applied to a queryset, we need to
+            # forcibly invalidate the prefetch cache on the instance.
+            instance._prefetched_objects_cache = {}
 
-def exception_handler(exc, context):
-    """
-    Returns the response that should be used for any given exception.
+        return JsonResponse(data=serializer.data, msg="success", code=200, status=status.HTTP_200_OK)
 
-    By default we handle the REST framework `APIException`, and also
-    Django's built-in `Http404` and `PermissionDenied` exceptions.
-
-    Any unhandled exceptions may return `None`, which will cause a 500 error
-    to be raised.
-    """
-    if isinstance(exc, Http404):
-        exc = exceptions.NotFound()
-    elif isinstance(exc, PermissionDenied):
-        exc = exceptions.PermissionDenied()
-
-    if isinstance(exc, exceptions.APIException):
-        headers = {}
-        if getattr(exc, 'auth_header', None):
-            headers['WWW-Authenticate'] = exc.auth_header
-        if getattr(exc, 'wait', None):
-            headers['Retry-After'] = '%d' % exc.wait
-
-        if isinstance(exc.detail, (list, dict)):
-            data = exc.detail
-        else:
-            data = {'detail': exc.detail}
-
-        set_rollback()
-        return Response(data, status=exc.status_code, headers=headers)
-
-    return None
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return JsonResponse(data=[], code=204, msg="delete resource success", status=status.HTTP_204_NO_CONTENT)

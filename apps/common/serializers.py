@@ -16,23 +16,25 @@ def query_set_list_serializers(query_set_class):
     """ 目的：方便前端开发，接口风格统一如viewset
         自定义统一rest_framework接口风格创建的func
         入参传入query_set的类
-        原数据："[{\"model\": \"test_platform.project\", \"pk\": 1, \"fields\": {\"project_name\": \"\\u6572\\u9177\", \"text\": \"\\u9879\\u76eetext\", \"project_leader\": \"Eden\", \"status\": true, \"create_time\": \"2020-04-30T17:36:06Z\", \"update_time\": \"2020-04-30T17:36:09Z\"}}, {\"model\": \"test_platform.project\", \"pk\": 3, \"fields\": {\"project_name\": \"\\u6572\\u725b\", \"text\": \"\\u9879\\u76eetext\", \"project_leader\": \"Eden\", \"status\": true, \"create_time\": \"2020-05-09T11:12:03Z\", \"update_time\": \"2020-05-09T11:12:06Z\"}}]"
+        原数据："[{\"model\": \"qa_platform.project\", \"pk\": 1, \"fields\": {\"project_name\": \"\\u6572\\u9177\", \"text\": \"\\u9879\\u76eetext\", \"project_leader\": \"Eden\", \"status\": true, \"create_time\": \"2020-04-30T17:36:06Z\", \"update_time\": \"2020-04-30T17:36:09Z\"}}, {\"model\": \"qa_platform.project\", \"pk\": 3, \"fields\": {\"project_name\": \"\\u6572\\u725b\", \"text\": \"\\u9879\\u76eetext\", \"project_leader\": \"Eden\", \"status\": true, \"create_time\": \"2020-05-09T11:12:03Z\", \"update_time\": \"2020-05-09T11:12:06Z\"}}]"
     """
+
     second_list = []
     create_time = 'create_time'
     update_time = 'update_time'
+
     first_list = serializers.serialize("python", query_set_class)
 
-    for list_json in first_list:
-        fields = list_json.get("fields")
+    for list_dict in first_list:
+        fields_dict = list_dict.get("fields")
         # id缺失处理
-        fields['id'] = list_json.get('pk')
+        fields_dict['id'] = list_dict.get('pk')
         # 时间单独格式化处理
-        if create_time in fields.keys():
-            fields[create_time] = fields[create_time].strftime('%Y-%m-%d')
-        if update_time in fields.keys():
-            fields[update_time] = fields[update_time].strftime('%Y-%m-%d')
-        second_list.append(fields)
+        if create_time in fields_dict.keys():
+            fields_dict[create_time] = fields_dict[create_time].strftime('%Y-%m-%d')
+        if update_time in fields_dict.keys():
+            fields_dict[update_time] = fields_dict[update_time].strftime('%Y-%m-%d')
+        second_list.append(fields_dict)
     # print(type(second_list))
     return second_list
 
