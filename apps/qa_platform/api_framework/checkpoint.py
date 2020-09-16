@@ -3,7 +3,7 @@
 
 import logging, re, json, jsonpath
 
-from apps.qa_platform.enumeration import CheckMethod
+from apps.qa_platform.enumeration import AssertMethod
 
 # 日志
 runner_log = logging.getLogger('runner_log')
@@ -22,10 +22,10 @@ class CheckpointBuilder(object):
         }
         # 方法字典
         self._funcs_dict = {
-            CheckMethod.ASSERT_EQUAL.value: "_assert_equal",
-            CheckMethod.ASSERT_NOT_EQUAL.value: '_assert_not_equal',
-            CheckMethod.ASSERT_IN.value: '_assert_in',
-            CheckMethod.ASSERT_NOT_IN.value: '_assert_not_in'
+            AssertMethod.ASSERT_EQUAL.value: "_assert_equal",
+            AssertMethod.ASSERT_NOT_EQUAL.value: '_assert_not_equal',
+            AssertMethod.ASSERT_IN.value: '_assert_in',
+            AssertMethod.ASSERT_NOT_IN.value: '_assert_not_in'
         }
 
     def _error_record(self, *error_info):
@@ -83,7 +83,10 @@ class CheckpointBuilder(object):
         # 根据设置的枚举选择并获取方法
         assertion_func = self._get_assert_func(func)
         # 校验的对象都转成字符串
-        first, second = str(first).replace(' ', ''), str(second).replace(' ', '')
+        # first, second = str(first).replace(' ', ''), str(second).replace(' ', '')
+        first, second = ('%s'%first).strip(), str(second).replace(' ', '')
+
+
         # 返回true或者false
         return assertion_func(first, second)
 

@@ -61,8 +61,6 @@ INSTALLED_APPS = [
     "rest_framework",
     # demo服务
     # "apps.demo_service",
-    # 用户服务
-    # "apps.user_service",
     # 测试服务
     "apps.qa_platform",
 ]
@@ -244,8 +242,8 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console'],
-            'level': 'ERROR',
-            'propagate': False
+            'level': 'DEBUG',
+            'propagate': True
         },
         'web_log': {
             'handlers': ['restful_api'],

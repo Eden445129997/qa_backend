@@ -289,14 +289,16 @@ class ApiAssert(models.Model):
     断言
     """
     id = models.AutoField(primary_key=True)
-    # 关联的case_model_id
-    api_model_id = models.IntegerField(verbose_name='所属的case_model')
-    # 检查对象（仅仅支持json校验）
-    assert_object = models.CharField(verbose_name='检查对象，jsonpath表达式', max_length=64)
+    # 关联的tb_api_case_data : id
+    data_id = models.IntegerField(verbose_name='所属数据id')
+    # 关联的tb_api_case_model : id
+    model_id = models.IntegerField(verbose_name='关联模型id')
     # 检查关系
     assert_method = models.CharField(verbose_name='校验方法', max_length=16, choices=CHECK_METHOD)
+    # 检查对象（仅仅支持json校验）
+    assert_obj = models.CharField(verbose_name='检查对象，jsonpath表达式', max_length=64)
     # 检查值
-    assert_value = models.TextField(verbose_name="校验的比对值")
+    assert_val = models.TextField(verbose_name="校验的比对值")
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=64, blank=True, null=True)
     # 状态（启用/不启用）

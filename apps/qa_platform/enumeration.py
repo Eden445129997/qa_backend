@@ -87,7 +87,7 @@ EVENT_API_STUTAS = (
 )
 
 
-class CheckMethod(Enum):
+class AssertMethod(Enum):
     """检查方法"""
     ASSERT_EQUAL = 'assertEqual'
     ASSERT_NOT_EQUAL = 'assertNotEqual'
@@ -96,10 +96,10 @@ class CheckMethod(Enum):
 
 
 CHECK_METHOD = (
-    (CheckMethod.ASSERT_EQUAL.value, CheckMethod.ASSERT_EQUAL.value),
-    (CheckMethod.ASSERT_NOT_EQUAL.value, CheckMethod.ASSERT_NOT_EQUAL.value),
-    (CheckMethod.ASSERT_IN.value, CheckMethod.ASSERT_IN.value),
-    (CheckMethod.ASSERT_NOT_IN.value, CheckMethod.ASSERT_NOT_IN.value)
+    (AssertMethod.ASSERT_EQUAL.value, AssertMethod.ASSERT_EQUAL.value),
+    (AssertMethod.ASSERT_NOT_EQUAL.value, AssertMethod.ASSERT_NOT_EQUAL.value),
+    (AssertMethod.ASSERT_IN.value, AssertMethod.ASSERT_IN.value),
+    (AssertMethod.ASSERT_NOT_IN.value, AssertMethod.ASSERT_NOT_IN.value)
 )
 
 if __name__ == '__main__':

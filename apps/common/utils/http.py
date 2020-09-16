@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import urllib3, requests
+import urllib3
+
+import requests
 
 # https警告解除
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)

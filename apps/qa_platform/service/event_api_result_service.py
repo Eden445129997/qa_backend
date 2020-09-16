@@ -12,26 +12,12 @@ from apps.qa_platform.models.dto import (
 )
 from apps.qa_platform.enumeration import EventApiStatus
 from apps.qa_platform.service.event_api_suit_service import (
-    ApiSuitChainOfResponsibility, case_id_list_by_plan_id, get_test_suit_by_case_id
+    ApiSuitChainOfResponsibility, case_id_list_by_plan_id
 )
 from apps.qa_platform.service.event_api_record_service import ApiRunChainOfResponsibility
 
 # 日志
 runner_log = logging.getLogger('runner_log')
-
-
-def test():
-    """事件任务有4中状态"""
-    # 方案1：使用生成器维护这四种状态，使用迭代器处理每一个用例节点
-    # 生成器：使用while循环执行四种状态的return
-    # 迭代器（两层迭代器）：使用while循环处理迭代器返回的每个用例与每个用例节点
-    # 责任链模式：用例节点执行 — 数据准备（序列化逻辑）、参数化逻辑、mock与请求逻辑、请求逻辑、校验点逻辑
-    #
-    # 创建测试报告 执行状态：等待中（枚举）入餐：测试套件，计算总数
-    # 执行状态：执行中（枚举）
-    # 执行状态：完成任务（枚举）
-    # 执行状态：失败任务（枚举）
-    pass
 
 class EventApiResultThread(threading.Thread):
 
@@ -115,10 +101,9 @@ class EventApiResultThread(threading.Thread):
                                 case_api_node.result_id = self.result_obj.id
                                 case_api_node.path = "%s%s" % (self.context.host, case_api_node.path)
                                 print(case_api_node)
-                                # todo：失败的测试点，跳过该次测试点
+                                # 失败跳过该数据
                                 if not self.run_chain.main(case_api_node):
                                     break
-                                # self.run_chain.main(case_api_node)
                             except StopIteration:
                                 break
                     # 跳出用例的迭代

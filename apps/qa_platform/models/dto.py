@@ -98,9 +98,9 @@ class CaseApiNode(BaseModel):
     # 请求方式
     method: str
     # 重连次数
-    reconnection_times: int = 3
+    reconnection_times: int
     # 超时设置
-    timeout: int = 10
+    timeout: int
     # 请求头
     # headers: str
     headers: Json
@@ -113,8 +113,8 @@ class CaseApiNode(BaseModel):
     # mock状态（0 不启用mock，1启用mock）
     is_mock: bool
     # mock返回
-    # mock_response: str
-    mock_response: Json
+    mock_response: str
+    # mock_response: Json
     # 表达式状态
     is_expression: bool
     # 检查点列表

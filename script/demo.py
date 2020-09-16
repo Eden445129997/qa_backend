@@ -8,3 +8,12 @@ cartesian = itertools.product('房管普', '房管庄')
 
 for i in cartesian:
     print(i)
+
+
+first = True
+second = '1    2    d '
+
+first = ('%s'%first).strip()
+
+print(len(first))
+print(len(second))

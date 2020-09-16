@@ -1,0 +1,15 @@
+
+2020-09-14 15:27:37 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_suit_service.py
+process_id:2279
+thread_id:123145396195328
+[
+  {
+    "loc": [
+      "body"
+    ],
+    "msg": "Invalid JSON",
+    "type": "value_error.json"
+  }
+]
+
