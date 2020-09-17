@@ -141,10 +141,12 @@ class _ExpressionHandler(BaseHandler):
 
     @print_func
     def handle(self, case_node : CaseApiNode):
-        self.case_node = case_node
-        case_node.headers = self.replace_from_expression(self.case_node.headers)
-        case_node.query = self.replace_from_expression(self.case_node.query)
-        case_node.body =self.replace_from_expression(self.case_node.body)
+        # 如果需要参数化则进入该判断
+        if case_node.is_expression:
+            self.case_node = case_node
+            case_node.headers = self.replace_from_expression(self.case_node.headers)
+            case_node.query = self.replace_from_expression(self.case_node.query)
+            case_node.body = self.replace_from_expression(self.case_node.body)
         return self.successor.handle(case_node)
 
 @print_clazz
@@ -238,6 +240,7 @@ class _HttpHandler(BaseHandler):
         return func
 
     def _handle_context(self, case_node: CaseApiNode):
+        case_node.headers['Content-Type'] = case_node.content_type
         self._reconnection_times = case_node.reconnection_times
         self._rest_reconnection_times = case_node.reconnection_times
 
@@ -246,13 +249,13 @@ class _HttpHandler(BaseHandler):
         try:
             print(
                 type(case_node.path),
-                case_node.path,
+                'url:%s'%case_node.path,
                 type(case_node.query),
-                case_node.query,
+                'query:%s'%case_node.query,
                 type(case_node.body),
-                case_node.body,
+                'body:%s'%case_node.body,
                 type(case_node.headers),
-                case_node.headers,
+                'headers:%s'%case_node.headers,
             )
             response = request_func(
                 url=case_node.path,
@@ -281,6 +284,7 @@ class _HttpHandler(BaseHandler):
 
         except Exception as e:
             print("进入exception")
+            print(e)
             case_node.err_record.append(e)
 
     @print_func

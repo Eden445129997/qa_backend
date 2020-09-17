@@ -17,7 +17,7 @@ from pydantic import ValidationError
 import logging, copy
 
 # 日志
-runner_log = logging.getLogger('runner_log')
+runner_log = logging.getLogger('event')
 
 @print_clazz
 class _CaseApiModelHandler(BaseHandler):
@@ -27,32 +27,9 @@ class _CaseApiModelHandler(BaseHandler):
 
     @print_func
     def handle(self, case_id):
-        # 模型
+        # 模型数据列表
         case_api_model = []
-
-        '''
-        # 补全模型节点
-        for model_node in query_set_list_serializers(
-            domain.ApiCaseModel.objects.filter(
-                case_id=case_id, is_status=1, is_delete=0
-            ).order_by('-sort').order_by('id')
-        ):
-            # 补全接口信息
-            api_info = domain.Api.objects.values(
-                'api_name', 'method', 'path', 'content_type'
-            ).get(
-                id=model_node.get('api_id'), is_status=1, is_delete=0
-            )
-
-            # 创建校验点列表
-            model_node['assert_list'] = []
-
-            # 补全模型需要关联的数据
-            case_api_model.append(
-                {**api_info, **model_node}
-            )
-        '''
-
+        # 模型表数据列表
         api_case_model_list = query_set_list_serializers(
             domain.ApiCaseModel.objects.filter(
                 case_id=case_id, is_status=1, is_delete=0

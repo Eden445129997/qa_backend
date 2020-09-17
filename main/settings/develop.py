@@ -204,7 +204,9 @@ LOGGING = {
     'handlers': {
         # 标准输出
         'console': {
+            # 'level': 'DEBUG',
             'level': 'ERROR',
+            # 'level': 'INFO',
             'class': 'logging.StreamHandler',
             # 'formatter': 'standard'
         },
@@ -224,11 +226,11 @@ LOGGING = {
             'backupCount': 30,
         },
         # 自定义 handlers，输出到文件
-        'task-director': {
+        'event-api': {
             'level': 'DEBUG',
             # 时间滚动切分
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': os.path.join(LOG_DIR, 'task-director.log'),
+            'filename': os.path.join(LOG_DIR, 'event-api.log'),
             'encoding': 'utf-8',
             'formatter': 'standard',
             # 调用过滤器
@@ -250,8 +252,8 @@ LOGGING = {
             'level': 'INFO',
             'propagate': False
         },
-        'runner_log': {
-            'handlers': ['task-director', 'console'],
+        'event': {
+            'handlers': ['event-api', 'console'],
             'level': 'INFO',
             # 此记录器处理过的消息就不再让 django 记录器再次处理了
             'propagate': False

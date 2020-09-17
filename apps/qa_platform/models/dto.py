@@ -93,6 +93,8 @@ class CaseApiNode(BaseModel):
     api_id: int
     # 接口名
     api_name: str
+    # body解析类型
+    content_type : str
     # 请求的uri
     path: str
     # 请求方式
