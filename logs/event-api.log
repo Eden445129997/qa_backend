@@ -1,0 +1,798 @@
+
+2020-09-23 10:37:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8420
+thread_id:123145348993024
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=1 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8420
+thread_id:123145348993024
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=1 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8420
+thread_id:123145348993024
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=1 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8420
+thread_id:123145348993024
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=1 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8420
+thread_id:123145348993024
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=1 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8420
+thread_id:123145348993024
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=1 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8443
+thread_id:123145578250240
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=2 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8443
+thread_id:123145578250240
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=2 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8443
+thread_id:123145578250240
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=2 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8443
+thread_id:123145578250240
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=2 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8443
+thread_id:123145578250240
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=2 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 10:37:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8443
+thread_id:123145578250240
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=2 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:04:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8633
+thread_id:123145354182656
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=3 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:04:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8633
+thread_id:123145354182656
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=3 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:04:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8633
+thread_id:123145354182656
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=3 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:04:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8633
+thread_id:123145354182656
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=3 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:04:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8633
+thread_id:123145354182656
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=3 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:04:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8633
+thread_id:123145354182656
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=3 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:09:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=4 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:09:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=4 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:09:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=4 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:09:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=4 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:09:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=4 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:09:59 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=4 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:11:20 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=5 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:11:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=5 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:11:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=5 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:11:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=5 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:11:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=5 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:11:22 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8668
+thread_id:123145390104576
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=5 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:03 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8680
+thread_id:123145329377280
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=6 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:04 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8680
+thread_id:123145329377280
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=6 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:05 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8680
+thread_id:123145329377280
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=6 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:05 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8680
+thread_id:123145329377280
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=6 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:05 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8680
+thread_id:123145329377280
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=6 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:06 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8680
+thread_id:123145329377280
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=6 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:41 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8697
+thread_id:123145564024832
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:42 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8697
+thread_id:123145564024832
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:42 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8697
+thread_id:123145564024832
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:44 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8697
+thread_id:123145564024832
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:44 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8697
+thread_id:123145564024832
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:12:45 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8697
+thread_id:123145564024832
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=7 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:13:13 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8708
+thread_id:123145422823424
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:13:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8708
+thread_id:123145422823424
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:13:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8708
+thread_id:123145422823424
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:13:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8708
+thread_id:123145422823424
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:13:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8708
+thread_id:123145422823424
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:13:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8708
+thread_id:123145422823424
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=8 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:14:19 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8724
+thread_id:123145343307776
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:14:19 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8724
+thread_id:123145343307776
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:14:19 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8724
+thread_id:123145343307776
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:14:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8724
+thread_id:123145343307776
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:14:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8724
+thread_id:123145343307776
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:14:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8724
+thread_id:123145343307776
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=9 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:15:01 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8742
+thread_id:123145364103168
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:15:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8742
+thread_id:123145364103168
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:15:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8742
+thread_id:123145364103168
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:15:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8742
+thread_id:123145364103168
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:15:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8742
+thread_id:123145364103168
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:15:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8742
+thread_id:123145364103168
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=10 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:16:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8769
+thread_id:123145351909376
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=11 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:16:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8769
+thread_id:123145351909376
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=11 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:16:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8769
+thread_id:123145351909376
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=11 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:16:41 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8769
+thread_id:123145351909376
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=11 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:16:41 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8769
+thread_id:123145351909376
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=11 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:16:41 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8769
+thread_id:123145351909376
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=11 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:17:08 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8780
+thread_id:123145480318976
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=12 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:17:08 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8780
+thread_id:123145480318976
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=12 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:17:08 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8780
+thread_id:123145480318976
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=12 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:17:09 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8780
+thread_id:123145480318976
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=12 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:17:09 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8780
+thread_id:123145480318976
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=12 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:17:09 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8780
+thread_id:123145480318976
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=12 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:18:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8801
+thread_id:123145330524160
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=13 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:18:03 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8801
+thread_id:123145330524160
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=13 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:18:03 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8801
+thread_id:123145330524160
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=13 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:18:04 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8801
+thread_id:123145330524160
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=13 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:18:04 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8801
+thread_id:123145330524160
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=13 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:18:04 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8801
+thread_id:123145330524160
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=13 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:20:45 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8865
+thread_id:123145331195904
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=14 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:20:45 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8865
+thread_id:123145331195904
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=14 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:20:45 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8865
+thread_id:123145331195904
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=14 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:20:46 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8865
+thread_id:123145331195904
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=14 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:20:46 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8865
+thread_id:123145331195904
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=14 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:20:46 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8865
+thread_id:123145331195904
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=14 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:15 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8881
+thread_id:123145469935616
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=15 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:16 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8881
+thread_id:123145469935616
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=15 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:16 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8881
+thread_id:123145469935616
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=15 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:16 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8881
+thread_id:123145469935616
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=15 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:16 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8881
+thread_id:123145469935616
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=15 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:17 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8881
+thread_id:123145469935616
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=15 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:59 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8894
+thread_id:123145380741120
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=16 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:59 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8894
+thread_id:123145380741120
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=16 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:21:59 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8894
+thread_id:123145380741120
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=16 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8894
+thread_id:123145380741120
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=16 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8894
+thread_id:123145380741120
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=16 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8894
+thread_id:123145380741120
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=16 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:51 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8922
+thread_id:123145555173376
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=17 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:51 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8922
+thread_id:123145555173376
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=17 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:51 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8922
+thread_id:123145555173376
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=17 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:51 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8922
+thread_id:123145555173376
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=17 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:52 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8922
+thread_id:123145555173376
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=17 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:22:52 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8922
+thread_id:123145555173376
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=17 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:23:53 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8935
+thread_id:123145539284992
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=18 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:23:54 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8935
+thread_id:123145539284992
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=18 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:23:54 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8935
+thread_id:123145539284992
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=18 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:23:54 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8935
+thread_id:123145539284992
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=18 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:23:54 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8935
+thread_id:123145539284992
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=18 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:23:54 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8935
+thread_id:123145539284992
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=18 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:35:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8957
+thread_id:123145556434944
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=19 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:35:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8957
+thread_id:123145556434944
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=19 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:35:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8957
+thread_id:123145556434944
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=19 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:35:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8957
+thread_id:123145556434944
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=19 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:35:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8957
+thread_id:123145556434944
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=19 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-23 11:35:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:8957
+thread_id:123145556434944
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://localhost:9998/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=19 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+

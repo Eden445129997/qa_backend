@@ -25,6 +25,13 @@ from rest_framework import views
 from rest_framework.response import Response
 from rest_framework import status
 
+class Test(View):
+    def post(self, request, *args, **kwargs):
+        # safe参数默认为True，返回的必须是字典类型，否则报错
+        # print("aaaa")
+        return JsonResponse({"code": 200, "data": "success,this is django CBV post request"}, safe=False)
+
+
 # django实现cbv（class base view）方式
 class DemoCBV(View):
     def get(self,request,*args,**kwargs):

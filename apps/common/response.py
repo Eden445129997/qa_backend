@@ -10,8 +10,10 @@ class JsonResponse(Response):
     arbitrary media types.
     """
 
-    def __init__(self, data=None, code=None, msg=None,
-                 status=None,
+    def __init__(self,
+                 data,
+                 code : int,
+                 msg : str,
                  template_name=None,
                  exception=False, content_type=None, **kwargs):
         """
@@ -20,7 +22,7 @@ class JsonResponse(Response):
         Setting 'renderer' and 'media_type' will typically be deferred,
         For example being set automatically by the `APIView`.
         """
-        super(Response, self).__init__(None, status=status)
+        super(Response, self).__init__(None, status=code)
 
         if isinstance(data, Serializer):
             msg = (

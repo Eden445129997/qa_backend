@@ -68,6 +68,11 @@ class EventApiRecordSerializer(serializers.ModelSerializer):
         model = domain.EventApiRecord
         fields = "__all__"
 
+class EventApiResultSerializer(serializers.ModelSerializer):
+    """接口测试报告细节"""
+    class Meta:
+        model = domain.EventApiResult
+        fields = "__all__"
 
 # class TestUserSerializer(serializers.ModelSerializer)
 #     """测试ModelSerializer的功能"""

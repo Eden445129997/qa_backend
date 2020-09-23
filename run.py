@@ -53,7 +53,5 @@ if __name__ == '__main__':
     # print(len(aaa))
     # Create your tests here.
 
-
-
 # python manage.py createsuperuser
 

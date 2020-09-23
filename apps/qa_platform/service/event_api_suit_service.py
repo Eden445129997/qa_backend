@@ -1,16 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# 工具装饰器
 from apps.common.utils.decorator import (
     print_clazz, print_func, print_model_and_data
 )
 
-# 模型
-from apps.qa_platform.models import domain
+# 实体类
 from apps.qa_platform.models import dto
+# dao层
+from apps.qa_platform.dao import (
+    qa_case_dao,
+    api_dao,
+    api_case_model_dao,
+    api_case_data_dao,
+    api_case_data_node_dao,
+    api_assert_dao
+)
 
-# 自定义序列化方法
-from apps.common.serializers import query_set_list_serializers
+# 责任链基类
 from apps.common.base_obj import BaseHandler
 # pydantic错误校验
 from pydantic import ValidationError
@@ -18,6 +26,17 @@ import logging, copy
 
 # 日志
 runner_log = logging.getLogger('event')
+
+
+def query_case_id_list_by_plan_id(plan_id: int):
+    """根据测试计划获取测试用例id列表"""
+    return [
+        case.get('id')
+        for case in qa_case_dao.query_case_list_by_plan_id(
+            plan_id=plan_id
+        )
+    ]
+
 
 @print_clazz
 class _CaseApiModelHandler(BaseHandler):
@@ -27,25 +46,21 @@ class _CaseApiModelHandler(BaseHandler):
 
     @print_func
     def handle(self, case_id):
-        # 模型数据列表
+        # 模型列表
         case_api_model = []
-        # 模型表数据列表
-        api_case_model_list = query_set_list_serializers(
-            domain.ApiCaseModel.objects.filter(
-                case_id=case_id, is_status=1, is_delete=0
-            ).order_by('-sort').order_by('id')
-        )
+        # 模型表列表（数据需要进行补全的列表）
+        api_case_model_list = api_case_model_dao.query_api_case_model_list_by_case_id(case_id)
+        # 循环每个模型
         for i in range(len(api_case_model_list)):
             model_node = api_case_model_list[i]
-            # 补全接口信息
-            api_info = domain.Api.objects.values(
-                'api_name', 'method', 'path', 'content_type'
-            ).get(
-                id=model_node.get('api_id'), is_status=1, is_delete=0
+            # 获取关联的接口信息
+            api_info = api_dao.query_api_by_id(
+                model_node.get('api_id')
             )
             # 创建校验点列表
             model_node['assert_list'] = []
-            # 执行测试用例套件时，参数化处理器需要使用该字段
+            # tb_event_api_record ｜ sort记录执行顺序
+            # 业务作用：执行测试用例套件时，参数化处理器需要使用该字段
             model_node['sort'] = i
 
             # 补全模型需要关联的数据
@@ -73,24 +88,26 @@ class _DataPrepareHandler(BaseHandler):
         # 模型中节点id顺序
         model_order = [model_node.get("id") for model_node in case_api_model]
 
+        # 数据id列表
+        case_data_id_list = [
+            case_data.get('id')
+            for case_data in
+            # 获取case_data的数据
+            api_case_data_dao.query_api_case_data_id_list(
+                case_api_model[0].get('case_id')
+            )
+        ]
         # 拷贝模型列表 并替换拷贝后的列表 装进测试套件中
-        for case_data in domain.ApiCaseData.objects \
-                .values("id") \
-                .filter(
-            case_id=case_api_model[0].get('case_id'), is_status=1, is_delete=0
-        ):
-            # 数据id
-            data_id = case_data.get('id')
+        for data_id in case_data_id_list:
             # 深拷贝
             model_and_data = copy.deepcopy(case_api_model)
+            # 补充测试套件数据
+            # 业务：tb_event_api_record需要记录该数据，后续为了查询的筛选字段
             for node in model_and_data:
                 node['data_id'] = data_id
 
             # 数据节点与模型节点替换
-            for case_data_node in query_set_list_serializers(
-                domain.ApiCaseDataNode.objects
-                    .filter(data_id=data_id, is_status=1, is_delete=0)
-            ):
+            for case_data_node in api_case_data_node_dao.query_case_api_data_node_list_by_data_id(data_id):
                 # 模型执行顺序的id列表，找到要替换的index
                 data_node_index = model_order.index(
                     case_data_node.get("model_id")
@@ -99,11 +116,8 @@ class _DataPrepareHandler(BaseHandler):
                 model_and_data[data_node_index] = {**model_and_data[data_node_index], **case_data_node}
 
             # 补全断言, 校验点到指定模型节点添加数断言
-            for assert_node in domain.ApiAssert.objects.values(
-                'data_id', 'model_id', 'assert_method', 'assert_obj', 'assert_val'
-            ).filter(
-                data_id=data_id, is_status=1, is_delete=0
-            ):
+            for assert_node in api_assert_dao.get_api_assert_list_by_data_id(data_id):
+                # 获取断言关联的模型索引id
                 assert_node_index = model_order.index(
                     assert_node.get('model_id')
                 )
@@ -178,19 +192,4 @@ class ApiSuitChainOfResponsibility(object):
                 break
         return self.test_suit
 
-def case_id_list_by_plan_id(plan_id: int):
-    """
-    1、根据测试计划获取测试用例id列表
-    2、根据测试用例id列表获取测试套件
-    :param plan_id:
-    :return: 测试套件列表 or 数据异常为None
-    """
-    # 根据测试计划获取测试用例列表
-    return [
-        id.get("id")
-        # 循环queryset字典列表
-        for id in domain.QaCase.objects
-            .values("id")
-            .filter(id=plan_id, is_status=1, is_delete=0)
-            .order_by('-sort').order_by('id')
-    ]
+

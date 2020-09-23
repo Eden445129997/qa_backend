@@ -25,7 +25,7 @@ class Project(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -57,7 +57,7 @@ class Host(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -93,7 +93,7 @@ class Api(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -123,7 +123,7 @@ class QaPlan(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -155,7 +155,7 @@ class QaCase(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -197,7 +197,7 @@ class ApiCaseModel(models.Model):
     # mock返回
     mock_response = models.TextField(verbose_name="mock的返回值", default="{}")
     # 表达式状态
-    is_expression = models.BooleanField(verbose_name="表达式状态（0 不启用jsonpath捕捉参数化，1 启用jsonpath捕捉参数化）", default=False)
+    is_expression = models.BooleanField(verbose_name="表达式状态：0 不启用jsonpath捕捉参数化\n 1 启用jsonpath捕捉参数化", default=False)
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=64, blank=True, null=True)
     # 排序顺序
@@ -205,7 +205,7 @@ class ApiCaseModel(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -230,7 +230,7 @@ class ApiCaseData(models.Model):
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=64, blank=True, null=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -263,13 +263,13 @@ class ApiCaseDataNode(models.Model):
     # mock返回
     mock_response = models.TextField(verbose_name="mock的返回值", default="{}")
     # 表达式状态
-    is_expression = models.BooleanField(verbose_name="表达式状态（0 不启用jsonpath捕捉参数化，1 启用jsonpath捕捉参数化）", default=False)
+    is_expression = models.BooleanField(verbose_name="表达式状态：0 不启用jsonpath捕捉参数化\n 1 启用jsonpath捕捉参数化", default=False)
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=64, blank=True, null=True)
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -304,7 +304,7 @@ class ApiAssert(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -339,7 +339,7 @@ class Event(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -349,8 +349,7 @@ class Event(models.Model):
 
     class Meta:
         db_table = "tb_event"
-        # django的admin界面的后台展示的数据
-        verbose_name = "接口测试报告"
+        verbose_name = "事件表"
         verbose_name_plural = verbose_name
 
 class EventApiResult(models.Model):
@@ -373,7 +372,7 @@ class EventApiResult(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -383,8 +382,7 @@ class EventApiResult(models.Model):
 
     class Meta:
         db_table = "tb_event_api_result"
-        # django的admin界面的后台展示的数据
-        verbose_name = "接口测试结果"
+        verbose_name = "接口事件结果"
         verbose_name_plural = verbose_name
 
 
@@ -422,7 +420,7 @@ class EventApiRecord(models.Model):
     # 状态（启用/不启用）
     is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
     # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除）", default=False)
+    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
     # 创建时间
     create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
     # 最后变动时间
@@ -433,5 +431,5 @@ class EventApiRecord(models.Model):
     class Meta:
         db_table = "tb_event_api_record"
         # django的admin界面的后台展示的数据
-        verbose_name = "接口测试报告细节"
+        verbose_name = "接口事件细节记录"
         verbose_name_plural = verbose_name

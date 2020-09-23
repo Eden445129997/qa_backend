@@ -3,6 +3,9 @@
 
 import itertools
 
+# http每一个请求的类
+# from django.http.request import HttpRequest
+
 # 笛卡尔积:Cartesian
 cartesian = itertools.product('房管普', '房管庄')
 

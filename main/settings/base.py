@@ -61,11 +61,17 @@ INSTALLED_APPS = [
     "rest_framework",
     # demo服务
     # "apps.demo_service",
-    # 用户服务
-    # "apps.user_service",
     # 测试服务
     "apps.qa_platform",
 ]
+
+# drf 配置
+REST_FRAMEWORK = {
+    # AttributeError: 'AutoSchema' object has no attribute 'get_link'
+    # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',
+    # 新版drf自带文档接口配置
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}
 
 # 中间件
 MIDDLEWARE = [
@@ -206,31 +212,33 @@ LOGGING = {
     'handlers': {
         # 标准输出
         'console': {
+            # 'level': 'DEBUG',
             'level': 'ERROR',
+            # 'level': 'INFO',
             'class': 'logging.StreamHandler',
             # 'formatter': 'standard'
         },
         # 自定义 handlers，输出到文件
-        'restful_api': {
+        'requests': {
             'level': 'DEBUG',
             # 时间滚动切分
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': os.path.join(LOG_DIR, 'web-log.log'),
+            'filename': os.path.join(LOG_DIR, 'http.log'),
             'encoding': 'utf-8',
             'formatter': 'standard',
             # 调用过滤器
             # 'filters': ['request_info'],
             # 每天凌晨切分
-            'when': 'MIDNIGHT',
+            # 'when': 'MIDNIGHT',
             # 保存 30 天
-            'backupCount': 30,
+            # 'backupCount': 30,
         },
         # 自定义 handlers，输出到文件
-        'task-director': {
+        'event-api': {
             'level': 'DEBUG',
             # 时间滚动切分
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': os.path.join(LOG_DIR, 'task-director.log'),
+            'filename': os.path.join(LOG_DIR, 'event-api.log'),
             'encoding': 'utf-8',
             'formatter': 'standard',
             # 调用过滤器
@@ -244,16 +252,16 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console'],
-            'level': 'ERROR',
-            'propagate': False
+            'level': 'DEBUG',
+            'propagate': True
         },
-        'web_log': {
-            'handlers': ['restful_api'],
+        'http': {
+            'handlers': ['requests'],
             'level': 'INFO',
             'propagate': False
         },
-        'runner_log': {
-            'handlers': ['task-director', 'console'],
+        'event': {
+            'handlers': ['event-api', 'console'],
             'level': 'INFO',
             # 此记录器处理过的消息就不再让 django 记录器再次处理了
             'propagate': False

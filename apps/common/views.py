@@ -3,18 +3,20 @@
 
 from rest_framework import status
 from rest_framework import viewsets
-from apps.common.custom_json_response import JsonResponse
+from apps.common.response import JsonResponse
+# http请求的类
+from django.http.request import HttpRequest
 
 
 class CustomModelViewSet(viewsets.ModelViewSet):
 
-    def create(self, request, *args, **kwargs):
+    def create(self, request : HttpRequest, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
-        return JsonResponse(data=serializer.data, msg="success", code=201, status=status.HTTP_201_CREATED)
+        return JsonResponse(data=serializer.data, msg="success", code=status.HTTP_201_CREATED)
 
-    def list(self, request, *args, **kwargs):
+    def list(self, request : HttpRequest, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
         page = self.paginate_queryset(queryset)
         if page is not None:
@@ -22,14 +24,14 @@ class CustomModelViewSet(viewsets.ModelViewSet):
             return self.get_paginated_response(serializer.data)
 
         serializer = self.get_serializer(queryset, many=True)
-        return JsonResponse(data=serializer.data, code=200, msg="success", status=status.HTTP_200_OK)
+        return JsonResponse(data=serializer.data, code=status.HTTP_200_OK, msg="success")
 
-    def retrieve(self, request, *args, **kwargs):
+    def retrieve(self, request : HttpRequest, *args, **kwargs):
         instance = self.get_object()
         serializer = self.get_serializer(instance)
-        return JsonResponse(data=serializer.data, code=200, msg="success", status=status.HTTP_200_OK)
+        return JsonResponse(data=serializer.data, code=status.HTTP_200_OK, msg="success")
 
-    def update(self, request, *args, **kwargs):
+    def update(self, request : HttpRequest, *args, **kwargs):
         partial = kwargs.pop('partial', False)
         instance = self.get_object()
         serializer = self.get_serializer(instance, data=request.data, partial=partial)
@@ -41,9 +43,9 @@ class CustomModelViewSet(viewsets.ModelViewSet):
             # forcibly invalidate the prefetch cache on the instance.
             instance._prefetched_objects_cache = {}
 
-        return JsonResponse(data=serializer.data, msg="success", code=200, status=status.HTTP_200_OK)
+        return JsonResponse(data=serializer.data, msg="success", code=status.HTTP_200_OK)
 
-    def destroy(self, request, *args, **kwargs):
+    def destroy(self, request : HttpRequest, *args, **kwargs):
         instance = self.get_object()
         self.perform_destroy(instance)
-        return JsonResponse(data=[], code=204, msg="delete resource success", status=status.HTTP_204_NO_CONTENT)
+        return JsonResponse(data=[], code=status.HTTP_200_OK, msg="delete resource success")

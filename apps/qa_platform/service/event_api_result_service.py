@@ -15,9 +15,11 @@ from apps.qa_platform.models.dto import (
     Context, TestSuitForDeque, CaseApiNode
 )
 from apps.qa_platform.enumeration import EventApiStatus
+
 from apps.qa_platform.service.event_api_suit_service import (
-    ApiSuitChainOfResponsibility, case_id_list_by_plan_id
+    ApiSuitChainOfResponsibility, query_case_id_list_by_plan_id
 )
+
 from apps.qa_platform.service.event_api_record_service import ApiRunChainOfResponsibility
 
 # 日志
@@ -48,7 +50,7 @@ class EventApiResultThread(threading.Thread):
         elif self.context.plan_id and self.context.case_id:
             raise ValueError('plan_id和case_id其中只能有一个，请检查context')
         elif self.context.plan_id:
-            self.context.case_id_list = case_id_list_by_plan_id(self.context.plan_id)
+            self.context.case_id_list = query_case_id_list_by_plan_id(self.context.plan_id)
         else:
             self.context.case_id_list = [self.context.case_id]
 
@@ -65,7 +67,6 @@ class EventApiResultThread(threading.Thread):
     @print_func
     def start_event_api(self):
         """开始事件"""
-        print("event_api_result:",EventApiStatus.EXECUTION.value)
         self.result_obj.current_status = EventApiStatus.EXECUTION.value
         self.result_obj.total = len(self.suit)
         self.result_obj.is_prepared = True
@@ -88,11 +89,34 @@ class EventApiResultThread(threading.Thread):
 
     @print_func
     def run(self):
+        """
+        业务逻辑：
+            1、接收context，根据context执行api的事件逻辑
+            2、result四种状态
+                等待状态
+                    获取测试套件责任链
+                        未完成获取测试套件：is_prepared = 0
+                        完成获取测试套件：is_prepared = 1
+                运行状态（已完成获取测试套件进入该阶段）
+                    接口请求事件责任链
+                        请求失败：跳出该这个测试点下的某个用例，但仍然执行该测试点其他用例
+                        并标记result状态为失败
+                完成状态
+                    当运行完测试套件，并没有错误则标记
+                失败状态
+                    1、获取测试套件失败
+                    2、执行测试用例失败
+                    3、未知异常标记失败
+        迭代器（两层迭代器）：使用while循环处理迭代器返回的每个用例与每个用例节点
+        责任链模式：用例节点执行 — 数据准备（序列化逻辑）、参数化逻辑、mock与请求逻辑、校验点逻辑-
+        """
         try:
             # 处理context信息
             self.handle_context()
             # 测试套件 链子
             self.suit: TestSuitForDeque = self.suit_chain.main(self.context.case_id_list)
+            if self.suit is None:
+                raise ValueError('测试套件获取失败，测试套件存在脏数据')
             # 执行测试套件 执行链对象
             start_time = self.start_event_api()
             # 责任链模式：执行测试套件
@@ -125,7 +149,8 @@ class EventApiResultThread(threading.Thread):
             # 如果有失败记录则标记失败
             if self.err_record:
                 self.fail_event_api()
-            self.stop_event_api(start_time)
+            else:
+                self.stop_event_api(start_time)
         except ValueError as e:
             event_log.error(e)
             self.err_record.append(e)
@@ -136,14 +161,3 @@ class EventApiResultThread(threading.Thread):
             self.fail_event_api()
         finally:
             sys.exit()
-
-    # 方案1：使用生成器维护这四种状态，使用迭代器处理每一个用例节点
-    # 生成器：使用while循环执行四种状态的return
-    # 迭代器（两层迭代器）：使用while循环处理迭代器返回的每个用例与每个用例节点
-    # 责任链模式：用例节点执行 — 数据准备（序列化逻辑）、参数化逻辑、mock与请求逻辑、校验点逻辑-
-    #
-    # 创建测试报告 执行状态：等待中（枚举）入餐：测试套件，计算总数
-    # 执行状态：执行中（枚举）入餐：测试套件，处理套件中的每一个
-    #                    入餐：使用迭代器，每次执行返回对应的节点数据
-    # 执行状态：完成任务（枚举）
-    # 执行状态：失败任务（枚举）

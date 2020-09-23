@@ -13,14 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-import json
-from django.contrib import admin
+# import json
+# from django.contrib import admin
 from django.urls import path,include
 from django.views import View
 from django.http import JsonResponse  # ,HttpResponse
-
-# def test_api(request):
-#     return HttpResponse("test_demo")
+# drf接口文档
+from rest_framework.documentation import include_docs_urls
 
 def test_api_func(request, *args, **kwargs):
     # for i in request.META:
@@ -51,9 +50,10 @@ class test_api(View):
         return test_api_func(request, *args, **kwargs)
 
 urlpatterns = [
-    path('testapi/', test_api.as_view()),
     # django自带后台管理
     # path('admin/', admin.site.urls),
-    # path('demo/',include("apps.demo_service.urls")),
+    path('testapi/', test_api.as_view()),
     path('platform/',include("apps.qa_platform.urls")),
+    path('docs/',include_docs_urls(title='api-docs'), name='docs'),  #配置docs的url路径
+    # path('demo/',include("apps.demo_service.urls")),
 ]
