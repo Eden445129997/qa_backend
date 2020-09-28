@@ -8,7 +8,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 
 # 模型
-from apps.qa_platform.models import domain
+from apps.qa_platform.models.domain import qa_plan
 # 自定义模型视图
 from apps.common.views import CustomModelViewSet
 # 序列化
@@ -21,7 +21,7 @@ from apps.common.response import JsonResponse
 
 class QaPlanViews(CustomModelViewSet):
     """测试计划表"""
-    queryset = domain.QaPlan.objects.all()
+    queryset = qa_plan.QaPlan.objects.all()
     serializer_class = serializers.QaPlanSerializer
 
 
@@ -34,7 +34,7 @@ class QueryQaPlanByName(APIView):
         # 判空
         if keywordKey in request.GET.dict():
             keyword = str(request.GET['keyword'])
-            project_list = domain.QaPlan.objects.filter(plan_name__icontains=keyword).order_by('-create_time')
+            project_list = qa_plan.QaPlan.objects.filter(plan_name__icontains=keyword).order_by('-create_time')
             # print(project_list.query)
             project_list = query_set_list_serializers(project_list)
 

@@ -8,14 +8,8 @@ from apps.common.utils.decorator import (
 
 # 实体类
 from apps.qa_platform.models import dto
-# dao层
-from apps.qa_platform.dao import (
-    qa_case_dao,
-    api_dao,
-    api_case_model_dao,
-    api_case_data_dao,
-    api_case_data_node_dao,
-    api_assert_dao
+from apps.qa_platform.models.domain import (
+    qa_case, api_case_model, api, api_case_data, api_case_data_node, api_assert
 )
 
 # 责任链基类
@@ -32,7 +26,7 @@ def query_case_id_list_by_plan_id(plan_id: int):
     """根据测试计划获取测试用例id列表"""
     return [
         case.get('id')
-        for case in qa_case_dao.query_case_list_by_plan_id(
+        for case in qa_case.QaCase.query_case_list_by_plan_id(
             plan_id=plan_id
         )
     ]
@@ -49,12 +43,12 @@ class _CaseApiModelHandler(BaseHandler):
         # 模型列表
         case_api_model = []
         # 模型表列表（数据需要进行补全的列表）
-        api_case_model_list = api_case_model_dao.query_api_case_model_list_by_case_id(case_id)
+        api_case_model_list = api_case_model.ApiCaseModel.query_api_case_model_list_by_case_id(case_id)
         # 循环每个模型
         for i in range(len(api_case_model_list)):
             model_node = api_case_model_list[i]
             # 获取关联的接口信息
-            api_info = api_dao.query_api_by_id(
+            api_info = api.Api.query_api_by_id(
                 model_node.get('api_id')
             )
             # 创建校验点列表
@@ -93,7 +87,7 @@ class _DataPrepareHandler(BaseHandler):
             case_data.get('id')
             for case_data in
             # 获取case_data的数据
-            api_case_data_dao.query_api_case_data_id_list(
+            api_case_data.ApiCaseData.query_api_case_data_id_list(
                 case_api_model[0].get('case_id')
             )
         ]
@@ -107,7 +101,7 @@ class _DataPrepareHandler(BaseHandler):
                 node['data_id'] = data_id
 
             # 数据节点与模型节点替换
-            for case_data_node in api_case_data_node_dao.query_case_api_data_node_list_by_data_id(data_id):
+            for case_data_node in api_case_data_node.ApiCaseDataNode.query_case_api_data_node_list_by_data_id(data_id):
                 # 模型执行顺序的id列表，找到要替换的index
                 data_node_index = model_order.index(
                     case_data_node.get("model_id")
@@ -116,7 +110,7 @@ class _DataPrepareHandler(BaseHandler):
                 model_and_data[data_node_index] = {**model_and_data[data_node_index], **case_data_node}
 
             # 补全断言, 校验点到指定模型节点添加数断言
-            for assert_node in api_assert_dao.get_api_assert_list_by_data_id(data_id):
+            for assert_node in api_assert.ApiAssert.get_api_assert_list_by_data_id(data_id):
                 # 获取断言关联的模型索引id
                 assert_node_index = model_order.index(
                     assert_node.get('model_id')

@@ -1,77 +1,80 @@
 from rest_framework import serializers
-from apps.qa_platform.models import domain
+from apps.qa_platform.models.domain import (
+    api, api_assert, api_case_data, api_case_data_node, api_case_model,
+    event, event_api_record, event_api_result, host, project, qa_case, qa_plan
+)
 
 
 class ProjectSerializer(serializers.ModelSerializer):
     """工程表"""
     class Meta:
-        model = domain.Project
+        model = project.Project
         fields = "__all__"
 
 class HostSerializer(serializers.ModelSerializer):
     """域名表"""
     class Meta:
-        model = domain.Host
+        model = host.Host
         fields = "__all__"
 
 class ApiSerializer(serializers.ModelSerializer):
     """接口表"""
     class Meta:
-        model = domain.Api
+        model = api.Api
         fields = "__all__"
 
 class QaPlanSerializer(serializers.ModelSerializer):
     """测试计划表"""
     class Meta:
-        model = domain.QaPlan
+        model = qa_plan.QaPlan
         fields = "__all__"
 
 class QaCaseSerializer(serializers.ModelSerializer):
     """测试用例表"""
     class Meta:
-        model = domain.QaCase
+        model = qa_case.QaCase
         fields = "__all__"
 
 class ApiCaseModelSerializer(serializers.ModelSerializer):
     """测试细节表(测试参数表)"""
     class Meta:
-        model = domain.ApiCaseModel
+        model = api_case_model.ApiCaseModel
         fields = "__all__"
 
 class ApiCaseDataSerializer(serializers.ModelSerializer):
     """测试细节表(测试参数表)"""
     class Meta:
-        model = domain.ApiCaseData
+        model = api_case_data.ApiCaseData
         fields = "__all__"
 
 class ApiCaseDataNodeSerializer(serializers.ModelSerializer):
     """测试细节表(测试参数表)"""
     class Meta:
-        model = domain.ApiCaseDataNode
+        model = api_case_data_node.ApiCaseDataNode
         fields = "__all__"
 
 class ApiAssertSerializer(serializers.ModelSerializer):
     """测试细节表(测试参数表)"""
     class Meta:
-        model = domain.ApiAssert
+        model = api_assert.ApiAssert
         fields = "__all__"
 
 class EventSerializer(serializers.ModelSerializer):
     """事件"""
     class Meta:
-        model = domain.Event
+        model = event.Event
         fields = "__all__"
 
 class EventApiRecordSerializer(serializers.ModelSerializer):
     """接口测试报告细节"""
     class Meta:
-        model = domain.EventApiRecord
+        model = event_api_record.EventApiRecord
         fields = "__all__"
 
 class EventApiResultSerializer(serializers.ModelSerializer):
     """接口测试报告细节"""
     class Meta:
-        model = domain.EventApiResult
+        model = event_api_result.EventApiResult
         fields = "__all__"
 
 # class TestUserSerializer(serializers.ModelSerializer)

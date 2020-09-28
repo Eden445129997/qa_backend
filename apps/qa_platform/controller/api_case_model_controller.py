@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # 模型
-from apps.qa_platform.models import domain
+from apps.qa_platform.models.domain import api_case_model
 # 自定义模型视图
 from apps.common.views import CustomModelViewSet
 # 序列化
@@ -10,5 +10,5 @@ from apps.qa_platform import serializers
 
 class ApiCaseModelViews(CustomModelViewSet):
     """测试模型表"""
-    queryset = domain.ApiCaseModel.objects.all()
+    queryset = api_case_model.ApiCaseModel.objects.all()
     serializer_class = serializers.ApiCaseModelSerializer

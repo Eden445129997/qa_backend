@@ -16,6 +16,7 @@ Including another URLconf
 # import json
 # from django.contrib import admin
 from django.urls import path,include
+from django.views.decorators.cache import cache_page
 from django.views import View
 from django.http import JsonResponse  # ,HttpResponse
 # drf接口文档

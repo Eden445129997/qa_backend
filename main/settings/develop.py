@@ -15,7 +15,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import socket
 
-
 # 别人的django代码
 # git clone https://github.com/happyletme/requestnew.git
 
@@ -71,6 +70,23 @@ REST_FRAMEWORK = {
     # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',
     # 新版drf自带文档接口配置
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}
+
+# 缓存配置
+CACHES = {
+    'default': {
+        # 'BACKEND': 'django.core.cache.backends.db.DatabaseCache',  # 指定缓存使用的引擎
+        # 'LOCATION': 'cache_table',  # 数据库表
+        # 'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',  # 指定缓存使用的引擎
+        # 'LOCATION': 'unique-snowflake',         # 写在内存中的变量的唯一值
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache', #指定缓存使用的引擎
+        'LOCATION': '/var/tmp/django_cache',        #指定缓存的路径
+        'TIMEOUT':300,              #缓存超时时间(默认为300秒,None表示永不过期)
+        'OPTIONS':{
+            'MAX_ENTRIES': 300,            # 最大缓存记录的数量（默认300）
+            'CULL_FREQUENCY': 3,           # 缓存到达最大个数之后，剔除缓存个数的比例，即：1/CULL_FREQUENCY（默认3）
+        }
+    }
 }
 
 # 中间件
@@ -173,7 +189,7 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": "root",
         "HOST": "111.229.54.5",
-        "PORT": 3306,
+        "PORT": '3306',
         # 配置长链接数
         # 'CONN_MAX_AGE': 5*60,
         "TEST": {

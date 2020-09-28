@@ -7,7 +7,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 
 # 模型
-from apps.qa_platform.models import domain
+from apps.qa_platform.models.domain import project
 # 自定义模型视图
 from apps.common.views import CustomModelViewSet
 # 序列化
@@ -22,7 +22,7 @@ from django.http.request import HttpRequest
 
 class ProjectViews(CustomModelViewSet):
     """工程表"""
-    queryset = domain.Project.objects.all()
+    queryset = project.Project.objects.all()
     serializer_class = serializers.ProjectSerializer
 
 
@@ -36,7 +36,7 @@ class QueryProjectByName(APIView):
         if keyword_key in request.GET.dict():
             keyword = str(request.GET['keyword'])
             # print(keyword)
-            project_list = domain.Project.objects.filter(project_name__icontains=keyword).order_by('-create_time')
+            project_list = project.Project.objects.filter(project_name__icontains=keyword).order_by('-create_time')
             # print(project_list.query)
             project_list = query_set_list_serializers(project_list)
 

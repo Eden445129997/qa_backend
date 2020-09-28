@@ -10,7 +10,7 @@ from apps.common.utils.decorator import (
     print_clazz, print_func
 )
 
-from apps.qa_platform.models.domain import EventApiResult
+from apps.qa_platform.models.domain.event_api_result import EventApiResult
 from apps.qa_platform.models.dto import (
     Context, TestSuitForDeque, CaseApiNode
 )
@@ -24,6 +24,21 @@ from apps.qa_platform.service.event_api_record_service import ApiRunChainOfRespo
 
 # 日志
 event_log = logging.getLogger('event')
+
+
+# @print_func
+# def handle_context(context : Context):
+#     """处理context数据"""
+#     if not context.plan_id and not context.case_id:
+#         raise ValueError('缺少必填参数：plan_id or case_id')
+#     elif context.plan_id and context.case_id:
+#         raise ValueError('plan_id和case_id其中只能有一个，请检查context')
+#     elif context.plan_id:
+#         context.case_id_list = query_case_id_list_by_plan_id(context.plan_id)
+#     else:
+#         context.case_id_list = [context.case_id]
+#         runner = EventApiResultThread(context)
+#         runner.run()
 
 @print_clazz
 class EventApiResultThread(threading.Thread):

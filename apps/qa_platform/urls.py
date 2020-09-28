@@ -27,7 +27,7 @@ urlpatterns = [
     path('queryProjectByName/', project_controller.QueryProjectByName.as_view(), name='根据project_name获取project'),
     path('queryQaPlanByName/', qa_plan_controller.QueryQaPlanByName.as_view(), name='根据plan_name获取plan'),
     path('queryQaCaseByName/', qa_case_controller.QueryQaCaseByName.as_view(), name='根据case_name获取case'),
-    path('runTestPlanById/', event_controller.HandleEvent.as_view(), name='处理event'),
+    path('event/api/run/', event_controller.HandleEvent.as_view(), name='处理event'),
 ]
 
 # Viewset视图集

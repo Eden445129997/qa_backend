@@ -101,7 +101,7 @@ CHECK_METHOD = (
     (AssertMethod.ASSERT_IN.value, AssertMethod.ASSERT_IN.value),
     (AssertMethod.ASSERT_NOT_IN.value, AssertMethod.ASSERT_NOT_IN.value)
 )
-
+#result.updateStatus
 if __name__ == '__main__':
     if "POST" == RequestMethod.POST.value:
         print(1)

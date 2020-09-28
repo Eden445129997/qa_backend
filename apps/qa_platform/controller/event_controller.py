@@ -8,7 +8,7 @@ from rest_framework.views import APIView
 # drf状态码
 from rest_framework import status
 # 模型
-from apps.qa_platform.models import domain
+from apps.qa_platform.models.domain import event
 # 自定义模型视图
 from apps.common.views import CustomModelViewSet
 # 序列化
@@ -28,7 +28,7 @@ from django.http.request import HttpRequest
 
 class EventViews(CustomModelViewSet):
     """事件表"""
-    queryset = domain.Event.objects.all()
+    queryset = event.Event.objects.all()
     serializer_class = serializers.EventSerializer
 
 

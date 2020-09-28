@@ -7,7 +7,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 
 # 模型
-from apps.qa_platform.models import domain
+from apps.qa_platform.models.domain import qa_case
 # 自定义模型视图
 from apps.common.views import CustomModelViewSet
 # 序列化
@@ -20,7 +20,7 @@ from apps.common.response import JsonResponse
 
 class QaCaseViews(CustomModelViewSet):
     """测试用例"""
-    queryset = domain.QaCase.objects.all()
+    queryset = qa_case.QaCase.objects.all()
     serializer_class = serializers.QaCaseSerializer
 
 class QueryQaCaseByName(APIView):

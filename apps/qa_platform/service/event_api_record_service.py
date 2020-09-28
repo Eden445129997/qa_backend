@@ -6,7 +6,7 @@ from apps.common.utils.decorator import (
 )
 
 from apps.qa_platform.models.dto import CaseApiNode
-from apps.qa_platform.models.domain import EventApiRecord
+from apps.qa_platform.models.domain.event_api_record import EventApiRecord
 from apps.qa_platform.enumeration import AssertMethod
 
 import urllib3
@@ -55,6 +55,8 @@ class _ExpressionHandler(BaseHandler):
     # 字符串从 ｜ 分割
     # 分割后的数组，索引0字符串前后去空格，索引1直接正则获取数字
     # 索引1找到对应节点，索引0捕捉元素
+
+    # todo: 字典转字符串之后，出现异常未转回字典(已修复的异常，找个时间优化以更好的解决方式处理掉)
     """
 
     def replace_from_expression(self, replace_json_or_dict : Json):
@@ -109,12 +111,13 @@ class _ExpressionHandler(BaseHandler):
                     sort=index,
                     is_status=1, is_delete=0
                 ).get('response')
-            except Exception as e:
+            except EventApiRecord.DoesNotExist as e:
                 self.case_node.err_record.append(
-                    '表达式异常，不存在执行记录，result_id：%s，case_id：%s，sort：%s，err：%s' % (
-                        self.case_node.result_id, self.case_node.case_id, index ,e
+                    '表达式异常，查询不到response，result_id：%s，case_id：%s，data_id：%s，sort：%s，err：%s' % (
+                        self.case_node.result_id, self.case_node.case_id,self.case_node.data_id, index ,e
                     )
                 )
+                return json.loads(replace_json_or_dict)
             else:
                 try:
                     response_dict = json.loads(response.replace('\'', '"'))
@@ -230,6 +233,7 @@ class _HttpHandler(BaseHandler):
     ):
         return self._default(method='DELETE', url=url, params=params, body=body, headers=headers, timeout=timeout)
 
+    @print_func
     def _get_func(self, key: str):
         """获取请求方法"""
         func = self._method_dict.get(key)
@@ -239,11 +243,13 @@ class _HttpHandler(BaseHandler):
             func = getattr(self, func)
         return func
 
+    @print_func
     def _handle_context(self, case_node: CaseApiNode):
         case_node.headers['Content-Type'] = case_node.content_type
         self._reconnection_times = case_node.reconnection_times
         self._rest_reconnection_times = case_node.reconnection_times
 
+    @print_func
     def _send(self, case_node : CaseApiNode):
         request_func = self._get_func(case_node.method)
         try:
@@ -388,6 +394,7 @@ class _AssertHandler(BaseHandler):
                 )
                 if not catch_list:
                     case_node.err_record.append('断言异常，未找到断言对象，表达式：%s'%assert_obj)
+                    continue
                 # todo：修改断言表达式，多个断言对象需要指定哪一个
                 # 断言失败添加到报错中
                 if not self._assert(assert_method, catch_list[0], assert_val):
@@ -396,6 +403,7 @@ class _AssertHandler(BaseHandler):
                             'assert_method': assert_method, 'assert_obj': catch_list[0], 'assert_val': assert_val
                         }
                     )
+
             except StopIteration:
                 break
         return self.successor.handle(case_node)

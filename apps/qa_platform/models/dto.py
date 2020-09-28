@@ -84,6 +84,7 @@ class Context(BaseModel):
     # 接口请求的host
     host: str
     # headers
+    # headers: Json or dict = {}
     headers: dict = {}
 
 class CaseApiNode(BaseModel):
