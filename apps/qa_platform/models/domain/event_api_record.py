@@ -28,7 +28,7 @@ class EventApiRecord(models.Model):
     # 请求头
     headers = models.TextField(verbose_name="请求头", default="{}")
     # url后的请求参数
-    params = models.TextField(verbose_name="请求行入参", default="{}")
+    query = models.TextField(verbose_name="请求行入参", default="{}")
     # 入参
     body = models.TextField(verbose_name="请求体入参", default="{}")
     # 响应参数
