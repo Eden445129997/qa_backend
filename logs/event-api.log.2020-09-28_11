@@ -1,0 +1,987 @@
+
+2020-09-28 10:20:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:20:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:20:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:20:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:20:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:20:40 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=7 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22406
+thread_id:123145504444416
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=8 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:28 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22424
+thread_id:123145520807936
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:28 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22424
+thread_id:123145520807936
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:28 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22424
+thread_id:123145520807936
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:28 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22424
+thread_id:123145520807936
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:28 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22424
+thread_id:123145520807936
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:28 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22424
+thread_id:123145520807936
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=9 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:53 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22435
+thread_id:123145349627904
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 1} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=1 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:53 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22435
+thread_id:123145349627904
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=1 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:53 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22435
+thread_id:123145349627904
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'b': 2} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=2 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:53 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22435
+thread_id:123145349627904
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=2 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:53 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22435
+thread_id:123145349627904
+case_id=1 api_id=1 api_name='所有接口数据' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/platform/project/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=3 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:21:53 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22435
+thread_id:123145349627904
+case_id=1 api_id=2 api_name='测试请求的接口' content_type='application/x-www-form-urlencoded' path='http://10.113.248.196/testapi/' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={'a': '${ $.. | 0 }'} is_mock=False mock_response='{}' is_expression=False assert_list=[{'data_id': 3, 'model_id': 2, 'assert_method': 'assertEqual', 'assert_obj': '$..', 'assert_val': '{"path": "/testapi/", "method": "GET", "contentType": "text/plain", "queryString": "", "queryJson": {}, "body": ""}'}] result_id=10 data_id=3 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:29:30 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22483
+thread_id:123145514328064
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=11 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:29:30 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22483
+thread_id:123145514328064
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=11 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:29:30 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22483
+thread_id:123145514328064
+'str' object does not support item assignment
+
+
+2020-09-28 10:30:30 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22483
+thread_id:123145514328064
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=12 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:30:30 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22483
+thread_id:123145514328064
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=12 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:30:30 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22483
+thread_id:123145514328064
+'str' object does not support item assignment
+
+
+2020-09-28 10:31:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22499
+thread_id:123145354371072
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=13 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:31:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22499
+thread_id:123145354371072
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=13 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:31:14 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22499
+thread_id:123145354371072
+'str' object does not support item assignment
+
+
+2020-09-28 10:35:36 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22535
+thread_id:123145556406272
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=14 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:35:36 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22535
+thread_id:123145556406272
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=14 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:35:36 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22535
+thread_id:123145556406272
+'str' object does not support item assignment
+
+
+2020-09-28 10:36:08 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22546
+thread_id:123145396940800
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:36:08 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22546
+thread_id:123145396940800
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:36:08 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22546
+thread_id:123145396940800
+'str' object does not support item assignment
+
+
+2020-09-28 10:38:52 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22584
+thread_id:123145406980096
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=16 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:38:52 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22584
+thread_id:123145406980096
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=16 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:38:52 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22584
+thread_id:123145406980096
+'str' object does not support item assignment
+
+
+2020-09-28 10:39:24 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22599
+thread_id:123145582030848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=17 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:39:24 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22599
+thread_id:123145582030848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=17 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:39:24 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22599
+thread_id:123145582030848
+'str' object does not support item assignment
+
+
+2020-09-28 10:46:10 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22630
+thread_id:123145538957312
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=18 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:46:10 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22630
+thread_id:123145538957312
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=18 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:46:10 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22630
+thread_id:123145538957312
+'str' object does not support item assignment
+
+
+2020-09-28 10:47:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22648
+thread_id:123145461669888
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=19 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:47:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22648
+thread_id:123145461669888
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=19 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:47:11 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22648
+thread_id:123145461669888
+'str' object does not support item assignment
+
+
+2020-09-28 10:50:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22674
+thread_id:123145322815488
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=20 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:50:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22674
+thread_id:123145322815488
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=20 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:50:14 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22674
+thread_id:123145322815488
+'str' object does not support item assignment
+
+
+2020-09-28 10:50:42 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22681
+thread_id:123145515425792
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=21 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:50:42 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22681
+thread_id:123145515425792
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=21 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:50:42 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22681
+thread_id:123145515425792
+'str' object does not support item assignment
+
+
+2020-09-28 10:50:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22685
+thread_id:123145378422784
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=22 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:50:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22685
+thread_id:123145378422784
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=22 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:50:58 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22685
+thread_id:123145378422784
+'str' object does not support item assignment
+
+
+2020-09-28 10:52:23 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22704
+thread_id:123145322905600
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=23 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:52:23 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22704
+thread_id:123145322905600
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=23 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:52:23 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22704
+thread_id:123145322905600
+'str' object does not support item assignment
+
+
+2020-09-28 10:58:48 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22740
+thread_id:123145408978944
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=24 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:58:48 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22740
+thread_id:123145408978944
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=24 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:58:48 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22740
+thread_id:123145408978944
+'str' object does not support item assignment
+
+
+2020-09-28 10:59:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22743
+thread_id:123145563496448
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=25 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:59:14 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22743
+thread_id:123145563496448
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=25 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 10:59:14 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22743
+thread_id:123145563496448
+'bool' object is not subscriptable
+
+
+2020-09-28 11:02:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22763
+thread_id:123145411493888
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=26 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:02:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22763
+thread_id:123145411493888
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=26 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:02:03 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22763
+thread_id:123145411493888
+'bool' object is not subscriptable
+
+
+2020-09-28 11:04:32 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22786
+thread_id:123145419833344
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=27 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:04:32 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22786
+thread_id:123145419833344
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=27 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:04:33 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22786
+thread_id:123145419833344
+'bool' object is not subscriptable
+
+
+2020-09-28 11:05:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22797
+thread_id:123145528664064
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=28 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:00 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22797
+thread_id:123145528664064
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=28 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:00 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22797
+thread_id:123145528664064
+'bool' object is not subscriptable
+
+
+2020-09-28 11:05:09 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22801
+thread_id:123145517539328
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=29 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:09 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22801
+thread_id:123145517539328
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=29 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:09 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22801
+thread_id:123145517539328
+'bool' object is not subscriptable
+
+
+2020-09-28 11:05:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22808
+thread_id:123145445756928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=30 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22808
+thread_id:123145445756928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=30 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:21 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22808
+thread_id:123145445756928
+'bool' object is not subscriptable
+
+
+2020-09-28 11:05:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22813
+thread_id:123145454510080
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=31 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:34 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22813
+thread_id:123145454510080
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=31 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:34 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22813
+thread_id:123145454510080
+'bool' object is not subscriptable
+
+
+2020-09-28 11:05:44 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22819
+thread_id:123145553903616
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=32 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:44 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22819
+thread_id:123145553903616
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=32 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:05:44 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22819
+thread_id:123145553903616
+'bool' object is not subscriptable
+
+
+2020-09-28 11:06:03 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22822
+thread_id:123145392332800
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=33 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:06:03 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22822
+thread_id:123145392332800
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=33 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:06:03 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22822
+thread_id:123145392332800
+'bool' object is not subscriptable
+
+
+2020-09-28 11:06:19 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22830
+thread_id:123145321648128
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=34 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:06:19 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22830
+thread_id:123145321648128
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=34 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:06:19 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22830
+thread_id:123145321648128
+'bool' object is not subscriptable
+
+
+2020-09-28 11:06:44 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22834
+thread_id:123145338597376
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=35 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:06:44 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22834
+thread_id:123145338597376
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=35 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:06:44 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22834
+thread_id:123145338597376
+'bool' object is not subscriptable
+
+
+2020-09-28 11:06:56 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22846
+thread_id:123145414582272
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=36 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:06:56 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22846
+thread_id:123145414582272
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=36 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:06:56 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22846
+thread_id:123145414582272
+'bool' object is not subscriptable
+
+
+2020-09-28 11:19:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22880
+thread_id:123145414955008
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=37 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:19:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22880
+thread_id:123145414955008
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=37 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:19:02 ERROR
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22880
+thread_id:123145414955008
+'bool' object is not subscriptable
+
+
+2020-09-28 11:21:32 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:32 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:32 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=6 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:32 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 6, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=6 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=7 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 7, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=7 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=8 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.old |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 8, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=8 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=9 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 9, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=9 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=10 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 10, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=10 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=11 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.old |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 11, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=11 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=12 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 12, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=12 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=38 data_id=13 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:21:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22900
+thread_id:123145400700928
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 13, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=38 data_id=13 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:29 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=5 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:29 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|1 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=5 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:29 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=6 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:29 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 6, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=6 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:30 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=7 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:30 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 7, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=7 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:30 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=8 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:30 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.old |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 8, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=8 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=9 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 9, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=9 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=10 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 10, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=10 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=11 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.old |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 11, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=11 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=12 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 12, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=12 sort=1 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=39 data_id=13 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-09-28 11:25:31 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:22940
+thread_id:123145502670848
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 13, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=39 data_id=13 sort=1 response=None fail_times=0 err_record=[]
+

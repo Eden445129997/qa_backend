@@ -10,6 +10,7 @@ from apps.qa_platform.models.domain.event_api_record import EventApiRecord
 from apps.qa_platform.enumeration import AssertMethod
 
 import urllib3
+from urllib.parse import urlencode
 
 import time
 
@@ -183,7 +184,6 @@ class _HttpHandler(BaseHandler):
             self,
             method: str,
             url: str,
-            params: dict,
             body: dict,
             headers: dict,
             timeout: int = 10
@@ -192,46 +192,43 @@ class _HttpHandler(BaseHandler):
         if method.upper() not in self._method_tuple:
             raise RuntimeError('不支持的请求方法')
         if headers and 'application/json' in headers.get('Content-Type'):
-            return requests.request(method=method, url=url, params=params, json=body, headers=headers, verify=False,
+            return requests.request(method=method, url=url, json=body, headers=headers, verify=False,
                                     timeout=timeout)
-        return requests.request(method=method, url=url, params=params, data=body, headers=headers, verify=False,
+
+        return requests.request(method=method, url=url, data=body, headers=headers, verify=False,
                                 timeout=timeout)
 
     def _get(
             self, url: str,
-            params: dict,
             body: dict,
             headers: dict,
             timeout: int = 10
     ):
-        return self._default(method='GET', url=url, params=params, body=body, headers=headers, timeout=timeout)
+        return self._default(method='GET', url=url, body=body, headers=headers, timeout=timeout)
 
     def _post(
             self, url: str,
-            params: dict,
             body: dict,
             headers: dict,
             timeout: int = 10
     ):
-        return self._default(method='POST', url=url, params=params, body=body, headers=headers, timeout=timeout)
+        return self._default(method='POST', url=url, body=body, headers=headers, timeout=timeout)
 
     def _put(
             self, url: str,
-            params: dict,
             body: dict,
             headers: dict,
             timeout: int = 10
     ):
-        return self._default(method='PUT', url=url, params=params, body=body, headers=headers, timeout=timeout)
+        return self._default(method='PUT', url=url, body=body, headers=headers, timeout=timeout)
 
     def _delete(
             self, url: str,
-            params: dict,
             body: dict,
             headers: dict,
             timeout: int = 10
     ):
-        return self._default(method='DELETE', url=url, params=params, body=body, headers=headers, timeout=timeout)
+        return self._default(method='DELETE', url=url, body=body, headers=headers, timeout=timeout)
 
     @print_func
     def _get_func(self, key: str):
@@ -263,9 +260,14 @@ class _HttpHandler(BaseHandler):
                 type(case_node.headers),
                 'headers:%s'%case_node.headers,
             )
+            # print(case_node.query)
+            # if case_node.query:
+            #     print(111)
+            #     query = urlencode(case_node.query)
+            #     print(2222)
+            #     case_node.path = "%s?%s"%(case_node.path, query)
             response = request_func(
                 url=case_node.path,
-                params=case_node.query,
                 body=case_node.body,
                 headers=case_node.headers,
                 timeout=case_node.timeout
@@ -287,6 +289,8 @@ class _HttpHandler(BaseHandler):
             if self._rest_reconnection_times:
                 time.sleep(1)
                 self._send(case_node)
+
+        # except UnicodeEncodeError
 
         except Exception as e:
             print("进入exception")

@@ -76,14 +76,14 @@ class EventApiStatus(Enum):
     WAIT = u'等待'
     EXECUTION = u'运行'
     FINISH = u'完成'
-    FAILSE = u'失败'
+    FALSE = u'失败'
 
 
 EVENT_API_STUTAS = (
     (EventApiStatus.WAIT.value, EventApiStatus.WAIT.value),
     (EventApiStatus.EXECUTION.value, EventApiStatus.EXECUTION.value),
     (EventApiStatus.FINISH.value, EventApiStatus.FINISH.value),
-    (EventApiStatus.FAILSE.value, EventApiStatus.FAILSE.value),
+    (EventApiStatus.FALSE.value, EventApiStatus.FALSE.value),
 )
 
 

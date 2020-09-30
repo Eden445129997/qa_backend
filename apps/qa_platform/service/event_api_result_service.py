@@ -55,6 +55,7 @@ class EventApiResultThread(threading.Thread):
         self.result_obj = self.mk_event_api_result()
         self.suit_chain = ApiSuitChainOfResponsibility()
         self.run_chain = ApiRunChainOfResponsibility()
+        self.headers = context.headers
         self.err_record = []
 
     @print_func
@@ -98,7 +99,7 @@ class EventApiResultThread(threading.Thread):
     @print_func
     def fail_event_api(self):
         """结束事件"""
-        self.result_obj.current_status = EventApiStatus.FAILSE.value
+        self.result_obj.current_status = EventApiStatus.FALSE.value
         self.result_obj.err_record = self.err_record
         self.result_obj.save()
 
@@ -147,6 +148,7 @@ class EventApiResultThread(threading.Thread):
                                 case_api_node: CaseApiNode = model_and_data_iter.__next__()
                                 case_api_node.result_id = self.result_obj.id
                                 case_api_node.path = "%s%s" % (self.context.host, case_api_node.path)
+                                case_api_node.headers = {**case_api_node.headers, **self.headers}
                                 event_log.info(case_api_node)
                                 # 失败跳过该数据
                                 if not self.run_chain.main(case_api_node):

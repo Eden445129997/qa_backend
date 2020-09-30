@@ -13,22 +13,13 @@ from rest_framework import status
 # drf响应
 # from rest_framework.response import Response
 
-# 模型
-from apps.qa_platform.service.event_api_suit_service import *
-from apps.qa_platform.service.event_api_result_service import *
-from apps.qa_platform.models import domain
 # 序列化
-from apps.common.serializers import query_set_list_serializers
 from apps.common.response import JsonResponse
 # http请求的类
 from django.http.request import HttpRequest
 
-
 from apps.common.single import db
 
-import json
-
-# import collections
 
 # 数据库的单例连接
 conner = db()

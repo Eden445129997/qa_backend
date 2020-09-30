@@ -1,0 +1,7 @@
+
+2020-09-28 17:20:59 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:23815
+thread_id:123145326247936
+case_id=2 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'ios', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'token': 'test'} query={} body={'phone': '13771768445', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=40 data_id=4 sort=0 response=None fail_times=0 err_record=[]
+

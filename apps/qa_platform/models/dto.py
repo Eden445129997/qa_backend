@@ -110,6 +110,7 @@ class CaseApiNode(BaseModel):
     # url后的查询参数
     # query: str
     query: Json
+    # params: Json
     # 入参
     # body: str
     body: Json

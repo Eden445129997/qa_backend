@@ -1,11 +1,10 @@
 # django原生sql
 from django.db import connection
 
-
 # def db_cursor(sql):
 #     return cursor.execute(sql)
 
-class db:
+class db(object):
 
     # cursor = connection.cursor()
     _instance = None
