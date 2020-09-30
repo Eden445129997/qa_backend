@@ -44,8 +44,8 @@ def run():
 if __name__ == '__main__':
     # start_app("batch_processing_service")
     # inspectdb("api_project")
-    synchronized_db()
-    # run()
+    # synchronized_db()
+    run()
 
     # 编码
     # aaa = "哈哈哈".encode("utf-8")

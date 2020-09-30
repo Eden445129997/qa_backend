@@ -206,3 +206,159 @@ request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
 request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
 
 
+
+2020-09-30 11:20:07 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27392
+thread_id:123145383415808
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '68389f81-a423-4c45-90b8-6f8f7d3cfbf8', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7fd1c9275e10>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:21:01 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27407
+thread_id:123145407197184
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': 'e2230729-3742-4844-a31a-b57ece2a950f', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7feb9837fe48>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:22:15 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27431
+thread_id:123145552150528
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': 'bf1befc2-fcb0-4f76-acb8-9fd92f203419', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7fe7b8478a58>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:23:11 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27451
+thread_id:123145558638592
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '7f5e6e06-82a1-4495-b628-528e874735e4', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7ff16e5aab70>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:25:28 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27473
+thread_id:123145497620480
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '1b223545-9fe4-45c0-a1c4-cd30b6703c73', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7f9946579c18>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:27:02 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27504
+thread_id:123145390624768
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '51042c9f-1abc-476a-94e0-d2ba01dd3a3e', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7fe7bae27940>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:27:35 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27510
+thread_id:123145400029184
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '1cc8730a-c93d-4c62-a51d-9562d5784410', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7fb38667bf60>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:27:58 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27514
+thread_id:123145341038592
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '614df6bf-d9ea-40f4-a164-515462b6b89f', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7faf2626bf60>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:30:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27552
+thread_id:123145433739264
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '89039078-abd8-4d57-a710-3ae85b3a8c65', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7fb6fcdabd30>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:31:15 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27552
+thread_id:123145433739264
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '1e07da36-9202-49de-9f20-27fa98d77e58', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7fb6fcdabeb8>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:34:51 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27610
+thread_id:123145352302592
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': '1100ede7-0e25-46bc-9eeb-9b548cfcd5fd', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7f909fd24518>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
+
+2020-09-30 11:36:21 INFO
+/Users/eden/workspace/djangoWebServer/apps/common/middleware.py
+process_id:27634
+thread_id:123145437257728
+request.META:{'SHELL': '/bin/zsh', 'TMPDIR': '/var/folders/l7/_f5f2c2x545_dy3vdd8wc1t00000gn/T/', '__PYVENV_LAUNCHER__': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'PYTHONUNBUFFERED': '1', 'PYCHARM_HOSTED': '1', 'USER': 'eden', 'PYTHONIOENCODING': 'UTF-8', 'SSH_AUTH_SOCK': '/private/tmp/com.apple.launchd.sOctEPiXS6/Listeners', '__CF_USER_TEXT_ENCODING': '0x1F5:0x19:0x34', 'VIRTUAL_ENV': '/Users/eden/workspace/djangoWebServer/venv', 'PATH': '/Users/eden/workspace/djangoWebServer/venv/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin', 'VERSIONER_PYTHON_VERSION': '2.7', 'PWD': '/Users/eden/workspace/djangoWebServer', 'XPC_FLAGS': '0x0', 'XPC_SERVICE_NAME': 'com.jetbrains.pycharm.4620', 'SHLVL': '1', 'HOME': '/Users/eden', 'LOGNAME': 'eden', 'PYTHONPATH': '/Users/eden/workspace/djangoWebServer', 'LC_CTYPE': 'zh_CN.UTF-8', '_': '/Users/eden/workspace/djangoWebServer/venv/bin/python3', 'DJANGO_SETTINGS_MODULE': 'main.settings.develop', 'TZ': 'Asia/Shanghai', 'RUN_MAIN': 'true', 'SERVER_NAME': 'hongwenhuidembp.www.idazoo.com', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '9998', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '103', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'POST', 'PATH_INFO': '/platform/event/api/run/', 'QUERY_STRING': 'a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'application/json', 'HTTP_USER_AGENT': 'PostmanRuntime/7.26.3', 'HTTP_ACCEPT': '*/*', 'HTTP_POSTMAN_TOKEN': 'c689f3f2-e5ea-43c0-a26f-9b12bf2e1cf1', 'HTTP_HOST': 'localhost:9998', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate, br', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7ffbca37bb38>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>, 'BODY': {'plan_id': 0, 'case_id': 3, 'host': 'http://10.113.248.196', 'headers': {'token': '测试一下'}}}
+request.path:/platform/event/api/run/
+request.method:POST
+request.content_type:application/json
+request.query:a=%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B
+request.body:b'{\n\t"plan_id":0,\n    "case_id":3,\n\t"host":"http://10.113.248.196",\n\t"headers":{"token":"\xe6\xb5\x8b\xe8\xaf\x95\xe4\xb8\x80\xe4\xb8\x8b"}\n}'
+
+
