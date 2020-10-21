@@ -25,6 +25,10 @@ from rest_framework import views
 from rest_framework.response import Response
 from rest_framework import status
 
+# 这里需要导入另外一个cache模块
+from django.core.cache import cache
+
+''
 class Test(View):
     def post(self, request, *args, **kwargs):
         # safe参数默认为True，返回的必须是字典类型，否则报错
@@ -35,19 +39,6 @@ class Test(View):
 # django实现cbv（class base view）方式
 class DemoCBV(View):
     def get(self,request,*args,**kwargs):
-        # print(request.META)
-        # print(request.META.get('PATH_INFO'))
-        # print(request.META.get('REQUEST_METHOD'))
-        # print(request.META.get('QUERY_STRING'))
-        # print(request.META.get('CONTENT_TYPE'))
-        # print(request.GET.dict())
-
-        # 请求的方式，即http或者是https
-        # print(request.scheme)
-        # 请求的路径,相对路径
-        # print(request.path)
-        # session
-        # print(request.session)
 
         # 设置cookies
         # response.set_cookie('name', 'root')
@@ -58,21 +49,10 @@ class DemoCBV(View):
         # 获取加密的cookie
         # request.get_signed_cookie("password", salt="@#$!%^&")
         time = datetime.datetime.now()
-        # print(time)
-        demo = models.DemoModel(text="测试时间戳",str_time = time)
-        demo.save()
         # safe参数默认为True，返回的必须是字典类型，否则报错
-        # return JsonResponse("success,this is django CBV get request",safe=False)
         return JsonResponse({"a":"测试1","b":"测试2"},safe=False)
 
     def post(self,request,*args,**kwargs):
-        # print(request.META)
-        # print(request.META.get('PATH_INFO'))
-        # print(request.META.get('REQUEST_METHOD'))
-        # print(request.META.get('QUERY_STRING'))
-        # print(request.META.get('CONTENT_TYPE'))
-        # print(request.GET.dict())
-
         # 请求的主体，返回的是一个byte数据
         print(request.body)
         # 获取post方式表单中提交的数据,headers:{'Content-Type':"application/json"}的时候，request.POST是没有值的

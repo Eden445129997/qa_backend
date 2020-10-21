@@ -10,7 +10,7 @@ from apps.qa_platform.models.domain.event_api_record import EventApiRecord
 from apps.qa_platform.enumeration import AssertMethod
 
 import urllib3
-from urllib.parse import urlencode,quote,unquote,quote_plus
+from urllib.parse import quote
 
 import time
 

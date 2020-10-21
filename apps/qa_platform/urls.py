@@ -19,7 +19,7 @@ from .controller import (
     api_case_data_node_controller,
     api_assert_controller,
 )
-
+# AutoAddCaseApi
 # 将rest_framework实现的viewset也添加django的路由中
 urlpatterns = [
     path('login/', controller.Login.as_view(), name='登录demo，获取token'),
@@ -28,6 +28,7 @@ urlpatterns = [
     path('queryQaPlanByName/', qa_plan_controller.QueryQaPlanByName.as_view(), name='根据plan_name获取plan'),
     path('queryQaCaseByName/', qa_case_controller.QueryQaCaseByName.as_view(), name='根据case_name获取case'),
     path('event/api/run/', event_controller.HandleEvent.as_view(), name='处理event'),
+    path('qaCase/api/autoadd/', qa_case_controller.CaseApiAutoAdd.as_view(), name='自动添加接口用例'),
 ]
 
 # Viewset视图集
