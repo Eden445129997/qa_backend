@@ -43,7 +43,8 @@ SECRET_KEY = '%gv+a$_$rd9bof0(*sc4p!^(1ydra!h3l21+l@(bug$4j7@0nu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [host(), "127.0.0.1", "localhost", "10.113.249.37", "10.113.249.255"]
+# ALLOWED_HOSTS = [host(), "127.0.0.1", "localhost", "10.113.249.37", "10.113.249.255"]
+ALLOWED_HOSTS = ["*",]
 
 # Application definition
 # 添加APP
