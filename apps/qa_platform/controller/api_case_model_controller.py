@@ -12,3 +12,6 @@ class ApiCaseModelViews(CustomModelViewSet):
     """测试模型表"""
     queryset = api_case_model.ApiCaseModel.objects.all()
     serializer_class = serializers.ApiCaseModelSerializer
+
+    # 排序
+    ordering = ('-sort', 'id')

@@ -15,7 +15,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import socket
 
-
 # 别人的django代码
 # git clone https://github.com/happyletme/requestnew.git
 
@@ -42,9 +41,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = '%gv+a$_$rd9bof0(*sc4p!^(1ydra!h3l21+l@(bug$4j7@0nu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [host(), "127.0.0.1", "localhost"]
+# ALLOWED_HOSTS = [host(), "127.0.0.1", "localhost", "10.113.249.37", "10.113.249.255"]
+ALLOWED_HOSTS = ['*',]
 
 # Application definition
 # 添加APP
@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # django全局过滤
+    'django_filters',
     # 跨域请求解决方案的跨域包
     "corsheaders",
     # drf框架（更加方便开发）
@@ -67,10 +69,37 @@ INSTALLED_APPS = [
 
 # drf 配置
 REST_FRAMEWORK = {
+    # 全局过滤(字段查询)
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    # 全局分页(两种)
+    # rest_framework.pagination.PageNumberPagination
+    # rest_framework.pagination.LimitOffsetPagination
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
+    # 接口文档错误解决方案
     # AttributeError: 'AutoSchema' object has no attribute 'get_link'
     # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',
+    # pip install coreapi==2.3.3
+    # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     # 新版drf自带文档接口配置
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
+
+# 缓存配置
+CACHES = {
+    'default': {
+        # 'BACKEND': 'django.core.cache.backends.db.DatabaseCache',  # 指定缓存使用的引擎
+        # 'LOCATION': 'cache_table',  # 数据库表
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',  # 指定缓存使用的引擎
+        # 'LOCATION': 'unique-snowflake',         # 写在内存中的变量的唯一值
+        # 'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache', #指定缓存使用的引擎
+        'LOCATION': '/var/tmp/django_cache',        #指定缓存的路径
+        'TIMEOUT':300,              #缓存超时时间(默认为300秒,None表示永不过期)
+        'OPTIONS':{
+            'MAX_ENTRIES': 300,            # 最大缓存记录的数量（默认300）
+            'CULL_FREQUENCY': 3,           # 缓存到达最大个数之后，剔除缓存个数的比例，即：1/CULL_FREQUENCY（默认3）
+        }
+    }
 }
 
 # 中间件
@@ -173,7 +202,7 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": "root",
         "HOST": "111.229.54.5",
-        "PORT": 3306,
+        "PORT": '3306',
         # 配置长链接数
         # 'CONN_MAX_AGE': 5*60,
         "TEST": {

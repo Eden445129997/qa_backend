@@ -32,7 +32,8 @@ class JsonResponse(Response):
             )
             raise AssertionError(msg)
 
-        self.data = {"code": code, "message": msg, "data": data}
+        # self.data = {"code": code, "message": msg, "data": data}
+        self.data = data
         self.data.update(kwargs)
         self.template_name = template_name
         self.exception = exception

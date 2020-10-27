@@ -1,294 +1,126 @@
 
-2020-10-06 15:21:15 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=4 data_id=15 sort=0 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=5 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:21:15 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=4 data_id=15 sort=1 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.old|0 }'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 5, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=5 sort=1 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:24:11 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=1 data_id=15 sort=0 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=6 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:24:11 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '$.result.token'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=1 data_id=15 sort=1 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 6, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=6 sort=1 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:26:22 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=2 data_id=15 sort=0 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=7 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:26:22 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '$.result.token'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=2 data_id=15 sort=1 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'ios', 'version': '${$.ios.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 7, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=7 sort=1 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:28:10 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=3 data_id=15 sort=0 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=8 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:28:10 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=3 data_id=15 sort=1 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.old |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 8, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=8 sort=1 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:28:46 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=4 data_id=15 sort=0 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=9 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:28:46 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=4 data_id=15 sort=1 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 9, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=9 sort=1 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:34:52 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=5 data_id=15 sort=0 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=10 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:34:52 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=5 data_id=15 sort=1 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'android', 'version': '${$.android.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 10, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=10 sort=1 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:34:52 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[0].partyId|1}'} body={} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=5 data_id=15 sort=2 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=11 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:36:47 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=6 data_id=15 sort=0 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.old |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 11, 'model_id': 8, 'assert_method': 'assertNotEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=11 sort=1 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:36:48 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=6 data_id=15 sort=1 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=12 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:36:48 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[0].partyId|1}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=6 data_id=15 sort=2 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.now |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 12, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=12 sort=1 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:37:56 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=7 data_id=15 sort=0 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={} query={} body={} is_mock=True mock_response='{"ios": {"old": "1.2.10", "now": "1.2.12", "new": "1.2.13"}, "android": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}, "tv": {"old": "1.2.2.9", "now": "1.2.12", "new": "1.2.13"}}' is_expression=False assert_list=[] result_id=15 data_id=13 sort=0 response=None fail_times=0 err_record=[]
 
 
-2020-10-06 15:37:56 INFO
+2020-10-27 11:36:25 INFO
 /Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=7 data_id=15 sort=1 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:37:56 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[0].partyId|1}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=7 data_id=15 sort=2 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:39:40 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=8 data_id=15 sort=0 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:39:41 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=8 data_id=15 sort=1 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:39:41 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[0].partyId|2}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=8 data_id=15 sort=2 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:41:11 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=9 data_id=15 sort=0 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:41:12 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=9 data_id=15 sort=1 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:41:12 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[1].partyId|1}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=9 data_id=15 sort=2 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:46:00 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=10 data_id=15 sort=0 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:46:00 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=10 data_id=15 sort=1 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:46:00 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[1].creatorId|1}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=10 data_id=15 sort=2 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:46:40 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=11 data_id=15 sort=0 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:46:41 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=11 data_id=15 sort=1 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:46:41 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[1].serialNo|1}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=11 data_id=15 sort=2 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:47:05 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=12 data_id=15 sort=0 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:47:05 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=12 data_id=15 sort=1 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:47:05 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[0].serialNo|1}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=12 data_id=15 sort=2 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:50:34 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=13 data_id=15 sort=0 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:50:34 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=13 data_id=15 sort=1 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:50:34 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[0].serialNo|1}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=13 data_id=15 sort=2 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:50:34 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=254 api_name='聚会宾客信息' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/getPartyParticipantInfo' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'partyId': '${$.result.partyId|1}', 'event': '1'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=13 data_id=15 sort=3 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:51:24 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=119 api_name='手机号短信登录/注册' content_type='application/json' path='http://10.113.248.196/api-user/v1/user/login/phone' method='POST' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1'} query={} body={'phone': '15361899601', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=14 data_id=15 sort=0 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:51:24 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=253 api_name='首页直播中列表' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/findRecommendAndHeatPartyList' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=14 data_id=15 sort=1 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:51:25 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=255 api_name='tv进入聚会前' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/into/pre' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'serialNo': '${$.result.list[0].serialNo|1}'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=14 data_id=15 sort=2 response=None fail_times=0 err_record=[]
-
-
-2020-10-06 15:51:25 INFO
-/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
-process_id:34577
-thread_id:123145489682432
-case_id=5 api_id=254 api_name='聚会宾客信息' content_type='application/json' path='http://10.113.248.196/api-party/v6/tv/homePage/getPartyParticipantInfo' method='GET' reconnection_times=3 timeout=10 headers={'device': 'tv', 'version': '1.2.9', 'token': '${$.result.token|0}'} query={'partyId': '${$.result.partyId|2}', 'event': '1'} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=14 data_id=15 sort=3 response=None fail_times=0 err_record=[]
+process_id:7701
+thread_id:123145347182592
+case_id=3 api_id=178 api_name='系统版本更新提示' content_type='application/json' path='http://10.113.248.196/api-user/v1/sys/last/version' method='POST' reconnection_times=3 timeout=10 headers={'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'device': 'tv', 'version': '${$.tv.new |0}'} query={} body={} is_mock=False mock_response='{}' is_expression=True assert_list=[{'data_id': 13, 'model_id': 8, 'assert_method': 'assertEqual', 'assert_obj': '$.result.updateStatus', 'assert_val': '0'}] result_id=15 data_id=13 sort=1 response=None fail_times=0 err_record=[]
 

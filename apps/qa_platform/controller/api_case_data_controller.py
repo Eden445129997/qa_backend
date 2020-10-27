@@ -12,3 +12,7 @@ class ApiCaseDataViews(CustomModelViewSet):
     """接口数据表"""
     queryset = api_case_data.ApiCaseData.objects.all()
     serializer_class = serializers.ApiCaseDataSerializer
+
+    # 精确匹配
+    # case_id、is_status
+    search_fields = ('text', 'id')

@@ -5,6 +5,12 @@
 from rest_framework.views import APIView
 # drf状态码
 from rest_framework import status
+# 过滤器(字段过滤)
+from django_filters.rest_framework import DjangoFilterBackend
+# drf SearchFilter模糊查询、OrderingFilter排序过滤器
+from rest_framework.filters import (
+    SearchFilter, OrderingFilter
+)
 
 # 模型
 # from apps.qa_platform.models.domain.qa_case import QaCase
@@ -29,6 +35,11 @@ class QaCaseViews(CustomModelViewSet):
     queryset = qa_case.QaCase.objects.all()
     serializer_class = serializers.QaCaseSerializer
 
+    # 模糊查询字段
+    search_fields = ('case_name', 'id')
+    # 排序
+    ordering = ('-sort', 'id')
+
 class QueryQaCaseByName(APIView):
     """根据测试用例名称获取数据，返回数组"""
 
@@ -38,7 +49,7 @@ class QueryQaCaseByName(APIView):
         # 判空
         if keywordKey in request.GET.dict():
             keyword = str(request.GET['keyword'])
-            project_list = qa_case.QaCase.objects.filter(case_name__icontains=keyword).order_by('-create_time')
+            project_list = qa_case.QaCase.objects.filter(case_name__icontains=keyword).order_by('-create_time').order_by('id')
             # print(project_list.query)
             project_list = query_set_list_serializers(project_list)
 

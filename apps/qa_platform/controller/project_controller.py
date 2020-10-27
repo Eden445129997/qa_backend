@@ -5,6 +5,12 @@
 from rest_framework.views import APIView
 # drf状态码
 from rest_framework import status
+# 过滤器(字段过滤)
+from django_filters.rest_framework import DjangoFilterBackend
+# drf SearchFilter模糊查询、OrderingFilter排序过滤器
+from rest_framework.filters import (
+    SearchFilter, OrderingFilter
+)
 
 # 模型
 from apps.qa_platform.models.domain import project
@@ -25,6 +31,15 @@ class ProjectViews(CustomModelViewSet):
     queryset = project.Project.objects.all()
     serializer_class = serializers.ProjectSerializer
 
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter,]
+    # 自定义精确查询字段
+    filter_fields = '__all__'
+    # 模糊查询字段
+    search_fields = ('project_name', 'id')
+    # 默认排序
+    ordering = ('-create_time', 'id')
+    # 自定义排序字段
+    ordering_fields = '__all__'
 
 class QueryProjectByName(APIView):
     """根据项目名获取数据，返回数组"""

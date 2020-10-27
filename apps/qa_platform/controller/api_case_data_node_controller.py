@@ -12,3 +12,6 @@ class ApiCaseDataNodeViews(CustomModelViewSet):
     """接口数据节点表"""
     queryset = api_case_data_node.ApiCaseDataNode.objects.all()
     serializer_class = serializers.ApiCaseDataNodeSerializer
+
+    # 排序
+    ordering = ('-sort', 'id')

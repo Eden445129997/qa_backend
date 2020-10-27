@@ -12,3 +12,7 @@ class EventApiResultViews(CustomModelViewSet):
     """接口事件结果"""
     queryset = event_api_result.EventApiResult.objects.all()
     serializer_class = serializers.EventApiResultSerializer
+
+    # 精确匹配
+    # is_status、is_prepared、current_status
+    search_fields = ('host', 'id')

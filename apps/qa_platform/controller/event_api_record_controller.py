@@ -12,3 +12,8 @@ class EventApiRecordViews(CustomModelViewSet):
     """接口事件记录"""
     queryset = event_api_record.EventApiRecord.objects.all()
     serializer_class = serializers.EventApiRecordSerializer
+
+    # 精确匹配
+    # result_id、case_id、data_id
+    search_fields = ('url', 'id')
+    ordering = ('sort')

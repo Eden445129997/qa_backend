@@ -44,7 +44,7 @@ SECRET_KEY = '%gv+a$_$rd9bof0(*sc4p!^(1ydra!h3l21+l@(bug$4j7@0nu'
 DEBUG = True
 
 # ALLOWED_HOSTS = [host(), "127.0.0.1", "localhost", "10.113.249.37", "10.113.249.255"]
-ALLOWED_HOSTS = ["*",]
+ALLOWED_HOSTS = ['*',]
 
 # Application definition
 # 添加APP
@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # django全局过滤
+    'django_filters',
     # 跨域请求解决方案的跨域包
     "corsheaders",
     # drf框架（更加方便开发）
@@ -67,10 +69,20 @@ INSTALLED_APPS = [
 
 # drf 配置
 REST_FRAMEWORK = {
+    # 全局过滤(字段查询)
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    # 全局分页(两种)
+    # rest_framework.pagination.PageNumberPagination
+    # rest_framework.pagination.LimitOffsetPagination
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
+    # 接口文档错误解决方案
     # AttributeError: 'AutoSchema' object has no attribute 'get_link'
     # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',
+    # pip install coreapi==2.3.3
+    # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     # 新版drf自带文档接口配置
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
 
 # 缓存配置

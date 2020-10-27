@@ -12,3 +12,4 @@ class ApiAssertViews(CustomModelViewSet):
     """接口校验点表"""
     queryset = api_assert.ApiAssert.objects.all()
     serializer_class = serializers.ApiAssertSerializer
+
