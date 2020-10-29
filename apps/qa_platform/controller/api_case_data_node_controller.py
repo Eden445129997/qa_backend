@@ -15,3 +15,6 @@ class ApiCaseDataNodeViews(CustomModelViewSet):
 
     # 排序
     ordering = ('-sort', 'id')
+
+    # 精确匹配
+    # model_id、data_id

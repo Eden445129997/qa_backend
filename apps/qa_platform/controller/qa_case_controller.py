@@ -36,7 +36,7 @@ class QaCaseViews(CustomModelViewSet):
     serializer_class = serializers.QaCaseSerializer
 
     # 模糊查询字段
-    search_fields = ('case_name', 'id')
+    search_fields = ('case_name',)
     # 排序
     ordering = ('-sort', 'id')
 

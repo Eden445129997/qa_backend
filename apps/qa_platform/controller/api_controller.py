@@ -16,4 +16,4 @@ class ApiViews(CustomModelViewSet):
     # 精确匹配
     # project_id、content_type、method、is_status
     # 模糊查询字段
-    search_fields = ('api_name','path')
+    search_fields = ('api_name','path',)

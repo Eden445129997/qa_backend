@@ -35,7 +35,7 @@ class ProjectViews(CustomModelViewSet):
     # 自定义精确查询字段
     filter_fields = '__all__'
     # 模糊查询字段
-    search_fields = ('project_name', 'id')
+    search_fields = ('project_name',)
     # 默认排序
     ordering = ('-create_time', 'id')
     # 自定义排序字段

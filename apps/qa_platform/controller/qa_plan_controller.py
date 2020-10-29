@@ -27,9 +27,7 @@ class QaPlanViews(CustomModelViewSet):
     # 精确匹配
     # project_id,is_status
     # 模糊查询字段
-    search_fields = ('plan_name', 'id')
-    # 排序
-    ordering = ('-sort', 'id')
+    search_fields = ('plan_name',)
 
 class QueryQaPlanByName(APIView):
     """根据计划名获取数据，返回数组"""

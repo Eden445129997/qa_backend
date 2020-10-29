@@ -13,3 +13,5 @@ class ApiAssertViews(CustomModelViewSet):
     queryset = api_assert.ApiAssert.objects.all()
     serializer_class = serializers.ApiAssertSerializer
 
+    # 精确匹配
+    # assert_method、model_id、data_id

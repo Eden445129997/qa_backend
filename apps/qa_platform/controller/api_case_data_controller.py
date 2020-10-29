@@ -15,4 +15,4 @@ class ApiCaseDataViews(CustomModelViewSet):
 
     # 精确匹配
     # case_id、is_status
-    search_fields = ('text', 'id')
+    search_fields = ('text',)

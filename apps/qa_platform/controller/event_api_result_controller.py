@@ -15,4 +15,4 @@ class EventApiResultViews(CustomModelViewSet):
 
     # 精确匹配
     # is_status、is_prepared、current_status
-    search_fields = ('host', 'id')
+    search_fields = ('host',)

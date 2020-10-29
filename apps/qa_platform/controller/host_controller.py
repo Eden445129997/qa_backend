@@ -12,3 +12,8 @@ class HostViews(CustomModelViewSet):
     """域名表"""
     queryset = host.Host.objects.all()
     serializer_class = serializers.HostSerializer
+
+    # 精确匹配
+    # project_id
+    # 模糊匹配
+    search_fields = ('nickname', 'host',)

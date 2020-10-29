@@ -15,5 +15,5 @@ class EventApiRecordViews(CustomModelViewSet):
 
     # 精确匹配
     # result_id、case_id、data_id
-    search_fields = ('url', 'id')
+    search_fields = ('url',)
     ordering = ('sort')
