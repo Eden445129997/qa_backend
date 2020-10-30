@@ -67,20 +67,28 @@ INSTALLED_APPS = [
     "apps.qa_platform",
 ]
 
+from django.conf import settings
+
+
+
 # drf 配置
 REST_FRAMEWORK = {
+    # 3.1限流策略
+    'DEFAULT_THROTTLE_RATES': {
+        # 'user': '100/hour',  # 认证用户每小时100次
+        # 'anon': '3/day',  # 未认证用户每天能访问3次
+        'user': None,
+        'anon': None,
+    },
+    # rest_framework默认配置路径
+    # import rest_framework.settings
     # 全局过滤(字段查询)
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     # 全局分页(两种)
     # rest_framework.pagination.PageNumberPagination
     # rest_framework.pagination.LimitOffsetPagination
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
-    # 接口文档错误解决方案
-    # AttributeError: 'AutoSchema' object has no attribute 'get_link'
-    # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',
-    # pip install coreapi==2.3.3
-    # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     # 新版drf自带文档接口配置
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }
@@ -345,3 +353,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 # print(os.path.join(BASE_DIR, 'logs/runner-log.log'))
+

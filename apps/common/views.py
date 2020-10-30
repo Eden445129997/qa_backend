@@ -9,6 +9,9 @@ from rest_framework.filters import (
     SearchFilter, OrderingFilter
 )
 
+# 这里面查看需要重写的属性与方法
+# from rest_framework import generics
+
 class CustomModelViewSet(viewsets.ModelViewSet):
     """
     自定义viewSet类
