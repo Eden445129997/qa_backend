@@ -28,27 +28,7 @@ class CustomMiddleware(MiddlewareMixin):
         """
         self.start_time = time.time()
 
-        try:
-            if 'application/json' in request.content_type:
-                # 二进制转码
-                # request_body = bytes.decode(request.body)
-                request.META['BODY'] = json.loads(request.body)
-
-        except JSONDecodeError:
-            http_log.error(
-                'request.META:%s\n'
-                'request.path:%s\n'
-                'request.method:%s\n'
-                'request.content_type:%s\n'
-                'request.body:%s\n'%(
-                    request.META,
-                    request.path,
-                    request.method,
-                    request.content_type,
-                    request.body
-                )
-            )
-
+        pass
 
     def process_view(self, request : HttpRequest, func, *args, **kwargs):
         """
@@ -80,21 +60,5 @@ class CustomMiddleware(MiddlewareMixin):
         当所有流程都处理完毕后，就来到了这个方法 这个方法的逻辑
         process_template_response 是完全一样的 ，只是后者是针对带有模板 response的处理
         """
-
-        http_log.info(
-            'request.META:%s\n'
-            'request.path:%s\n'
-            'request.method:%s\n'
-            'request.content_type:%s\n'
-            'request.query:%s\n'
-            'request.body:%s\n' % (
-                request.META,
-                request.path,
-                request.method,
-                request.content_type,
-                request.META['QUERY_STRING'],
-                request.body
-            )
-        )
 
         return response

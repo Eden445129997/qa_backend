@@ -4,6 +4,8 @@ from django.urls import path
 # 使用viewset时使用的路由
 from rest_framework.routers import DefaultRouter
 
+from .models.domain.test_model import *
+
 from .controller import (
     controller,
     project_controller,
@@ -33,6 +35,9 @@ urlpatterns = [
 
 # Viewset视图集
 router = DefaultRouter()
+router.register("a", AViews, basename="a")
+router.register("b", BViews, basename="b")
+
 router.register("project", project_controller.ProjectViews, basename="project")
 router.register("host", host_controller.HostViews, basename="host")
 router.register("api", api_controller.ApiViews, basename="api")

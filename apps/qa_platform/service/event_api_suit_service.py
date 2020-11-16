@@ -9,7 +9,7 @@ from apps.common.utils.decorator import (
 # 实体类
 from apps.qa_platform.models import dto
 from apps.qa_platform.models.domain import (
-    qa_case, api_case_model, api, api_case_data, api_case_data_node, api_assert
+    qa_case, api_case_model, api_case_data, api_case_data_node, api_assert
 )
 
 # 责任链基类
@@ -22,15 +22,14 @@ import logging, copy
 runner_log = logging.getLogger('event')
 
 
-def query_case_id_list_by_plan_id(plan_id: int):
+def query_qa_case_id_list(plan_id: int):
     """根据测试计划获取测试用例id列表"""
     return [
         case.get('id')
-        for case in qa_case.QaCase.query_case_list_by_plan_id(
+        for case in qa_case.QaCase.query_qa_case_list(
             plan_id=plan_id
         )
     ]
-
 
 @print_clazz
 class _CaseApiModelHandler(BaseHandler):
@@ -43,26 +42,21 @@ class _CaseApiModelHandler(BaseHandler):
         # 模型列表
         case_api_model = []
         # 模型表列表（数据需要进行补全的列表）
-        api_case_model_list = api_case_model.ApiCaseModel.query_api_case_model_list_by_case_id(case_id)
-        # 循环每个模型
-        for i in range(len(api_case_model_list)):
-            model_node = api_case_model_list[i]
-            # 获取关联的接口信息
-            api_info = api.Api.query_api_by_id(
-                model_node.get('api_id')
-            )
+        model_query_set = api_case_model.ApiCaseModel.query_set_by_case_id(case_id)
+
+        for i in range(len(model_query_set)):
+            model_node = model_query_set[i].__dict__
+            api_dict = model_query_set[i].api.__dict__
+            model_node['api'] = api_dict
             # 创建校验点列表
             model_node['assert_list'] = []
             # tb_event_api_record ｜ sort记录执行顺序
             # 业务作用：执行测试用例套件时，参数化处理器需要使用该字段
             model_node['sort'] = i
 
-            # 补全模型需要关联的数据
-            case_api_model.append(
-                {**api_info, **model_node}
-            )
-
+            case_api_model.append(model_node)
         return self.successor.handle(case_api_model)
+
 
 @print_clazz
 class _DataPrepareHandler(BaseHandler):
@@ -87,10 +81,11 @@ class _DataPrepareHandler(BaseHandler):
             case_data.get('id')
             for case_data in
             # 获取case_data的数据
-            api_case_data.ApiCaseData.query_api_case_data_id_list(
+            api_case_data.ApiCaseData.query_api_case_data_list(
                 case_api_model[0].get('case_id')
             )
         ]
+
         # 拷贝模型列表 并替换拷贝后的列表 装进测试套件中
         for data_id in case_data_id_list:
             # 深拷贝
@@ -101,7 +96,7 @@ class _DataPrepareHandler(BaseHandler):
                 node['data_id'] = data_id
 
             # 数据节点与模型节点替换
-            for case_data_node in api_case_data_node.ApiCaseDataNode.query_case_api_data_node_list_by_data_id(data_id):
+            for case_data_node in api_case_data_node.ApiCaseDataNode.query_case_api_data_node_list(data_id):
                 # 模型执行顺序的id列表，找到要替换的index
                 data_node_index = model_order.index(
                     case_data_node.get("model_id")
@@ -110,7 +105,7 @@ class _DataPrepareHandler(BaseHandler):
                 model_and_data[data_node_index] = {**model_and_data[data_node_index], **case_data_node}
 
             # 补全断言, 校验点到指定模型节点添加数断言
-            for assert_node in api_assert.ApiAssert.get_api_assert_list_by_data_id(data_id):
+            for assert_node in api_assert.ApiAssert.query_api_assert_list(data_id):
                 # 获取断言关联的模型索引id
                 assert_node_index = model_order.index(
                     assert_node.get('model_id')
@@ -135,6 +130,7 @@ class _CaseApiValidateHandler(BaseHandler):
                 except ValidationError as e:
                     runner_log.error(e.json())
                     return False
+        # return False
         return case_api_group
 
 @print_clazz

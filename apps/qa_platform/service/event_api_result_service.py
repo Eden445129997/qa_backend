@@ -17,7 +17,7 @@ from apps.qa_platform.models.dto import (
 from apps.qa_platform.enumeration import EventApiStatus
 
 from apps.qa_platform.service.event_api_suit_service import (
-    ApiSuitChainOfResponsibility, query_case_id_list_by_plan_id
+    ApiSuitChainOfResponsibility, query_qa_case_id_list
 )
 
 from apps.qa_platform.service.event_api_record_service import ApiRunChainOfResponsibility
@@ -66,7 +66,7 @@ class EventApiResultThread(threading.Thread):
         elif self.context.plan_id and self.context.case_id:
             raise ValueError('plan_id和case_id其中只能有一个，请检查context')
         elif self.context.plan_id:
-            self.context.case_id_list = query_case_id_list_by_plan_id(self.context.plan_id)
+            self.context.case_id_list = query_qa_case_id_list(self.context.plan_id)
         else:
             self.context.case_id_list = [self.context.case_id]
 
@@ -147,7 +147,7 @@ class EventApiResultThread(threading.Thread):
                             try:
                                 case_api_node: CaseApiNode = model_and_data_iter.__next__()
                                 case_api_node.result_id = self.result_obj.id
-                                case_api_node.path = "%s%s" % (self.context.host, case_api_node.path)
+                                case_api_node.api.path = "%s%s" % (self.context.host, case_api_node.api.path)
                                 case_api_node.headers = {**case_api_node.headers, **self.headers}
                                 event_log.info(case_api_node)
                                 # 失败跳过该数据

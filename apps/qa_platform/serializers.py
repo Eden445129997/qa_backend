@@ -10,6 +10,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = project.Project
         fields = "__all__"
+        # exclude = ('add_time',):  除去指定的某些字段
 
 class HostSerializer(serializers.ModelSerializer):
     """域名表"""

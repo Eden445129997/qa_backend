@@ -4,23 +4,26 @@
 # 为了兼容python2.7（django企业开发实战指出）
 from __future__ import unicode_literals
 
+from apps.common.base_obj import BaseDoMain
 from django.db import models
 
-from apps.qa_platform.enumeration import (
-    REQUEST_METHOD, EVENT_API_STUTAS, CHECK_METHOD, HTTP_CONTENT_TYPE
-)
+
+from .qa_plan import QaPlan
 
 # 自定义序列化类
 from apps.common.serializers import query_set_list_serializers
 
-class QaCase(models.Model):
+class QaCase(BaseDoMain):
     """
     测试用例表
     """
     # 用例id
     id = models.AutoField(primary_key=True)
     # 外键—关联计划表
-    plan_id = models.IntegerField(verbose_name='所属计划id')
+    plan = models.ForeignKey(
+        QaPlan, on_delete=models.DO_NOTHING, db_column='plan_id',
+        db_constraint=False
+    )
     # 用例名称
     case_name = models.CharField(verbose_name="用例名称", max_length=32)
     # 排序
@@ -45,8 +48,8 @@ class QaCase(models.Model):
         verbose_name_plural = verbose_name
 
     @classmethod
-    def query_case_list_by_plan_id(cls, plan_id: int):
-        return query_set_list_serializers(
+    def query_qa_case_list(cls, plan_id: int):
+        return cls.to_serialize(
             cls.objects
                 .filter(
                 plan_id=plan_id,

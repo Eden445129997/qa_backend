@@ -115,10 +115,10 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     # 跨域设置（必须在django.middleware.csrf.CsrfViewMiddleware的上面）
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     # csrf攻击跳过（前后端分离不需要做）
     # 'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # log中间件
@@ -206,7 +206,8 @@ WSGI_APPLICATION = 'main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "qa_platform",
+        # 'NAME': "qa_platform",
+        'NAME': "test",
         "USER": "root",
         "PASSWORD": "root",
         "HOST": "111.229.54.5",
@@ -336,13 +337,14 @@ LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
 
 # 语言
-USE_I18N = True
+USE_I18N = False
 
 # 数据和时间格式
-USE_L10N = True
+# 时区是否本地化，不同地区展示不同的时间
+USE_L10N = False
 
-# 启动时区
-USE_TZ = True
+# 启动时区(建议关闭)
+USE_TZ = False
 
 # 设置用户模型（否则会用django自带的）
 # AUTH_USER_MODEL = "user_service.User"

@@ -247,17 +247,17 @@ class _HttpHandler(BaseHandler):
 
     @print_func
     def _handle_context(self, case_node: CaseApiNode):
-        case_node.headers['Content-Type'] = case_node.content_type
+        case_node.headers['Content-Type'] = case_node.api.content_type
         self._reconnection_times = case_node.reconnection_times
         self._rest_reconnection_times = case_node.reconnection_times
 
     @print_func
     def _send(self, case_node : CaseApiNode):
-        request_func = self._get_func(case_node.method)
+        request_func = self._get_func(case_node.api.method)
         try:
             print(
-                type(case_node.path),
-                'url:%s'%case_node.path,
+                type(case_node.api.path),
+                'url:%s'%case_node.api.path,
                 type(case_node.query),
                 'query:%s'%case_node.query,
                 type(case_node.body),
@@ -270,7 +270,7 @@ class _HttpHandler(BaseHandler):
                 for k in case_node.headers.keys():
                     case_node.headers[k] = quote(case_node.headers.get(k))
             response = request_func(
-                url=case_node.path,
+                url=case_node.api.path,
                 params=case_node.query,
                 body=case_node.body,
                 headers=case_node.headers,
@@ -425,8 +425,8 @@ class _ApiRecordHandler(BaseHandler):
             result_id = case_node.result_id,
             case_id = case_node.case_id,
             data_id = case_node.data_id,
-            api_name = case_node.api_name,
-            url = case_node.path,
+            api_name = case_node.api.api_name,
+            url = case_node.api.path,
             headers = case_node.headers,
             query = case_node.query,
             body = case_node.body,

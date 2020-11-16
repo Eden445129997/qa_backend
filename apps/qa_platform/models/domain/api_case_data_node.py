@@ -4,22 +4,23 @@
 # 为了兼容python2.7（django企业开发实战指出）
 from __future__ import unicode_literals
 
+from apps.common.base_obj import BaseDoMain
 from django.db import models
-
-from apps.qa_platform.enumeration import (
-    REQUEST_METHOD, EVENT_API_STUTAS, CHECK_METHOD, HTTP_CONTENT_TYPE
-)
 
 # 自定义序列化类
 from apps.common.serializers import query_set_list_serializers
 
-class ApiCaseDataNode(models.Model):
-    # 用例id
-    id = models.AutoField(primary_key=True)
-    # 关联用例表
-    data_id = models.IntegerField(verbose_name='所属数据id', default=1)
+class ApiCaseDataNode(BaseDoMain):
     # 用例模型id
-    model_id = models.IntegerField(verbose_name='所属用例模型id')
+    model = models.ForeignKey(
+        verbose_name='关联模型id', to="ApiCaseModel", db_column='model_id', on_delete=models.DO_NOTHING,
+        db_constraint=False
+    )
+    # 关联用例数据表
+    data = models.ForeignKey(
+        verbose_name='所属数据id', to="ApiCaseData",  db_column='data_id', on_delete=models.DO_NOTHING,
+        db_constraint=False
+    )
     # 请求头
     headers = models.TextField(verbose_name="请求头", default="{}")
     # url后的请求参数
@@ -34,14 +35,6 @@ class ApiCaseDataNode(models.Model):
     is_expression = models.BooleanField(verbose_name="表达式状态：0 不启用jsonpath捕捉参数化\n 1 启用jsonpath捕捉参数化", default=False)
     # 用例描述
     text = models.CharField(verbose_name="用例描述", max_length=64, blank=True, null=True)
-    # 状态（启用/不启用）
-    is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
-    # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
-    # 创建时间
-    create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
-    # 最后变动时间
-    update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
 
     objects = models.Manager()
 
@@ -52,8 +45,8 @@ class ApiCaseDataNode(models.Model):
         verbose_name_plural = verbose_name
 
     @classmethod
-    def query_case_api_data_node_list_by_data_id(cls,data_id: int):
-        return query_set_list_serializers(
+    def query_case_api_data_node_list(cls,data_id: int) -> list:
+        return cls.to_serialize(
             cls.objects.filter(
                 data_id=data_id,
                 is_status=1,

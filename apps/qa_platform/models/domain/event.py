@@ -4,13 +4,10 @@
 # 为了兼容python2.7（django企业开发实战指出）
 from __future__ import unicode_literals
 
+from apps.common.base_obj import BaseDoMain
 from django.db import models
 
-from apps.qa_platform.enumeration import (
-    REQUEST_METHOD, EVENT_API_STUTAS, CHECK_METHOD, HTTP_CONTENT_TYPE
-)
-
-class Event(models.Model):
+class Event(BaseDoMain):
     """
     事件工单
     """
@@ -27,14 +24,6 @@ class Event(models.Model):
     text = models.CharField(verbose_name="事件备注", max_length=64, blank=True, null=True)
     # 报错记录
     err_record = models.TextField(verbose_name="报错记录", blank=True, null=True)
-    # 状态（启用/不启用）
-    is_status = models.BooleanField(verbose_name="启用状态：0未启用 1启用", default=True)
-    # 逻辑删除
-    is_delete = models.BooleanField(verbose_name="逻辑删除：1删除 0未删除", default=False)
-    # 创建时间
-    create_time = models.DateTimeField(verbose_name='创建时间', auto_now_add=True)
-    # 最后变动时间
-    update_time = models.DateTimeField(verbose_name='更新时间', auto_now=True)
 
     objects = models.Manager()
 

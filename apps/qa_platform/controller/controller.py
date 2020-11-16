@@ -35,3 +35,5 @@ class Login(APIView):
 class Logout(APIView):
     def post(self, request : HttpRequest, *args, **kwargs):
         return JsonResponse(data={"token": "Django token", "routers": ["*"]}, msg="success", code=status.HTTP_200_OK)
+
+

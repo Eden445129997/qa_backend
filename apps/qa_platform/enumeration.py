@@ -39,6 +39,7 @@ class HttpContentType(Enum):
     IMAGE_JPEG = u'image/jpeg'
     IMAGE_PNG = u'image/png'
 
+HTTP_CONTENT_TYPE_LIST = [const.value for const in HttpContentType]
 
 HTTP_CONTENT_TYPE = (
     (HttpContentType.TEXT_HTML.value, HttpContentType.TEXT_HTML.value),
@@ -55,19 +56,20 @@ HTTP_CONTENT_TYPE = (
 )
 
 
-class RequestMethod(Enum):
+class HttpMethod(Enum):
     """请求方式"""
     Get = u'GET'
     POST = u'POST'
     PUT = u'PUT'
     DELETE = u'DELETE'
 
+HTTP_METHOD_LIST = [const.value for const in HttpMethod]
 
-REQUEST_METHOD = (
-    (RequestMethod.Get.value, RequestMethod.Get.value),
-    (RequestMethod.POST.value, RequestMethod.POST.value),
-    (RequestMethod.PUT.value, RequestMethod.PUT.value),
-    (RequestMethod.DELETE.value, RequestMethod.DELETE.value),
+HTTP_METHOD_TUPLE = (
+    (HttpMethod.Get.value, HttpMethod.Get.value),
+    (HttpMethod.POST.value, HttpMethod.POST.value),
+    (HttpMethod.PUT.value, HttpMethod.PUT.value),
+    (HttpMethod.DELETE.value, HttpMethod.DELETE.value),
 )
 
 
@@ -103,7 +105,7 @@ CHECK_METHOD = (
 )
 #result.updateStatus
 if __name__ == '__main__':
-    if "POST" == RequestMethod.POST.value:
-        print(1)
-    print(RequestMethod.POST)
-    print(type(RequestMethod.POST))
+
+    # for i in HttpContentType:
+    #     print(i.value)
+    pass

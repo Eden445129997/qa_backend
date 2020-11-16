@@ -5,7 +5,10 @@
 from __future__ import unicode_literals
 
 from pydantic import (
-    BaseModel, Json
+    BaseModel, Json , validator, ValidationError
+)
+from apps.qa_platform.enumeration import (
+    HTTP_CONTENT_TYPE_LIST, HTTP_METHOD_LIST
 )
 
 import collections
@@ -87,19 +90,35 @@ class Context(BaseModel):
     # headers: Json or dict = {}
     headers: dict = {}
 
+class Api(BaseModel):
+    id : int
+    project_id : int
+    api_name : str
+    content_type : str
+    method : str
+    path : str
+    text : str
+    is_status : bool
+    is_delete : bool
+    # create_time
+    # update_time
+    
+    @validator('content_type')
+    def content_type_validator(cls, val):
+        assert val in HTTP_CONTENT_TYPE_LIST
+        return val
+
+    @validator('method')
+    def method_validator(cls, val):
+        assert val in HTTP_METHOD_LIST
+        return val
+
+
 class CaseApiNode(BaseModel):
     # 用例id
     case_id : int
-    # 请求的接口id
-    api_id: int
-    # 接口名
-    api_name: str
-    # body解析类型
-    content_type : str
-    # 请求的uri
-    path: str
-    # 请求方式
-    method: str
+    # 请求的接口
+    api: Api
     # 重连次数
     reconnection_times: int
     # 超时设置
@@ -111,7 +130,7 @@ class CaseApiNode(BaseModel):
     # query: str
     query: Json
     # params: Json
-    # 入参
+    # 请求体
     # body: str
     body: Json
     # mock状态（0 不启用mock，1启用mock）
@@ -135,3 +154,6 @@ class CaseApiNode(BaseModel):
     fail_times = 0
     # 请求时候的失败信息
     err_record = []
+
+
+

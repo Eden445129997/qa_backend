@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from rest_framework import viewsets
+from rest_framework import viewsets, views
 # 过滤器(字段过滤)
 from django_filters.rest_framework import DjangoFilterBackend
 # drf SearchFilter模糊查询、OrderingFilter排序过滤器
@@ -38,6 +38,7 @@ class CustomModelViewSet(viewsets.ModelViewSet):
     # search_fields = ('case_name', 'id')
     # 默认排序
     ordering = ('-create_time', 'id')
+
 
 '''
 
