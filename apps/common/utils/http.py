@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import urllib3
+# import urllib3
 
 import requests
 
 # https警告解除
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+# urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 METHOD_LIST = ['GET', 'OPTIONS', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE']
 
@@ -53,16 +53,20 @@ choice = {
 }
 
 if __name__ == '__main__':
+    headers = {
+        'referer': 'https://employee.91jkys.com/sso/login',
+        'origin': 'https://employee.91jkys.com',
+        'upgrade-insecure-requests': 1,
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
     params = {
-        "a": "1",
-        "b": "2",
-        "c": "3"
+        "redirect": "https://crm-new.91jkys.com",
     }
     body = {
-        "a": "1",
-        "b": "2",
-        "c": "3"
+        "name": "heyayun",
+        "passwd": "hb123456.",
+        # "c": "3"
     }
-    response = choice.get('GET')('http://localhost:9998/testapi/?test=aaa', params, body,
+    response = choice.get('GET')('https://employee.91jkys.com/sso/login?redirect=https://crm-new.91jkys.com', params, body,
                                  {"Content-Type": "text/plain"}, 10)
     print(response.text)

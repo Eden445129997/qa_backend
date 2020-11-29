@@ -1,0 +1,21 @@
+
+2020-11-16 17:20:33 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:81264
+thread_id:123145500688384
+case_id=2 api=Api(id=119, project_id=1, api_name='手机号短信登录/注册', content_type='application/json', method='POST', path='http://10.113.248.196/api-user/v1/user/login/phone', text='', is_status=True, is_delete=False) reconnection_times=3 timeout=10 headers={'test': '111'} query={'test': '111'} body={'test': '111'} is_mock=True mock_response='{}' is_expression=True assert_list=[] result_id=248 data_id=4 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-11-16 17:21:55 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:81264
+thread_id:123145500688384
+case_id=2 api=Api(id=119, project_id=1, api_name='手机号短信登录/注册', content_type='application/json', method='POST', path='http://10.113.248.196/api-user/v1/user/login/phone', text='', is_status=True, is_delete=False) reconnection_times=3 timeout=10 headers={'test': '111'} query={'test': '111'} body={'test': '111'} is_mock=False mock_response='{}' is_expression=True assert_list=[] result_id=249 data_id=4 sort=0 response=None fail_times=0 err_record=[]
+
+
+2020-11-16 17:22:34 INFO
+/Users/eden/workspace/djangoWebServer/apps/qa_platform/service/event_api_result_service.py
+process_id:81264
+thread_id:123145500688384
+case_id=2 api=Api(id=119, project_id=1, api_name='手机号短信登录/注册', content_type='application/json', method='POST', path='http://10.113.248.196/api-user/v1/user/login/phone', text='', is_status=True, is_delete=False) reconnection_times=3 timeout=10 headers={'device': 'ios', 'version': '1.2.9', 'device-product': '1', 'device-model': '1', 'device-os-ver': '1', 'token': 'test'} query={} body={'phone': '15361899636', 'smsCode': '123456', 'deviceId': 'tester_eden_0'} is_mock=False mock_response='{}' is_expression=False assert_list=[] result_id=250 data_id=4 sort=0 response=None fail_times=0 err_record=[]
+

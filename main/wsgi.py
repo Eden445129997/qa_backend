@@ -1,5 +1,5 @@
 """
-WSGI config for djangoWebServer project.
+WSGI dev for qa_backend project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,7 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-profile = os.environ.get('PROJECT_PROFILE', 'develop')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'main.settings.%s' % profile)
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'main.settings.pro')
 
 application = get_wsgi_application()

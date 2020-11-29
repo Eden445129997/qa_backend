@@ -1,7 +1,7 @@
-"""djangoWebServer URL Configuration
+"""qa_backend URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.2/topics/http/urls/
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 # import json
-# from django.contrib import admin
+from django.contrib import admin
 from django.urls import path,include
 from django.views.decorators.cache import cache_page
 from django.views import View
@@ -50,11 +50,13 @@ class test_api(View):
     def delete(self, request, *args, **kwargs):
         return test_api_func(request, *args, **kwargs)
 
+
 urlpatterns = [
     # django自带后台管理
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('testapi/', test_api.as_view()),
-    path('platform/',include("apps.qa_platform.urls")),
-    path('docs/',include_docs_urls(title='api-docs'), name='docs'),  #配置docs的url路径
+    path('qa_backend/',include("apps.qa_backend.urls")),
+    #配置docs的url路径
+    path('docs/',include_docs_urls(title='api-docs'), name='docs'),
     # path('demo/',include("apps.demo_service.urls")),
 ]

@@ -1,9 +1,12 @@
-Django==3.0.6
-django-filter==2.2.0
+Django==3.1.3
+djangorestframework==3.12.2
+django-environ==0.4.5
+django-filter==2.4.0
 django-cors-headers==3.2.1
+django-docutils==0.5.1
 coreapi==2.3.3
-djangorestframework==3.11.0
 jsonpath==0.82
 pydantic==1.6.1
 PyMySQL==0.9.3
 requests==2.23.0
+django-simpleui==2020.9.26
