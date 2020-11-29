@@ -1,10 +1,7 @@
-from .gloVar import *
+from .. import *
 
 # 日志地址
-LOG_DIR = os.path.join(BASE_DIR, 'logs')
-# 如果不存该地址则创建
-if not os.path.join(LOG_DIR):
-    os.mkdir(LOG_DIR)
+LOG_DIR = BASE_DIR.path('logs')
 
 LOGGING = {
     # 版本
@@ -39,7 +36,7 @@ LOGGING = {
             'level': 'DEBUG',
             # 时间滚动切分
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': os.path.join(LOG_DIR, 'http.log'),
+            'filename': LOG_DIR.path('http.log').__str__(),
             'encoding': 'utf-8',
             'formatter': 'standard',
             # 调用过滤器
@@ -54,7 +51,7 @@ LOGGING = {
             'level': 'DEBUG',
             # 时间滚动切分
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': os.path.join(LOG_DIR, 'event-api.log'),
+            'filename': LOG_DIR.path('event-api.log').__str__(),
             'encoding': 'utf-8',
             'formatter': 'standard',
             # 调用过滤器

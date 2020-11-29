@@ -1,6 +1,6 @@
 
 # rest_framework 默认配置
-from rest_framework import settings
+# from rest_framework import settings
 
 # drf 配置
 REST_FRAMEWORK = {

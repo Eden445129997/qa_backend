@@ -62,10 +62,10 @@ if __name__ == '__main__':
 # python3 manage.py startapp appname
 
 # 使用django的admin，创建用户
-# python manage.py createsuperuser
+# python3 manage.py createsuperuser
 
 # 根据setting配置创建css等静态资源文件（配合nginx使用）
-# python manage.py collectstatic
+# python3 manage.py collectstatic
 
 # 启动服务（默认端口8080）
 # python3 manage.py runserver ip:port

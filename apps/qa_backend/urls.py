@@ -24,9 +24,6 @@ from .views import (
 urlpatterns = [
     path('login/', controller.Login.as_view(), name='登录demo，获取token'),
     path('logout/', controller.Logout.as_view(), name='退出登录demo，清除token'),
-    path('queryProjectByName/', project_views.QueryProjectByName.as_view(), name='根据project_name获取project'),
-    path('queryQaPlanByName/', qa_plan_views.QueryQaPlanByName.as_view(), name='根据plan_name获取plan'),
-    path('queryQaCaseByName/', qa_case_views.QueryQaCaseByName.as_view(), name='根据case_name获取case'),
     path('event/api/run/', event_views.HandleEvent.as_view(), name='处理event'),
     path('qaCase/api/autoadd/', qa_case_views.CaseApiAutoAdd.as_view(), name='自动添加接口用例'),
 ]

@@ -69,7 +69,7 @@ from .caches import *
 from .corsheaders import *
 
 # 模版配置
-from . import templates
+from .templates import *
 
 # 语言设置
 from .language import *
@@ -85,7 +85,7 @@ from .simpleui import *
 
 # 定义媒体存放路径
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR.path('media').__str__()
 
 # logging的配置
 from .logging import *
